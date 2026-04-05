@@ -1,0 +1,449 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+:root {
+  --ln-bg-1: #6f2bff;
+  --ln-bg-2: #2a0b4a;
+  --ln-bg-3: #0c0d14;
+  --ln-card: rgba(10, 13, 20, 0.62);
+  --ln-border: rgba(255, 255, 255, 0.12);
+  --ln-muted: rgba(255, 255, 255, 0.72);
+  --ln-muted-2: rgba(255, 255, 255, 0.56);
+  --ln-primary: #23a6ff;
+  --ln-primary-2: #1d8cff;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing {
+  min-height: 100vh;
+  color: #fff;
+  background: radial-gradient(900px 700px at 12% 18%, rgba(124, 44, 255, 0.85) 0%, rgba(124, 44, 255, 0.15) 55%, transparent 72%),
+    radial-gradient(900px 700px at 78% 28%, rgba(160, 90, 255, 0.45) 0%, rgba(160, 90, 255, 0.12) 52%, transparent 70%),
+    radial-gradient(1000px 800px at 50% 105%, rgba(40, 120, 255, 0.18) 0%, rgba(40, 120, 255, 0.06) 45%, transparent 65%),
+    linear-gradient(115deg, var(--ln-bg-1) 0%, var(--ln-bg-2) 34%, var(--ln-bg-3) 72%, #05060b 100%);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing a {
+  color: inherit;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-top {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 14px 18px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background: rgba(5, 6, 11, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-top__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-nav {
+  display: flex;
+  gap: 18px;
+  opacity: 0.9;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-nav a {
+  text-decoration: none;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.84);
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.landing-nav a:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-btn {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: filter 160ms ease, background 160ms ease, border-color 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.landing-btn:hover {
+  filter: brightness(1.04);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-btn--primary {
+  border: none;
+  color: #06131f;
+  background: linear-gradient(180deg, var(--ln-primary) 0%, var(--ln-primary-2) 100%);
+  box-shadow: 0 14px 28px rgba(35, 166, 255, 0.20);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-btn--secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.20);
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-btn--chip {
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-hero {
+  padding: 62px 18px 28px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-hero__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-hero__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-title {
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+  text-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.12;
+  letter-spacing: -0.2px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-sub {
+  margin-top: 14px;
+  color: var(--ln-muted);
+  max-width: 560px;
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-hero__art {
+  position: relative;
+  min-height: 420px;
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-logoart {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-logoart__panel {
+  width: min(420px, 100%);
+  border-radius: 22px;
+  background: rgba(10, 13, 20, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.55);
+  padding: 26px 24px 22px;
+  text-align: center;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-eq {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120px;
+  opacity: 0.22;
+  background: linear-gradient(to top, rgba(35, 166, 255, 0.55), transparent 65%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.25) 0,
+      rgba(255, 255, 255, 0.25) 8px,
+      transparent 8px,
+      transparent 22px
+    );
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-note {
+  position: absolute;
+  font-size: 44px;
+  font-weight: 900;
+  opacity: 0.7;
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.45));
+  user-select: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-note.n1 {
+  left: -4px;
+  top: 18px;
+  color: rgba(35, 166, 255, 0.95);
+  transform: rotate(-18deg);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-note.n2 {
+  left: 58%;
+  top: 12px;
+  color: rgba(160, 90, 255, 0.9);
+  transform: rotate(12deg);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-note.n3 {
+  right: 42px;
+  top: 84px;
+  color: rgba(35, 166, 255, 0.9);
+  transform: rotate(-10deg);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-note.n4 {
+  right: 18%;
+  top: 210px;
+  color: rgba(160, 90, 255, 0.86);
+  transform: rotate(18deg);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-stats {
+  padding: 26px 18px 34px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-stats__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-stat {
+  background: rgba(10, 13, 20, 0.52);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  padding: 28px 26px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.42);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-stat__value {
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-stat__label {
+  margin-top: 10px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-stat.tint-a {
+  border-color: rgba(35, 166, 255, 0.18);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-stat.tint-b {
+  border-color: rgba(160, 90, 255, 0.18);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-stat.tint-c {
+  border-color: rgba(35, 255, 220, 0.10);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-sections {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 18px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-section {
+  background: rgba(10, 13, 20, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 22px;
+  padding: 22px 22px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-section h2 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -0.2px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-section p {
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: var(--ln-muted);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(5, 6, 11, 0.35);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-footer__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .landing-hero__grid {
+    grid-template-columns: 1fr;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .landing-hero__art {
+    min-height: 360px;
+  }
+  
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .landing-sections {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 720px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .landing-nav {
+    display: none;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .landing-title {
+    font-size: 46px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .landing-h1 {
+    font-size: 30px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .landing-stats__inner {
+    grid-template-columns: 1fr;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .landing-stat__value {
+    font-size: 48px;
+  }
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-chipRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-footer__primary {
+  opacity: 0.8;
+}

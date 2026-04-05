@@ -1,0 +1,101 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--body-bg, var(--app-bg));
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--sb-thumb) transparent;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+* ::-webkit-scrollbar {
+  width: var(--sb-size);
+  height: var(--sb-size);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+* ::-webkit-scrollbar-трека {
+  background: transparent;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+* ::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+* ::-webkit-scrollbar-thumb:hover {
+  background: var(--sb-thumb-hover);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html, body, #root {
+  min-height: 100%;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--body-bg, var(--app-bg));
+  background-attachment: fixed;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+#root {
+  min-height: 100%;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+button, input, textarea, select {
+  font: inherit;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+button {
+  cursor: pointer;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+button:disabled, input:disabled, textarea:disabled, select:disabled {
+  cursor: not-allowed;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+::selection {
+  background: rgba(255, 255, 255, 0.14);
+}

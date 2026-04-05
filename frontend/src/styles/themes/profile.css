@@ -1,0 +1,274 @@
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+
+html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-btn, html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-btn--ghost, html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-btn--primary, html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-statPill, html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-head-actions .sp-btn {
+  min-height: 36px;
+  border-radius: 14px;
+  border: 1px solid var(--light-field-border-strong, rgba(155, 123, 214, 0.30));
+  background: var(--light-button-bg, linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(236, 226, 255, 0.98)));
+  color: var(--theme-text-main, #2d2141);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 8px 20px rgba(128, 98, 190, 0.10);
+  transition: transform 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease, background 0.14s ease, color 0.14s ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-btn:hover, html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-btn--ghost:hover, html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-btn--primary:hover, html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-head-actions .sp-btn:hover, html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-statPill:hover{
+  border-color: rgba(162, 126, 231, 0.42);
+  background: var(--light-button-bg-hover, linear-gradient(180deg, rgba(250, 246, 255, 1), rgba(233, 220, 255, 0.99)));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.86), 0 10px 22px rgba(128, 98, 190, 0.14);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] {
+  --border: rgba(112, 86, 172, 0.12);
+  --border-2: rgba(137, 108, 204, 0.18);
+  --menu-border: rgba(118, 92, 176, 0.14);
+  --ctl-br: rgba(118, 92, 176, 0.14);
+  --ctl-br-2: rgba(142, 112, 205, 0.20);
+  --theme-border-soft: rgba(118, 92, 176, 0.14);
+  --theme-border-strong: rgba(142, 112, 205, 0.20);
+  --ring-accent: rgba(130, 98, 192, 0.16);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .app-sidebar, html[data-theme-preset="violet"] .app-sidebar .app-sticky, html[data-theme-preset="violet"] .app-sidebar .sidecard {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] .topbarProfileMenu {
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 20px;
+  background: radial-gradient(320px 180px at 50% 0%, rgba(141, 109, 223, 0.12), transparent 70%),
+    linear-gradient(180deg, rgba(26, 20, 46, 0.98), rgba(14, 11, 28, 0.98));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] .topbarProfileMenu .ui-dd__item {
+  min-height: 40px;
+  border-radius: 14px;
+  border: 1px solid rgba(122, 96, 186, 0.14);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015));
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="violet"] .topbarProfileMenu .ui-dd__item:hover {
+  border-color: rgba(142, 112, 205, 0.22);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] .topbarProfileMenu .ui-dd__sep {
+  margin: 0 4px;
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] :is(.sp-page--profile, .sp-page--studio) .sp-btn--primary {
+  background: var(--surface-field, rgba(255, 255, 255, 0.06));
+  border-color: var(--ctl-br, rgba(118, 92, 176, 0.14));
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="violet"] :is(.sp-page--profile, .sp-page--studio) .sp-btn--primary:hover {
+  background: var(--surface-field-hover, rgba(255, 255, 255, 0.08));
+  border-color: var(--ctl-br-2, rgba(142, 112, 205, 0.20));
+}
+html[data-theme-preset="violet"] :is(
+  .sp-page,
+  .sp-page--profile,
+  .sp-page--studio
+) .sp-trackRowModern:hover, html[data-theme-preset="violet"] :is(
+  .sp-page,
+  .sp-page--profile,
+  .sp-page--studio
+) .sp-personCard:hover, html[data-theme-preset="violet"] :is(
+  .sp-page,
+  .sp-page--profile,
+  .sp-page--studio
+
+/* Стан наведення підсилює візуальний відгук елемента */
+) .sp-miniTrack:hover{
+  border-color: rgba(142, 112, 205, 0.20);
+}
+html[data-theme-preset="violet"] :is(
+  .sp-page,
+  .sp-page--profile,
+  .sp-page--studio
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+) :is(.sp-heroCard__avatar, .sp-personCard__avatar, .sp-miniTrack__cover, .sp-trackRowModern__cover) {
+  border-color: rgba(122, 96, 186, 0.14);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] .app-shell .app-body > .app-sidebar > .app-sticky.glass {
+  border: 1px solid rgba(122, 96, 186, 0.14);
+  border-color: rgba(122, 96, 186, 0.14);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.26);
+  background: linear-gradient(180deg, rgba(28, 20, 52, 0.94), rgba(12, 10, 25, 0.98));
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="violet"] .app-shell .app-body > .app-sidebar > .app-sticky.glass:hover {
+  border-color: rgba(142, 112, 205, 0.20);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .app-shell .app-body > .app-sidebar > .app-sticky.glass, html[data-theme-preset="violet"] .app-shell .app-body > .app-sidebar > .app-sticky.glass * {
+  outline-color: transparent;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-empty {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding-inline: 0;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__overlay {
+  background: linear-gradient(to top, rgba(199, 177, 247, 0.30) 0%, rgba(199, 177, 247, 0.14) 26%, rgba(255, 255, 255, 0.04) 56%, transparent 100%),
+    linear-gradient(to top, rgba(255, 255, 255, 0.82) 0%, rgba(246, 240, 255, 0.44) 48%, rgba(246, 240, 255, 0.10) 72%, transparent 100%);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) :is(.sp-btn, .sp-btn--ghost) {
+  background: var(--light-button-bg);
+  border-color: rgba(155, 123, 214, 0.24);
+  color: var(--theme-text-main, #2d2141);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-btn--primary {
+  background: var(--light-button-bg);
+  border-color: rgba(155, 123, 214, 0.30);
+  color: var(--theme-text-main, #2d2141);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 8px 20px rgba(128, 98, 190, 0.10);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-btn--primary:hover {
+  background: var(--light-button-bg-hover);
+  border-color: rgba(162, 126, 231, 0.42);
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-trackRowModern__index {
+  color: rgba(87, 70, 126, 0.58);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-statusPill {
+  border-color: rgba(149, 122, 212, 0.22);
+  background: linear-gradient(180deg, rgba(247, 242, 255, 0.96), rgba(238, 230, 252, 0.94));
+  color: #5a477b;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-statusPill.is-active {
+  border-color: rgba(88, 181, 127, 0.34);
+  background: linear-gradient(180deg, rgba(220, 248, 230, 0.98), rgba(201, 241, 215, 0.96));
+  color: #216b3d;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-statusPill.is-muted {
+  border-color: rgba(149, 122, 212, 0.20);
+  background: linear-gradient(180deg, rgba(245, 239, 255, 0.96), rgba(236, 227, 251, 0.94));
+  color: #5f4d7f;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] :is(.sp-profileModal, .sp-trackModal, .sp-dialogModal) {
+  color: var(--theme-text-main, #2d2141);
+}
+html[data-theme-preset="light"] :is(.sp-profileModal, .sp-trackModal, .sp-dialogModal) :is(
+  .modalTitle,
+  .sp-profileField__label,
+  .sp-label,
+  .sp-profileEditIntro,
+  .sp-trackModal__uploadMeta,
+  .sp-checkRow,
+  .sp-profileEditAvatarHint,
+  .sp-dialogText
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+) {
+  color: var(--theme-text-muted, #6d5a86);
+}
+html[data-theme-preset="light"] :is(.sp-profileModal, .sp-trackModal, .sp-dialogModal) :is(
+  .sp-profileField__control,
+  .sp-input,
+  .sp-select,
+  .ui-select,
+  .ui-selectTrigger
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+) {
+  border-color: rgba(155, 123, 214, 0.30);
+  background: var(--light-button-bg, linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(236, 226, 255, 0.98)));
+  color: var(--theme-text-main, #2d2141);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 8px 20px rgba(128, 98, 190, 0.10);
+}
+html[data-theme-preset="light"] :is(.sp-profileModal, .sp-trackModal, .sp-dialogModal) :is(
+  .sp-profileField__control::placeholder,
+  .sp-input::placeholder
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+) {
+  color: rgba(102, 82, 136, 0.52);
+}
+html[data-theme-preset="light"] :is(.sp-profileModal, .sp-trackModal, .sp-dialogModal) :is(
+  .sp-btn,
+  .sp-btn--ghost,
+  .sp-btn--primary,
+  .sp-profileEditUploadBtn
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+) {
+  border: 1px solid rgba(155, 123, 214, 0.30);
+  background: var(--light-button-bg, linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(236, 226, 255, 0.98)));
+  color: var(--theme-text-main, #2d2141);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 8px 20px rgba(128, 98, 190, 0.10);
+}
+html[data-theme-preset="light"] :is(.sp-profileModal, .sp-trackModal, .sp-dialogModal) :is(
+  .sp-btn:hover,
+  .sp-btn--ghost:hover,
+  .sp-btn--primary:hover,
+  .sp-profileEditUploadBtn:hover
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+) {
+  border-color: rgba(162, 126, 231, 0.42);
+  background: var(--light-button-bg-hover, linear-gradient(180deg, rgba(250, 246, 255, 1), rgba(233, 220, 255, 0.99)));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] :is(.sp-profileModal, .sp-trackModal, .sp-dialogModal) .sp-btn--primary {
+  background: var(--light-button-bg, linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(236, 226, 255, 0.98)));
+  border-color: rgba(155, 123, 214, 0.30);
+  color: var(--theme-text-main, #2d2141);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 8px 20px rgba(128, 98, 190, 0.10);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] :is(.sp-profileModal, .sp-trackModal, .sp-dialogModal) .sp-btn--primary:hover {
+  background: var(--light-button-bg-hover, linear-gradient(180deg, rgba(250, 246, 255, 1), rgba(233, 220, 255, 0.99)));
+  border-color: rgba(162, 126, 231, 0.42);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__badge--corner {
+  background: linear-gradient(180deg, rgba(245, 239, 255, 0.98), rgba(236, 229, 255, 0.98));
+  border-color: rgba(121, 97, 156, 0.18);
+  color: var(--theme-text-soft, #5d4a77);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.56);
+}

@@ -1,0 +1,25 @@
+# Нижче зібрано службові збіги для пошуку тексту і стилів цього повідомлення
+
+src/i18n/translations.js:157:    "auth.subtitle": "Nothing stops the music.",
+src/i18n/translations.js:171:    "footer.description": "Nothing stops the music.",
+src/i18n/translations.js:387:    "auth.subtitle": "Nothing stops the music.",
+src/i18n/translations.js:401:    "footer.description": "Nothing stops the music.",
+src/i18n/translations.js:617:    "auth.subtitle": "Nothing stops the music.",
+src/i18n/translations.js:631:    "footer.description": "Nothing stops the music.",
+src/pages/Track.jsx:31:  const [message, setMessage] = useState("");
+src/styles/pages/admin.css:254:.admin-toast {
+src/styles/pages/artist-pages.css:43:.sp-bannerError,  .sp-loadingLine {
+src/styles/pages/artist-pages.css:50:.sp-loadingLine {
+src/styles/pages/artist-pages.css:655:.sp-page--profile,  .sp-page--profile .sp-profileLayout,  .sp-page--profile .sp-profileMain,  .sp-page--profile .sp-profileSide,  .sp-page--profile .sp-card,  .sp-page--profile .sp-section,  .sp-page--profile .sp-bannerError,  .sp-page--profile .sp-loadingLine {
+src/styles/pages/artist-pages.css:818:.sp-page--profile .sp-profileLayout,  .sp-page--profile .sp-card,  .sp-page--profile .sp-section,  .sp-page--profile .sp-bannerError,  .sp-page--profile .sp-loadingLine {
+src/styles/pages/artist-pages.css:832:.sp-page--studio,  .sp-page--studio .sp-profileLayout,  .sp-page--studio .sp-profileMain,  .sp-page--studio .sp-profileSide,  .sp-page--studio .sp-card,  .sp-page--studio .sp-section,  .sp-page--studio .sp-bannerError,  .sp-page--studio .sp-loadingLine {
+src/styles/pages/artist-pages.css:847:.sp-page--studio .sp-profileLayout,  .sp-page--studio .sp-card,  .sp-page--studio .sp-section,  .sp-page--studio .sp-bannerError,  .sp-page--studio .sp-loadingLine {
+src/styles/pages/artist-pages.css:929:  .sp-page--profile .sp-profileLayout,  .sp-page--profile .sp-card,  .sp-page--profile .sp-section,  .sp-page--profile .sp-bannerError,  .sp-page--profile .sp-loadingLine {
+src/styles/pages/artist-pages.css:953:  :is(.sp-page--profile, .sp-page--studio) > :is(.sp-heroCard, .sp-heroCard--profile, .sp-bannerError, .sp-loadingLine) {
+src/styles/pages/artist-pages.css:1036:    .sp-loadingLine,
+src/styles/pages/artist-pages.css:1084:    .sp-loadingLine,
+src/components/player/PlayerBar.jsx:54:  const [message, setMessage] = useState("");
+src/styles/themes/presets.css:1885:html[data-theme-preset="light"] :is(.admin-subtitle, .admin-table__subline, .admin-trackModal__uploadMeta, .sp-loadingLine, .sp-bannerError, .track-playlist__message, .playerbar__menuTitle, .playerbar__menuMsg, .mobileNowPlaying__sheetMsg, .mobileNowPlaying__artistBody small, .mobileNowPlaying__artistKicker) {
+src/components/layout/RightPanel.jsx:68:  const [message, setMessage] = useState("");
+src/pages/ArtistStudio.jsx:545:      {toast ? <div className="sp-loadingLine">✅ {toast}</div> : null}
+src/pages/Profile.jsx:133:      {busy ? <div className="sp-loadingLine">{t("profile.loadingData")}</div> : null}

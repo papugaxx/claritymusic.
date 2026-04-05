@@ -1,0 +1,2625 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+:root {
+  --theme-surface-plain: rgba(255, 255, 255, 0.04);
+  --theme-surface-soft: rgba(255, 255, 255, 0.06);
+  --theme-surface-strong: rgba(255, 255, 255, 0.1);
+  --theme-border-soft: rgba(255, 255, 255, 0.12);
+  --theme-border-strong: rgba(255, 255, 255, 0.18);
+  --theme-text-main: rgba(255, 255, 255, 0.94);
+  --theme-text-soft: rgba(255, 255, 255, 0.8);
+  --theme-text-muted: rgba(255, 255, 255, 0.64);
+  --theme-shadow-soft: 0 16px 40px rgba(0, 0, 0, 0.28);
+  --theme-shadow-strong: 0 24px 60px rgba(0, 0, 0, 0.36);
+  --theme-hero-glow: radial-gradient(900px 320px at 0% 0%, rgba(168, 85, 247, 0.1), transparent 52%);
+  --theme-player-track: rgba(255, 255, 255, 0.18);
+  --theme-player-fill: rgba(239, 239, 255, 0.98);
+  --surface-glass-bg: linear-gradient(180deg, rgba(20,18,32,.84), rgba(12,12,18,.82));
+  --surface-card-bg: linear-gradient(180deg, rgba(20,18,32,.88), rgba(12,12,18,.84));
+  --surface-panel-bg: var(--surface-card-bg);
+  --control-bg: rgba(255,255,255,.05);
+  --control-bg-hover: rgba(255,255,255,.08);
+  --control-border: rgba(255,255,255,.10);
+  --control-border-hover: rgba(255,255,255,.15);
+  --field-bg: rgba(255,255,255,.04);
+  --field-bg-focus: rgba(255,255,255,.05);
+  --field-border: rgba(255,255,255,.10);
+  --modal-bg: linear-gradient(180deg, rgba(27, 18, 49, .96), rgba(10, 10, 18, .95));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] {
+  --card: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(246, 240, 255, 0.96) 56%, rgba(240, 233, 252, 0.98));
+  --panel: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 240, 255, 0.96) 54%, rgba(241, 233, 252, 0.98));
+  --shadow: 0 24px 64px rgba(108, 84, 150, 0.14);
+  --shadow-2: 0 30px 78px rgba(108, 84, 150, 0.16);
+  --shadow-3: 0 36px 90px rgba(108, 84, 150, 0.18);
+  --sb-thumb: rgba(124, 97, 176, 0.24);
+  --sb-thumb-hover: rgba(124, 97, 176, 0.38);
+  --accent: #8262c0;
+  --accent-2: #7250ad;
+  --border-accent: rgba(130, 98, 192, 0.18);
+  --border-accent-strong: rgba(130, 98, 192, 0.30);
+  --ring-accent: rgba(130, 98, 192, 0.20);
+  --theme-surface-plain: rgba(255, 255, 255, 0.76);
+  --theme-surface-soft: rgba(248, 242, 255, 0.90);
+  --theme-surface-strong: rgba(239, 231, 253, 0.94);
+  --light-surface-subtle: linear-gradient(180deg, rgba(252, 250, 255, 0.98), rgba(239, 231, 252, 0.97));
+  --light-surface-hover: linear-gradient(180deg, rgba(247, 241, 255, 0.99), rgba(236, 228, 252, 0.99));
+  --light-surface-active: linear-gradient(180deg, rgba(238, 228, 255, 0.99), rgba(229, 218, 251, 0.98));
+  --light-surface-hero: linear-gradient(180deg, rgba(239, 230, 255, 0.90), rgba(248, 242, 255, 0.98));
+  --light-button-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 238, 255, 0.98));
+  --light-button-bg-hover: linear-gradient(180deg, rgba(246, 239, 255, 0.99), rgba(235, 227, 252, 0.99));
+  --light-button-primary: linear-gradient(180deg, rgba(138, 108, 214, 0.98), rgba(117, 86, 201, 0.99));
+  --light-button-primary-hover: linear-gradient(180deg, rgba(149, 119, 226, 0.99), rgba(126, 94, 210, 0.99));
+  --surface-glass-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(246, 240, 255, 0.95), rgba(240, 232, 252, 0.97));
+  --surface-card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 238, 255, 0.96));
+  --surface-panel-bg: var(--surface-card-bg);
+  --control-bg: var(--light-button-bg);
+  --control-bg-hover: var(--light-button-bg-hover);
+  --control-border: rgba(118, 92, 164, 0.18);
+  --control-border-hover: rgba(118, 92, 164, 0.30);
+  --field-bg: rgba(255, 255, 255, 0.94);
+  --field-bg-focus: rgba(248, 242, 255, 0.98);
+  --field-border: rgba(118, 92, 164, 0.16);
+  --modal-bg: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(244,236,252,0.98));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] body {
+  color: var(--theme-text-main);
+  background: radial-gradient(1180px 660px at 10% 0%, rgba(219, 204, 255, 0.94), transparent 62%),
+    radial-gradient(980px 560px at 100% 100%, rgba(236, 226, 255, 0.82), transparent 60%),
+    linear-gradient(180deg, #fcf9ff 0%, #f4eeff 56%, #eee7fb 100%);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] ::selection {
+  background: rgba(127, 101, 164, 0.18);
+  color: #2b203d;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .app-shell,  html[data-theme-preset="light"] .admin-shell,  html[data-theme-preset="light"] .home,  html[data-theme-preset="light"] .playlist-page,  html[data-theme-preset="light"] .track-page,  html[data-theme-preset="light"] .settings-pageShell {
+  color: var(--theme-text-main);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .glass,  html[data-theme-preset="light"] .home__card,  html[data-theme-preset="light"] .app-sticky,  html[data-theme-preset="light"] .panel,  html[data-theme-preset="light"] .admin-card,  html[data-theme-preset="light"] .track-item,  html[data-theme-preset="light"] .settings-panel,  html[data-theme-preset="light"] .settings-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 238, 255, 0.96));
+  border: 1px solid var(--theme-border-soft);
+  box-shadow: var(--theme-shadow-soft);
+  color: var(--theme-text-main);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .topbar,  html[data-theme-preset="light"] .app-topstrip__inner,  html[data-theme-preset="light"] .admin-top,  html[data-theme-preset="light"] .admin-sidebar,  html[data-theme-preset="light"] .playerbar {
+  border-color: var(--theme-border-soft);
+  box-shadow: var(--theme-shadow-strong);
+  color: var(--theme-text-main);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .topbar,  html[data-theme-preset="light"] .app-topstrip__inner {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(246, 239, 255, 0.95), rgba(240, 231, 252, 0.95));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .admin-top,  html[data-theme-preset="light"] .admin-sidebar {
+  background: linear-gradient(180deg, rgba(255, 252, 255, 0.97), rgba(242, 234, 252, 0.95));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .app-sticky,  html[data-theme-preset="light"] .app-main,  html[data-theme-preset="light"] .app-sidebar,  html[data-theme-preset="light"] .app-right {
+  color: var(--theme-text-main);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .home__sectionHead::after {
+  background: linear-gradient(90deg, rgba(125, 99, 164, 0.32), rgba(125, 99, 164, 0.08), transparent);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__title,  html[data-theme-preset="light"] .page-title,  html[data-theme-preset="light"] .playlist-page__title,  html[data-theme-preset="light"] .admin-title,  html[data-theme-preset="light"] .rp__headerTitle,  html[data-theme-preset="light"] .settings-head h1,  html[data-theme-preset="light"] .settings-panel__head h2 {
+  color: var(--theme-text-main);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .tile,  html[data-theme-preset="light"] .libRow,  html[data-theme-preset="light"] .playlistMenu,  html[data-theme-preset="light"] .ui-dd,  html[data-theme-preset="light"] .admin-nav-item,  html[data-theme-preset="light"] .admin-pill,  html[data-theme-preset="light"] .admin-btn,  html[data-theme-preset="light"] .admin-iconbtn,  html[data-theme-preset="light"] .chip {
+  border-color: var(--theme-border-soft);
+  color: var(--theme-text-main);
+  box-shadow: none;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .tile:hover,  html[data-theme-preset="light"] .libRow:hover,  html[data-theme-preset="light"] .admin-nav-item:hover,  html[data-theme-preset="light"] .admin-btn:hover,  html[data-theme-preset="light"] .admin-pill:hover,  html[data-theme-preset="light"] .playlistMenu__item:hover,  html[data-theme-preset="light"] .ui-dd__item:hover,  html[data-theme-preset="light"] .ui-dd__row:hover{
+  border-color: var(--theme-border-strong);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .chip.is-active,  html[data-theme-preset="light"] .admin-nav-item.is-active,  html[data-theme-preset="light"] .settings-chipBtn.is-active,  html[data-theme-preset="light"] .settings-themeCard.is-active {
+  border-color: rgba(125, 99, 164, 0.28);
+  color: #2f2342;
+  box-shadow: 0 10px 24px rgba(125, 99, 164, 0.12);
+}
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+ html[data-theme-preset="light"] .chip__icon,  html[data-theme-preset="light"] .tile__media,  html[data-theme-preset="light"] .artist__avatar,  html[data-theme-preset="light"] .track-cover,  html[data-theme-preset="light"] .track-hero__cover,  html[data-theme-preset="light"] .profile-avatar,  html[data-theme-preset="light"] .sp-profileEditAvatarCard,  html[data-theme-preset="light"] .sp-profileEditAvatarPreview {
+  background: linear-gradient(180deg, rgba(255, 251, 255, 0.97), rgba(237, 228, 251, 0.93));
+  border-color: var(--theme-border-soft);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72), 0 10px 24px rgba(95, 76, 124, 0.08);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .topbar__search,  html[data-theme-preset="light"] .searchbox input,  html[data-theme-preset="light"] .input,  html[data-theme-preset="light"] .admin-input,  html[data-theme-preset="light"] .sp-select,  html[data-theme-preset="light"] .sp-profileField__control,  html[data-theme-preset="light"] select {
+  border-color: var(--theme-border-soft);
+  color: var(--theme-text-main);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78);
+}
+
+/* Ці стилі роблять текст підказки читабельним усередині поля */
+html[data-theme-preset="light"] .topbar__search::placeholder,  html[data-theme-preset="light"] .searchbox input::placeholder,  html[data-theme-preset="light"] .input::placeholder,  html[data-theme-preset="light"] .admin-input::placeholder,  html[data-theme-preset="light"] .sp-profileField__control::placeholder {
+  color: rgba(87, 71, 111, 0.46);
+}
+
+/* Стан фокуса підкреслює активний елемент і покращує навігацію з клавіатури */
+html[data-theme-preset="light"] .topbar__search:focus,  html[data-theme-preset="light"] .searchbox input:focus,  html[data-theme-preset="light"] .input:focus,  html[data-theme-preset="light"] .admin-input:focus,  html[data-theme-preset="light"] .sp-profileField__control:focus,  html[data-theme-preset="light"] select:focus {
+  border-color: rgba(125, 99, 164, 0.3);
+  box-shadow: 0 0 0 4px rgba(125, 99, 164, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.84);
+}
+
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .profile-btn:hover,  html[data-theme-preset="light"] .icon-btn:hover,  html[data-theme-preset="light"] .libMoreBtn:hover,  html[data-theme-preset="light"] .sp-profileEditUploadBtn:hover {
+  background: linear-gradient(180deg, rgba(239, 231, 252, 0.94), rgba(236, 227, 249, 0.98));
+  border-color: var(--theme-border-strong);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .profile-avatar,  html[data-theme-preset="light"] .profile-avatar__img {
+  color: #523c70;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .profile-name,  html[data-theme-preset="light"] .profile-caret,  html[data-theme-preset="light"] .libraryHead__title,  html[data-theme-preset="light"] .tile__title,  html[data-theme-preset="light"] .artist__name,  html[data-theme-preset="light"] .track-title,  html[data-theme-preset="light"] .rp__track,  html[data-theme-preset="light"] .rp__artistName,  html[data-theme-preset="light"] .playlistMenu__title,  html[data-theme-preset="light"] .ui-dd__name,  html[data-theme-preset="light"] .settings-themeCard__title,  html[data-theme-preset="light"] .settings-kicker {
+  color: var(--theme-text-main);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .tile__sub,  html[data-theme-preset="light"] .page-sub,  html[data-theme-preset="light"] .playlist-page__count,  html[data-theme-preset="light"] .playlist-page__hint,  html[data-theme-preset="light"] .track-meta,  html[data-theme-preset="light"] .track-right,  html[data-theme-preset="light"] .rp__sub,  html[data-theme-preset="light"] .rp__artistHint,  html[data-theme-preset="light"] .rp__creditLabel,  html[data-theme-preset="light"] .rp__muted,  html[data-theme-preset="light"] .ui-dd__sub,  html[data-theme-preset="light"] .ui-dd__hint,  html[data-theme-preset="light"] .playlistMenu__subtitle,  html[data-theme-preset="light"] .settings-subtitle,  html[data-theme-preset="light"] .settings-panel__head p,  html[data-theme-preset="light"] .settings-themeCard__note,  html[data-theme-preset="light"] .sp-profileEditAvatarHint {
+  color: var(--theme-text-muted);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .playerbar__control,  html[data-theme-preset="light"] .playerbar__action {
+  background: linear-gradient(180deg, rgba(244, 236, 255, 0.94), rgba(235, 226, 252, 0.98));
+  border-color: rgba(122, 93, 188, 0.20);
+  color: #5e42bb;
+  box-shadow: 0 8px 20px rgba(107, 78, 176, 0.10);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .playerbar__control:hover,  html[data-theme-preset="light"] .playerbar__action:hover {
+  background: linear-gradient(180deg, rgba(236, 226, 255, 0.96), rgba(227, 216, 252, 0.99));
+  border-color: rgba(111, 79, 198, 0.28);
+  color: #5134b1;
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] :is(.playlist-page, .liked-page) :is(.track-item__play, .track-item__like, .track-item__remove) {
+  background: linear-gradient(180deg, rgba(244, 236, 255, 0.94), rgba(235, 226, 252, 0.98));
+  border-color: rgba(122, 93, 188, 0.20);
+  color: #5e42bb;
+  box-shadow: 0 8px 20px rgba(107, 78, 176, 0.10);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] :is(.playlist-page, .liked-page) :is(.track-item__play, .track-item__like, .track-item__remove):hover:not(:disabled) {
+  background: linear-gradient(180deg, rgba(236, 226, 255, 0.96), rgba(227, 216, 252, 0.99));
+  border-color: rgba(111, 79, 198, 0.28);
+  color: #5134b1;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] :is(.playlist-page, .liked-page) .track-item__glyph {
+  color: inherit;
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .playerbar__time,  html[data-theme-preset="light"] .playerbar__artist,  html[data-theme-preset="light"] .playerbar__volumeIcon {
+  color: var(--theme-text-muted);
+  opacity: 1;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .playerbar__range::-webkit-slider-thumb,  html[data-theme-preset="light"] .playerbar__range::-moz-range-thumb {
+  background: #ffffff;
+  border-color: rgba(117, 96, 149, 0.42);
+  box-shadow: 0 8px 18px rgba(91, 72, 118, 0.16);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-dd,  html[data-theme-preset="light"] .playlistMenu {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 236, 255, 0.98));
+  border-color: var(--theme-border-soft);
+  box-shadow: var(--theme-shadow-soft);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-dd__sep,  html[data-theme-preset="light"] .playlistMenu__sep,  html[data-theme-preset="light"] .modalHeader,  html[data-theme-preset="light"] .modalFooter,  html[data-theme-preset="light"] .admin-card__head,  html[data-theme-preset="light"] .admin-table th,  html[data-theme-preset="light"] .admin-table td {
+  border-color: rgba(103, 82, 134, 0.1);
+  background-image: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .modal {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 237, 255, 0.98));
+  border-color: var(--theme-border-soft);
+  box-shadow: var(--theme-shadow-strong);
+  color: var(--theme-text-main);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .modalOverlay {
+  background: rgba(101, 74, 147, 0.14);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .admin-table thead th {
+  background: rgba(246, 240, 255, 0.98);
+  color: var(--theme-text-muted);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .admin-table tbody tr:hover td {
+  background: rgba(236, 227, 255, 0.66);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .admin-table td,  html[data-theme-preset="light"] .admin-subtitle,  html[data-theme-preset="light"] .admin-nav__label,  html[data-theme-preset="light"] .admin-brand__sub,  html[data-theme-preset="light"] .admin-state-text,  html[data-theme-preset="light"] .liked-page__empty {
+  color: var(--theme-text-soft);
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-pageShell {
+  padding: 6px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-card {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  border-radius: 28px;
+  padding: 26px;
+  display: grid;
+  gap: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-head {
+  display: grid;
+  gap: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-kicker {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.66;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-head h1 {
+  margin: 0;
+  font-size: clamp(42px, 4.2vw, 68px);
+  line-height: 0.94;
+  font-weight: 900;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-subtitle {
+  margin: 0;
+  max-width: 760px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-grid {
+  display: grid;
+  gap: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-grid--top {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-panel {
+  border-radius: 24px;
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-panel--full {
+  grid-column: 1 / -1;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-panel__head {
+  display: grid;
+  gap: 6px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-panel__head h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-panel__head p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-actionsRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-actionsRow--wrap {
+  flex-wrap: wrap;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-chipBtn {
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-themeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-themeCard {
+  width: 100%;
+  display: grid;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 24px;
+  text-align: left;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-themeCard__preview {
+  min-height: 250px;
+  border-radius: 24px;
+  border: 1px solid transparent;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-themeCard__preview::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-themeCard__previewShell {
+  width: 42px;
+  height: 160px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-themeCard__previewThumb {
+  width: 11px;
+  height: 38px;
+  border-radius: 999px;
+  position: absolute;
+  bottom: 16px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-themeCard__preview--violet .settings-themeCard__previewShell {
+  background: linear-gradient(180deg, rgba(30, 24, 57, 0.98), rgba(26, 20, 49, 0.98));
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-themeCard__preview--violet .settings-themeCard__previewThumb {
+  background: linear-gradient(180deg, rgba(86, 65, 138, 1), rgba(66, 47, 121, 1));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-themeCard__preview--light .settings-themeCard__previewShell {
+  background: linear-gradient(180deg, rgba(245, 238, 248, 0.98), rgba(238, 230, 243, 0.98));
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-themeCard__preview--light .settings-themeCard__previewThumb {
+  background: linear-gradient(180deg, rgba(219, 208, 237, 1), rgba(212, 201, 229, 1));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-themeCard__meta {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-themeCard__title {
+  font-weight: 900;
+  font-size: 15px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-themeCard__note {
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .settings-grid--top,  .settings-themeGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 640px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-card {
+    padding: 18px;
+    border-radius: 22px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__preview {
+    min-height: 210px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-actionsRow {
+    flex-wrap: wrap;
+  }
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .auth-page-container,  html[data-theme-preset="light"] .landing {
+  background: radial-gradient(980px 520px at 0% 0%, rgba(227, 216, 246, 0.96), transparent 60%),
+    radial-gradient(980px 560px at 100% 100%, rgba(238, 229, 255, 0.90), transparent 60%),
+    linear-gradient(180deg, #fdfaff 0%, #f5efff 56%, #efe7fb 100%);
+  color: var(--theme-text-main);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .auth-card,  html[data-theme-preset="light"] .landing-hero__art,  html[data-theme-preset="light"] .landing-logoart__panel,  html[data-theme-preset="light"] .landing-top {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 238, 255, 0.96));
+  border-color: var(--theme-border-soft);
+  box-shadow: var(--theme-shadow-soft);
+  color: var(--theme-text-main);
+}
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+ html[data-theme-preset="light"] .landing-btn,  html[data-theme-preset="light"] .auth-secondary-btn,  html[data-theme-preset="light"] .auth-social-btn {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.90), rgba(244, 236, 252, 0.96));
+  border-color: var(--theme-border-soft);
+  color: var(--theme-text-main);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .landing-btn--primary,  html[data-theme-preset="light"] .auth-primary-btn {
+  background: linear-gradient(180deg, rgba(130, 98, 192, 0.96), rgba(113, 81, 174, 0.98));
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(103, 82, 134, 0.18);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .auth-input,  html[data-theme-preset="light"] .landing-nav a:hover,  html[data-theme-preset="light"] .landing-btn--secondary,  html[data-theme-preset="light"] .landing-stat{
+  background: rgba(255, 255, 255, 0.86);
+  border-color: var(--theme-border-soft);
+  color: var(--theme-text-main);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .auth-title,  html[data-theme-preset="light"] .auth-back,  html[data-theme-preset="light"] .auth-label,  html[data-theme-preset="light"] .landing-title,  html[data-theme-preset="light"] .landing-h1,  html[data-theme-preset="light"] .landing-nav a{
+  color: var(--theme-text-main);
+  text-shadow: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .auth-subtitle,  html[data-theme-preset="light"] .landing-sub,  html[data-theme-preset="light"] .auth-divider {
+  color: var(--theme-text-muted);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] {
+  --profile-hero-overlay: linear-gradient(180deg, rgba(255, 252, 255, 0.88), rgba(241, 232, 255, 0.94));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroMainCard,  html[data-theme-preset="light"] .home__heroMiniCard,  html[data-theme-preset="light"] .home__heroMainVisual,  html[data-theme-preset="light"] .home__heroMainArtFrame,  html[data-theme-preset="light"] .sp-heroCard,  html[data-theme-preset="light"] .sp-heroCard--profile,  html[data-theme-preset="light"] .sp-page--profile .sp-card,  html[data-theme-preset="light"] .sp-page--profile .sp-section,  html[data-theme-preset="light"] .sp-page--studio .sp-card,  html[data-theme-preset="light"] .sp-page--studio .sp-section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(241, 233, 255, 0.98));
+  border-color: var(--theme-border-soft);
+  box-shadow: var(--theme-shadow-soft);
+  color: var(--theme-text-main);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroMainVisual,  html[data-theme-preset="light"] .home__heroMainArtFrame,  html[data-theme-preset="light"] .home__heroMainArt,  html[data-theme-preset="light"] .home__heroMiniThumbWrap,  html[data-theme-preset="light"] .home__heroMiniAvatarWrap,  html[data-theme-preset="light"] .home__heroMiniThumb,  html[data-theme-preset="light"] .home__heroMiniAvatar,  html[data-theme-preset="light"] .sp-heroCard__avatarWrap--profile,  html[data-theme-preset="light"] .sp-heroCard__avatar--profile,  html[data-theme-preset="light"] .sp-heroCard__avatar--profile .artistAvatar{
+  background: linear-gradient(180deg, rgba(246, 240, 255, 0.98), rgba(229, 219, 255, 0.94));
+  border-color: rgba(110, 91, 141, 0.14);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroBadge,  html[data-theme-preset="light"] .home__heroMetaPill{
+  background: linear-gradient(180deg, rgba(236, 228, 255, 0.96), rgba(241, 232, 255, 0.98));
+  border-color: rgba(121, 97, 156, 0.18);
+  color: var(--theme-text-soft);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroMainTitle,  html[data-theme-preset="light"] .home__heroMainMeta,  html[data-theme-preset="light"] .home__heroMainText,  html[data-theme-preset="light"] .home__heroFilterLabel,  html[data-theme-preset="light"] .home__genresLabel,  html[data-theme-preset="light"] .home__heroMiniLabel,  html[data-theme-preset="light"] .home__heroMiniTitle,  html[data-theme-preset="light"] .home__heroMiniSub,  html[data-theme-preset="light"] .playerbar__track,  html[data-theme-preset="light"] .playerbar__artist,  html[data-theme-preset="light"] .sp-h,  html[data-theme-preset="light"] .sp-section__sub,  html[data-theme-preset="light"] .sp-empty,  html[data-theme-preset="light"] .sp-metaCard__label,  html[data-theme-preset="light"] .sp-metaCard__value,  html[data-theme-preset="light"] .sp-heroCard__title--profile{
+  text-shadow: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroMainTitle,  html[data-theme-preset="light"] .home__heroMiniTitle,  html[data-theme-preset="light"] .playerbar__track,  html[data-theme-preset="light"] .sp-h,  html[data-theme-preset="light"] .sp-metaCard__value,  html[data-theme-preset="light"] .sp-heroCard__title--profile {
+  color: var(--theme-text-main);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroMainMeta,  html[data-theme-preset="light"] .home__heroMainText,  html[data-theme-preset="light"] .home__heroFilterLabel,  html[data-theme-preset="light"] .home__genresLabel,  html[data-theme-preset="light"] .home__heroMiniLabel,  html[data-theme-preset="light"] .home__heroMiniSub,  html[data-theme-preset="light"] .playerbar__artist,  html[data-theme-preset="light"] .sp-section__sub,  html[data-theme-preset="light"] .sp-empty,  html[data-theme-preset="light"] .sp-metaCard__label{
+  color: var(--theme-text-muted);
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .playerbar__time,  html[data-theme-preset="light"] .playerbar__volumeIcon {
+  color: var(--theme-text-soft);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .sp-metaCard {
+  min-height: 78px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-page--profile .sp-sideCard,  html[data-theme-preset="light"] .sp-page--studio .sp-sideCard {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(241, 233, 255, 0.98));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-head-actions .btn,  html[data-theme-preset="light"] .sp-head-actions button,  html[data-theme-preset="light"] .sp-heroCard__actions--profile .btn,  html[data-theme-preset="light"] .sp-heroCard__actions--profile button {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(233, 221, 255, 0.98));
+  border-color: var(--theme-border-soft);
+  color: var(--theme-text-main);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .sp-head-actions .btn:hover,  html[data-theme-preset="light"] .sp-head-actions button:hover,  html[data-theme-preset="light"] .sp-heroCard__actions--profile .btn:hover,  html[data-theme-preset="light"] .sp-heroCard__actions--profile button:hover {
+  background: linear-gradient(180deg, rgba(238, 231, 247, 0.96), rgba(229, 214, 255, 0.98));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .landing-top {
+  box-shadow: none;
+  color: #fff;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .landing-hero__art {
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .landing-logoart__panel,  html[data-theme-preset="light"] .landing-stat,  html[data-theme-preset="light"] .landing-section {
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .landing-title,  html[data-theme-preset="light"] .landing-h1,  html[data-theme-preset="light"] .landing-nav a,  html[data-theme-preset="light"] .landing-section h2,  html[data-theme-preset="light"] .landing-stat__value,  html[data-theme-preset="light"] .landing-footer__primary{
+  color: #fff;
+  text-shadow: 0 18px 60px rgba(0, 0, 0, 0.32);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroMainCard,  html[data-theme-preset="light"] .home__heroMiniCard,  html[data-theme-preset="light"] .home__heroMainVisual,  html[data-theme-preset="light"] .home__heroMainArtFrame {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(246, 239, 232, 0.98));
+  border-color: rgba(110, 91, 141, 0.12);
+  box-shadow: 0 16px 34px rgba(91, 72, 118, 0.08);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroMainArt,  html[data-theme-preset="light"] .home__heroMiniThumb,  html[data-theme-preset="light"] .home__heroMiniAvatar {
+  box-shadow: 0 18px 36px rgba(91, 72, 118, 0.12);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroFilterLabel,  html[data-theme-preset="light"] .home__genresLabel,  html[data-theme-preset="light"] .home__heroMiniLabel {
+  color: rgba(82, 66, 107, 0.78);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroMainMeta,  html[data-theme-preset="light"] .home__heroMainText,  html[data-theme-preset="light"] .home__heroMiniSub,  html[data-theme-preset="light"] .libRow__sub,  html[data-theme-preset="light"] .tile__sub,  html[data-theme-preset="light"] .ui-dd__sub,  html[data-theme-preset="light"] .page-sub {
+  color: rgba(76, 61, 102, 0.72);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .libraryHead__title,  html[data-theme-preset="light"] .home__title,  html[data-theme-preset="light"] .home__heroMainTitle,  html[data-theme-preset="light"] .home__heroMiniTitle,  html[data-theme-preset="light"] .libRow__title,  html[data-theme-preset="light"] .tile__title,  html[data-theme-preset="light"] .profile-name {
+  color: #2c2040;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .rp {
+  scrollbar-color: rgba(132, 108, 175, 0.34) rgba(255, 255, 255, 0.24);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .rp::-webkit-scrollbar-thumb {
+  background: rgba(132, 108, 175, 0.32);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .rp__creditLabel {
+  color: rgba(95, 77, 122, 0.72);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .rp__creditValue {
+  color: #34264a;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .tile__media img,  html[data-theme-preset="light"] .track-cover img,  html[data-theme-preset="light"] .track-hero__cover img,  html[data-theme-preset="light"] .profile-avatar__img {
+  background: transparent;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-pageShell {
+  padding: 4px 12px 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-card {
+  border-color: rgba(108, 88, 140, 0.13);
+  box-shadow: 0 22px 46px rgba(92, 74, 119, 0.10);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-head {
+  gap: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-head h1 {
+  letter-spacing: -0.04em;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(243, 237, 255, 0.98));
+  border-color: rgba(108, 88, 140, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.82), 0 12px 28px rgba(92, 74, 119, 0.06);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-themeCard {
+  padding: 16px;
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(242, 236, 255, 0.98));
+  border: 1px solid rgba(108, 88, 140, 0.12);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .settings-themeCard:hover {
+  transform: none;
+  border-color: rgba(120, 99, 154, 0.22);
+  box-shadow: 0 14px 28px rgba(92, 74, 119, 0.08);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-themeCard.is-active {
+  box-shadow: 0 16px 34px rgba(120, 99, 154, 0.12);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-themeCard__preview {
+  min-height: 232px;
+  border-radius: 22px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-themeCard__previewShell {
+  box-shadow: 0 14px 24px rgba(72, 54, 105, 0.08);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .topbar .clarity-logo,  html[data-theme-preset="light"] .landing .clarity-logo {
+  filter: drop-shadow(0 10px 18px rgba(54, 39, 83, 0.16));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .landing {
+  color: #fff;
+  background: radial-gradient(900px 700px at 12% 18%, rgba(124, 44, 255, 0.85) 0%, rgba(124, 44, 255, 0.15) 55%, transparent 72%),
+    radial-gradient(900px 700px at 78% 28%, rgba(160, 90, 255, 0.45) 0%, rgba(160, 90, 255, 0.12) 52%, transparent 70%),
+    radial-gradient(1000px 800px at 50% 105%, rgba(40, 120, 255, 0.18) 0%, rgba(40, 120, 255, 0.06) 45%, transparent 65%),
+    linear-gradient(115deg, #6f2bff 0%, #2a0b4a 34%, #0c0d14 72%, #05060b 100%);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .landing-top {
+  background: rgba(5, 6, 11, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .landing-hero__art {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .landing-logoart__panel,  html[data-theme-preset="light"] .landing-stat,  html[data-theme-preset="light"] .landing-section {
+  background: rgba(10, 13, 20, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .landing-btn,  html[data-theme-preset="light"] .landing-btn--secondary{
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .landing-btn--primary {
+  background: linear-gradient(180deg, #23a6ff 0%, #1d8cff 100%);
+  color: #06131f;
+  border-color: transparent;
+  box-shadow: 0 14px 28px rgba(35, 166, 255, 0.20);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .landing-title,  html[data-theme-preset="light"] .landing-h1,  html[data-theme-preset="light"] .landing-nav a,  html[data-theme-preset="light"] .landing-section h2,  html[data-theme-preset="light"] .landing-stat__value,  html[data-theme-preset="light"] .landing-footer__primary{
+  color: #fff;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .landing-sub,  html[data-theme-preset="light"] .landing-section p,  html[data-theme-preset="light"] .landing-stat__label{
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .landing-nav a:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .landing-footer {
+  background: rgba(5, 6, 11, 0.38);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .app-topstrip__inner,  html[data-theme-preset="violet"] .app-sticky,  html[data-theme-preset="violet"] .playerbar,  html[data-theme-preset="violet"] .home__hero,  html[data-theme-preset="violet"] .settings-card {
+  border-color: rgba(133, 107, 196, 0.18);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 0 0 1px rgba(107, 78, 171, 0.10);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .app-topstrip__inner,  html[data-theme-preset="light"] .app-sticky,  html[data-theme-preset="light"] .playerbar,  html[data-theme-preset="light"] .home__hero,  html[data-theme-preset="light"] .settings-card {
+  border: 1px solid rgba(103, 82, 134, 0.12);
+  box-shadow: 0 18px 42px rgba(92, 74, 119, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.86),
+    0 0 0 1px rgba(103, 82, 134, 0.04);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .topbar,  html[data-theme-preset="light"] .topbar__search,  html[data-theme-preset="light"] .profile-btn,  html[data-theme-preset="light"] .libraryHead__title,  html[data-theme-preset="light"] .home__title,  html[data-theme-preset="light"] .home__heroMainTitle,  html[data-theme-preset="light"] .home__heroMiniTitle,  html[data-theme-preset="light"] .tile__title,  html[data-theme-preset="light"] .artist__name,  html[data-theme-preset="light"] .rp__headerTitle,  html[data-theme-preset="light"] .rp__track,  html[data-theme-preset="light"] .rp__artistName,  html[data-theme-preset="light"] .rp__creditValue,  html[data-theme-preset="light"] .playerbar__track,  html[data-theme-preset="light"] .settings-head h1,  html[data-theme-preset="light"] .settings-panel__head h2 {
+  color: #21162f;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroMainMeta,  html[data-theme-preset="light"] .home__heroMainText,  html[data-theme-preset="light"] .home__heroMiniSub,  html[data-theme-preset="light"] .tile__sub,  html[data-theme-preset="light"] .rp__sub,  html[data-theme-preset="light"] .rp__artistHint,  html[data-theme-preset="light"] .rp__creditLabel,  html[data-theme-preset="light"] .playerbar__artist,  html[data-theme-preset="light"] .playerbar__time,  html[data-theme-preset="light"] .settings-subtitle,  html[data-theme-preset="light"] .settings-panel__head p,  html[data-theme-preset="light"] .settings-themeCard__note,  html[data-theme-preset="light"] .page-sub {
+  color: rgba(82, 66, 108, 0.84);
+  opacity: 1;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .tile__media,  html[data-theme-preset="light"] .track-cover,  html[data-theme-preset="light"] .track-hero__cover,  html[data-theme-preset="light"] .profile-avatar {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .tile__media img,  html[data-theme-preset="light"] .track-cover img,  html[data-theme-preset="light"] .track-hero__cover img {
+  border-radius: inherit;
+  box-shadow: 0 14px 30px rgba(92, 74, 119, 0.10);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .artist__avatar,  html[data-theme-preset="light"] .profile-avatar {
+  box-shadow: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .artist__avatar img,  html[data-theme-preset="light"] .profile-avatar__img {
+  box-shadow: 0 12px 24px rgba(92, 74, 119, 0.12);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__hero,  html[data-theme-preset="light"] .playerbar {
+  background: radial-gradient(860px 300px at 0% 0%, rgba(229, 217, 246, 0.70), transparent 56%),
+    linear-gradient(180deg, rgba(251, 246, 255, 0.98), rgba(239, 232, 255, 0.98));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-card {
+  background: radial-gradient(900px 260px at 50% 100%, rgba(219, 203, 255, 0.34), transparent 58%),
+    linear-gradient(180deg, rgba(255,255,255,.99), rgba(242,236,255,.99));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-panel {
+  border-radius: 26px;
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-select,  html[data-theme-preset="light"] .ui-selectTrigger {
+  background: linear-gradient(180deg, rgba(255,255,255,.97), rgba(242,236,255,.98));
+  border: 1px solid rgba(103, 82, 134, 0.14);
+  color: #281d3b;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.82), 0 8px 18px rgba(92, 74, 119, 0.06);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .ui-select:hover,  html[data-theme-preset="light"] .ui-selectTrigger:hover {
+  background: linear-gradient(180deg, rgba(249,245,255,.98), rgba(241,234,255,.99));
+  border-color: rgba(120, 99, 154, 0.22);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-selectMenu,  html[data-theme-preset="light"] .ui-dd {
+  background: linear-gradient(180deg, rgba(255,255,255,.99), rgba(242,236,255,.99));
+  border: 1px solid rgba(103, 82, 134, 0.14);
+  box-shadow: 0 16px 34px rgba(92, 74, 119, 0.10);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-selectMenu__item,  html[data-theme-preset="light"] .ui-dd__item,  html[data-theme-preset="light"] .ui-dd__row{
+  color: #2a1f3d;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .ui-selectMenu__item:hover,  html[data-theme-preset="light"] .ui-dd__item:hover,  html[data-theme-preset="light"] .ui-dd__row:hover{
+  background: rgba(238, 229, 248, 0.62);
+  border-color: rgba(120, 99, 154, 0.16);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-selectMenu__item.is-active,  html[data-theme-preset="light"] .ui-dd__item.is-active {
+  color: #37264e;
+  background: linear-gradient(180deg, rgba(232, 221, 255, 0.98), rgba(239, 231, 255, 0.98));
+  border-color: rgba(120, 99, 154, 0.20);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .admin-table td,  html[data-theme-preset="light"] .admin-table th,  html[data-theme-preset="light"] .admin-subtitle,  html[data-theme-preset="light"] .admin-pageState,  html[data-theme-preset="light"] .admin-toolbar__toggle {
+  color: #3a2c50;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .profile-menu .ui-dd,  html[data-theme-preset="light"] .ui-selectMenu,  html[data-theme-preset="light"] .playlistMenu {
+  background: linear-gradient(180deg, rgba(255,255,255,.995), rgba(247,241,235,.995));
+  border: 1px solid rgba(116, 95, 148, 0.18);
+  box-shadow: 0 22px 46px rgba(92, 74, 119, 0.14),
+    inset 0 1px 0 rgba(255,255,255,.90);
+  color: #241933;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .profile-menu .ui-dd__item,  html[data-theme-preset="light"] .ui-selectMenu__item,  html[data-theme-preset="light"] .profile-dd-item,  html[data-theme-preset="light"] .playlistMenu__item,  html[data-theme-preset="light"] .ui-dd__row {
+  background: linear-gradient(180deg, rgba(255,255,255,.76), rgba(247,241,235,.92));
+  border: 1px solid rgba(116, 95, 148, 0.10);
+  color: #291d3a;
+  box-shadow: none;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .profile-menu .ui-dd__item:hover,  html[data-theme-preset="light"] .ui-selectMenu__item:hover,  html[data-theme-preset="light"] .profile-dd-item:hover,  html[data-theme-preset="light"] .playlistMenu__item:hover,  html[data-theme-preset="light"] .ui-dd__row:hover {
+  background: linear-gradient(180deg, rgba(238, 228, 249, 0.92), rgba(255,255,255,.98));
+  border-color: rgba(123, 101, 158, 0.22);
+  color: #20142f;
+  transform: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .profile-menu .ui-dd__item.is-active,  html[data-theme-preset="light"] .ui-selectMenu__item.is-active,  html[data-theme-preset="light"] .profile-dd-item.is-active {
+  background: linear-gradient(180deg, rgba(228, 216, 246, 0.98), rgba(247, 240, 235, 0.98));
+  border-color: rgba(123, 101, 158, 0.24);
+  color: #241933;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .profile-menu .ui-dd__item.is-danger,  html[data-theme-preset="light"] .profile-dd-item.danger {
+  background: linear-gradient(180deg, rgba(255,245,247,.95), rgba(255,238,241,.98));
+  border-color: rgba(214, 109, 132, 0.18);
+  color: #a13d55;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .profile-menu .ui-dd__item.is-danger:hover,  html[data-theme-preset="light"] .profile-dd-item.danger:hover {
+  background: linear-gradient(180deg, rgba(255,236,241,.98), rgba(255,245,247,.98));
+  border-color: rgba(214, 109, 132, 0.26);
+  color: #922f49;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .profile-menu .ui-dd__sep{
+  background: linear-gradient(90deg, rgba(123, 101, 158, 0), rgba(123, 101, 158, 0.20), rgba(123, 101, 158, 0));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .settings-kicker,  html[data-theme-preset="light"] .settings-subtitle,  html[data-theme-preset="light"] .settings-panel__head p,  html[data-theme-preset="light"] .home__genresLabel,  html[data-theme-preset="light"] .home__heroFilterLabel,  html[data-theme-preset="light"] .page-sub {
+  color: #5a486f;
+  opacity: 1;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__genresLabel,  html[data-theme-preset="light"] .home__heroFilterLabel {
+  font-weight: 800;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .chip,  html[data-theme-preset="light"] .settings-chipBtn,  html[data-theme-preset="light"] .settings-themeCard__note {
+  color: #332246;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .clarity-logo,  html[data-theme-preset="light"] .clarity-logo img,  html[data-theme-preset="violet"] .clarity-logo,  html[data-theme-preset="violet"] .clarity-logo img {
+  filter: none;
+  opacity: 1;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .landing .clarity-logo img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroFilterLabel,  html[data-theme-preset="light"] .home__genresLabel,  html[data-theme-preset="light"] .settings-kicker,  html[data-theme-preset="light"] .settings-subtitle,  html[data-theme-preset="light"] .settings-panel__head p {
+  color: rgba(58, 42, 85, 0.84);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-dd__item,  html[data-theme-preset="light"] .profile-dd-item,  html[data-theme-preset="light"] .ui-selectMenu__item {
+  background: transparent;
+  color: #2f2342;
+  border: 1px solid transparent;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-selectMenu__item.is-active,  html[data-theme-preset="light"] .ui-dd__item.is-active,  html[data-theme-preset="light"] .profile-dd-item.is-active {
+  background: linear-gradient(180deg, rgba(227, 214, 246, 0.98), rgba(236, 227, 220, 0.96));
+  border-color: rgba(145, 116, 184, 0.34);
+  color: #2d2140;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.56);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-dd__title,  html[data-theme-preset="light"] .ui-dd__name,  html[data-theme-preset="light"] .ui-selectMenu__item,  html[data-theme-preset="light"] .profile-dd-item,  html[data-theme-preset="light"] .ui-dd__hint,  html[data-theme-preset="light"] .ui-dd__sub {
+  color: #41325a;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-select.ui-selectTrigger,  html[data-theme-preset="light"] select,  html[data-theme-preset="light"] .sp-select {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 241, 236, 0.98));
+  color: #312445;
+  border-color: rgba(169, 148, 200, 0.38);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72), 0 10px 24px rgba(91, 72, 118, 0.06);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .sp-select.ui-selectTrigger:hover,  html[data-theme-preset="light"] select:hover,  html[data-theme-preset="light"] .sp-select:hover {
+  border-color: rgba(145, 117, 183, 0.42);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.clarity-logo {
+  user-select: none;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] .clarity-logo {
+  filter: drop-shadow(0 10px 18px rgba(95, 70, 146, 0.22));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .clarity-logo {
+  filter: drop-shadow(0 6px 12px rgba(145, 117, 183, 0.10));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .topbar .clarity-logo,  html[data-theme-preset="light"] .landing .clarity-logo {
+  --logo-start: #6b4f95;
+  --logo-mid: #7c60a8;
+  --logo-end: #5b437f;
+  --logo-dot: #6a4f94;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroFilterLabel,  html[data-theme-preset="light"] .home__genresLabel,  html[data-theme-preset="light"] .settings-kicker,  html[data-theme-preset="light"] .settings-subtitle,  html[data-theme-preset="light"] .settings-panel__head p,  html[data-theme-preset="light"] .settings-panel__head small,  html[data-theme-preset="light"] .settings-card p,  html[data-theme-preset="light"] .settings-card small {
+  color: #5a476f;
+  opacity: 1;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroFilterLabel,  html[data-theme-preset="light"] .home__genresLabel {
+  font-weight: 900;
+  color: #635074;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-selectMenu,  html[data-theme-preset="light"] .ui-dd,  html[data-theme-preset="light"] .playlistMenu,  html[data-theme-preset="light"] [role="listbox"],  html[data-theme-preset="light"] [role="menu"] {
+  background: linear-gradient(180deg, rgba(255, 252, 255, 0.995), rgba(241, 233, 255, 0.985));
+  border: 1px solid rgba(170, 149, 203, 0.26);
+  box-shadow: 0 20px 48px rgba(95, 76, 124, 0.14);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-dd__item,  html[data-theme-preset="light"] .profile-dd-item,  html[data-theme-preset="light"] .ui-selectMenu__item,  html[data-theme-preset="light"] .ui-dd__row,  html[data-theme-preset="light"] .playlistMenu__item{
+  color: #2f2342;
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .ui-dd__item:hover,  html[data-theme-preset="light"] .profile-dd-item:hover,  html[data-theme-preset="light"] .ui-selectMenu__item:hover,  html[data-theme-preset="light"] .ui-dd__row:hover,  html[data-theme-preset="light"] .playlistMenu__item:hover{
+  background: linear-gradient(180deg, rgba(238, 229, 247, 0.96), rgba(249, 241, 236, 0.98));
+  border-color: rgba(153, 127, 191, 0.26);
+  color: #291d3a;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-dd__item.is-active,  html[data-theme-preset="light"] .profile-dd-item.is-active,  html[data-theme-preset="light"] .ui-selectMenu__item.is-active,  html[data-theme-preset="light"] .ui-dd__item[aria-current="page"] {
+  background: linear-gradient(180deg, rgba(228, 214, 246, 0.98), rgba(247, 239, 233, 0.96));
+  border-color: rgba(145, 116, 184, 0.28);
+  color: #2c203f;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-dd__item.is-danger,  html[data-theme-preset="light"] .profile-dd-item.is-danger {
+  color: #8c4b62;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .ui-dd__item.is-danger:hover,  html[data-theme-preset="light"] .profile-dd-item.is-danger:hover {
+  background: linear-gradient(180deg, rgba(250, 234, 239, 0.98), rgba(247, 239, 234, 0.98));
+  border-color: rgba(191, 127, 147, 0.24);
+  color: #7a3953;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-select.ui-selectTrigger,  html[data-theme-preset="light"] .ui-select,  html[data-theme-preset="light"] select,  html[data-theme-preset="light"] .sp-select {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(247, 241, 236, 0.98));
+  color: #312445;
+  border-color: rgba(169, 148, 200, 0.30);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 10px 24px rgba(91, 72, 118, 0.06);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .sp-select.ui-selectTrigger:hover,  html[data-theme-preset="light"] .ui-select:hover,  html[data-theme-preset="light"] select:hover,  html[data-theme-preset="light"] .sp-select:hover {
+  background: linear-gradient(180deg, rgba(250, 245, 250, 0.99), rgba(247, 241, 236, 0.99));
+  border-color: rgba(145, 117, 183, 0.34);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] select option {
+  background: #fbf7ff;
+  color: #2f2342;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] {
+  --body-bg: radial-gradient(980px 560px at 16% 6%, rgba(120, 78, 214, 0.22), transparent 58%),
+    radial-gradient(900px 520px at 84% 18%, rgba(84, 70, 170, 0.16), transparent 54%),
+    linear-gradient(180deg, #14111f 0%, #0c0b13 58%, #09090f 100%);
+  --surface-card: linear-gradient(180deg, rgba(27, 23, 42, 0.96), rgba(16, 14, 26, 0.96));
+  --surface-card-strong: linear-gradient(180deg, rgba(31, 26, 48, 0.98), rgba(18, 15, 29, 0.98));
+  --surface-soft: rgba(255, 255, 255, 0.04);
+  --surface-soft-2: rgba(255, 255, 255, 0.06);
+  --surface-hover: rgba(255, 255, 255, 0.08);
+  --surface-active: rgba(150, 118, 223, 0.18);
+  --surface-media: linear-gradient(180deg, rgba(61, 46, 103, 0.84), rgba(24, 19, 40, 0.94));
+  --surface-chip: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.035));
+  --surface-chip-hover: linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.055));
+  --surface-chip-active: linear-gradient(180deg, rgba(123, 95, 190, 0.34), rgba(86, 61, 137, 0.28));
+  --surface-elevated: linear-gradient(180deg, rgba(30, 25, 46, 0.98), rgba(16, 14, 25, 0.98));
+  --surface-elevated-hover: linear-gradient(180deg, rgba(39, 33, 58, 0.98), rgba(22, 19, 34, 0.98));
+  --surface-field: rgba(255, 255, 255, 0.06);
+  --surface-field-hover: rgba(255, 255, 255, 0.1);
+  --surface-field-focus: rgba(255, 255, 255, 0.1);
+  --menu-bg: var(--surface-elevated);
+  --menu-border: rgba(255, 255, 255, 0.12);
+  --menu-item-hover: rgba(255, 255, 255, 0.08);
+  --menu-item-active: linear-gradient(180deg, rgba(120, 91, 185, 0.36), rgba(84, 61, 132, 0.3));
+  --menu-item-active-text: rgba(251, 247, 255, 0.97);
+  --menu-item-text: rgba(248, 246, 255, 0.94);
+  --menu-item-muted: rgba(219, 212, 241, 0.62);
+  --menu-danger: rgba(255, 185, 185, 0.96);
+  --menu-danger-hover: rgba(255, 0, 0, 0.1);
+  --ctl-bg: rgba(255, 255, 255, 0.06);
+  --ctl-bg-2: rgba(255, 255, 255, 0.1);
+  --ctl-br: rgba(255, 255, 255, 0.12);
+  --ctl-br-2: rgba(255, 255, 255, 0.18);
+  --ctl-text: rgba(248, 246, 255, 0.94);
+  --ctl-muted: rgba(219, 212, 241, 0.58);
+  --ctl-ring: rgba(154, 124, 227, 0.26);
+  --ctl-caret: rgba(247, 242, 255, 0.82);
+  --theme-border-soft: rgba(255, 255, 255, 0.1);
+  --theme-border-strong: rgba(255, 255, 255, 0.16);
+  --theme-text-main: rgba(248, 246, 255, 0.94);
+  --theme-text-soft: rgba(230, 224, 248, 0.8);
+  --theme-text-muted: rgba(209, 200, 234, 0.6);
+  --theme-shadow-soft: 0 18px 46px rgba(0, 0, 0, 0.32);
+  --theme-shadow-strong: 0 24px 58px rgba(0, 0, 0, 0.4);
+  --theme-hero-glow: radial-gradient(820px 280px at 4% 0%, rgba(135, 92, 228, 0.2), transparent 54%);
+  --theme-player-track: rgba(255, 255, 255, 0.16);
+  --theme-player-fill: rgba(248, 246, 255, 0.96);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] {
+  --surface-soft: rgba(118, 98, 151, 0.04);
+  --surface-soft-2: rgba(118, 98, 151, 0.06);
+  --surface-hover: rgba(118, 98, 151, 0.08);
+  --surface-active: rgba(125, 99, 164, 0.14);
+  --surface-media: linear-gradient(180deg, rgba(247, 240, 255, 0.98), rgba(232, 223, 248, 0.94));
+  --surface-field-focus: rgba(255, 255, 255, 0.98);
+  --theme-border-soft: rgba(103, 82, 134, 0.12);
+  --theme-border-strong: rgba(103, 82, 134, 0.18);
+  --theme-text-main: #2f2342;
+  --theme-text-soft: rgba(59, 45, 82, 0.82);
+  --theme-text-muted: rgba(86, 71, 110, 0.68);
+  --theme-shadow-soft: 0 18px 42px rgba(108, 84, 150, 0.12);
+  --theme-shadow-strong: 0 26px 64px rgba(108, 84, 150, 0.15);
+  --theme-hero-glow: radial-gradient(840px 300px at 4% 0%, rgba(225, 214, 255, 0.92), rgba(225, 214, 255, 0.16) 52%, transparent 74%);
+  --theme-player-track: rgba(124, 98, 176, 0.18);
+  --theme-player-fill: rgba(124, 98, 176, 0.88);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] body,  html[data-theme-preset="light"] body {
+  background: var(--body-bg);
+  color: var(--theme-text-main, var(--text));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .app-topstrip__inner,  html[data-theme-preset="violet"] .app-sticky,  html[data-theme-preset="violet"] .playerbar,  html[data-theme-preset="violet"] .home__hero,  html[data-theme-preset="violet"] .home__card,  html[data-theme-preset="violet"] .home__heroMainCard,  html[data-theme-preset="violet"] .home__heroMiniCard,  html[data-theme-preset="violet"] .sp-card,  html[data-theme-preset="violet"] .sp-section,  html[data-theme-preset="violet"] .settings-card,  html[data-theme-preset="violet"] .settings-panel {
+  background: var(--surface-card);
+  border-color: var(--theme-border-soft);
+  box-shadow: var(--theme-shadow-soft);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .home__hero,  html[data-theme-preset="violet"] .home__heroMainCard {
+  background: var(--theme-hero-glow),
+    var(--surface-card-strong);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .topbar__search,  html[data-theme-preset="violet"] .profile-btn,  html[data-theme-preset="violet"] .settings-chipBtn,  html[data-theme-preset="violet"] .settings-themeCard,  html[data-theme-preset="violet"] .libRow,  html[data-theme-preset="violet"] .chip,  html[data-theme-preset="violet"] .playlistMenu__item,  html[data-theme-preset="violet"] .ui-dd__item,  html[data-theme-preset="violet"] .ui-dd__row,  html[data-theme-preset="violet"] .ui-selectMenu__item,  html[data-theme-preset="violet"] .sp-infoRow {
+  color: var(--theme-text-main);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .libRow,  html[data-theme-preset="violet"] .sp-infoRow,  html[data-theme-preset="violet"] .settings-themeCard,  html[data-theme-preset="violet"] .settings-chipBtn,  html[data-theme-preset="violet"] .chip {
+  background: var(--surface-chip);
+  border-color: var(--theme-border-soft);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="violet"] .libRow:hover,  html[data-theme-preset="violet"] .libRow.is-menu-open,  html[data-theme-preset="violet"] .settings-themeCard:hover,  html[data-theme-preset="violet"] .settings-chipBtn:hover,  html[data-theme-preset="violet"] .chip:hover {
+  background: var(--surface-chip-hover);
+  border-color: var(--theme-border-strong);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .settings-themeCard.is-active,  html[data-theme-preset="violet"] .chip.is-active {
+  background: var(--surface-chip-active);
+  border-color: rgba(172, 142, 241, 0.28);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .sp-infoRow__label,  html[data-theme-preset="violet"] .playlist-page__count,  html[data-theme-preset="violet"] .playlist-page__hint,  html[data-theme-preset="violet"] .ui-dd__sub,  html[data-theme-preset="violet"] .ui-dd__hint,  html[data-theme-preset="violet"] .playlistMenu__subtitle,  html[data-theme-preset="violet"] .settings-themeCard__note,  html[data-theme-preset="violet"] .settings-subtitle,  html[data-theme-preset="violet"] .settings-panel__head p {
+  color: var(--theme-text-muted);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .sp-infoRow__value,  html[data-theme-preset="violet"] .libraryHead__title,  html[data-theme-preset="violet"] .profile-name,  html[data-theme-preset="violet"] .settings-themeCard__title,  html[data-theme-preset="violet"] .settings-head h1,  html[data-theme-preset="violet"] .settings-panel__head h2 {
+  color: var(--theme-text-main);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .profile-avatar,  html[data-theme-preset="violet"] .tile__media,  html[data-theme-preset="violet"] .sp-profileEditAvatarCard,  html[data-theme-preset="violet"] .sp-profileEditAvatarPreview {
+  background: var(--surface-media);
+  border-color: rgba(173, 147, 235, 0.16);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .app-topstrip__inner,  html[data-theme-preset="light"] .app-sticky,  html[data-theme-preset="light"] .playerbar,  html[data-theme-preset="light"] .home__hero,  html[data-theme-preset="light"] .home__card,  html[data-theme-preset="light"] .home__heroMainCard,  html[data-theme-preset="light"] .home__heroMiniCard,  html[data-theme-preset="light"] .sp-card,  html[data-theme-preset="light"] .sp-section,  html[data-theme-preset="light"] .settings-card,  html[data-theme-preset="light"] .settings-panel {
+  background: var(--surface-card);
+  border-color: var(--theme-border-soft);
+  box-shadow: var(--theme-shadow-soft);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__hero,  html[data-theme-preset="light"] .home__heroMainCard {
+  background: var(--theme-hero-glow),
+    var(--surface-card-strong);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .sp-infoRow {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(242, 235, 255, 0.94));
+  border-color: var(--theme-border-soft);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-infoRow__label,  html[data-theme-preset="light"] .ui-dd__sub,  html[data-theme-preset="light"] .ui-dd__hint,  html[data-theme-preset="light"] .playlistMenu__subtitle,  html[data-theme-preset="light"] .settings-themeCard__note,  html[data-theme-preset="light"] .settings-subtitle,  html[data-theme-preset="light"] .settings-panel__head p {
+  color: var(--theme-text-muted);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-infoRow__value,  html[data-theme-preset="light"] .libraryHead__title,  html[data-theme-preset="light"] .profile-name,  html[data-theme-preset="light"] .settings-themeCard__title,  html[data-theme-preset="light"] .settings-head h1,  html[data-theme-preset="light"] .settings-panel__head h2,  html[data-theme-preset="light"] .ui-dd__name,  html[data-theme-preset="light"] .playlistMenu__title {
+  color: var(--theme-text-main);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-selectMenu,  html[data-theme-preset="light"] .ui-dd,  html[data-theme-preset="light"] .playlistMenu {
+  background: var(--menu-bg);
+  border-color: var(--menu-border);
+  box-shadow: var(--theme-shadow-soft);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-selectMenu__item,  html[data-theme-preset="light"] .ui-dd__item,  html[data-theme-preset="light"] .ui-dd__row,  html[data-theme-preset="light"] .playlistMenu__item,  html[data-theme-preset="light"] .profile-dd-item {
+  color: var(--menu-item-text);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .ui-selectMenu__item:hover,  html[data-theme-preset="light"] .ui-dd__item:hover,  html[data-theme-preset="light"] .ui-dd__row:hover,  html[data-theme-preset="light"] .playlistMenu__item:hover,  html[data-theme-preset="light"] .profile-dd-item:hover {
+  background: var(--menu-item-hover);
+  border-color: var(--menu-border);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .ui-selectMenu__item.is-active,  html[data-theme-preset="light"] .ui-dd__item.is-active,  html[data-theme-preset="light"] .profile-dd-item.is-active,  html[data-theme-preset="light"] .playlistMenu__item.is-active {
+  background: var(--menu-item-active);
+  border-color: color-mix(in srgb, var(--menu-border) 84%, var(--accent) 16%);
+  color: var(--menu-item-active-text);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .profile-avatar,  html[data-theme-preset="light"] .tile__media,  html[data-theme-preset="light"] .sp-profileEditAvatarCard,  html[data-theme-preset="light"] .sp-profileEditAvatarPreview {
+  background: var(--surface-media);
+  border-color: var(--theme-border-soft);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.72), 0 10px 24px rgba(95, 76, 124, 0.08);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] {
+  --surface-media-asset: linear-gradient(180deg, rgba(63, 47, 106, 0.9), rgba(20, 16, 34, 0.98));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] {
+  --surface-media-asset: linear-gradient(180deg, rgba(63, 47, 106, 0.9), rgba(20, 16, 34, 0.98));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroMainVisual,  html[data-theme-preset="light"] .home__heroMainArtFrame,  html[data-theme-preset="light"] .sp-heroCard__avatarWrap--profile,  html[data-theme-preset="violet"] .home__heroMainVisual,  html[data-theme-preset="violet"] .home__heroMainArtFrame,  html[data-theme-preset="violet"] .sp-heroCard__avatarWrap--profile {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .tile__media,  html[data-theme-preset="light"] .home__heroMainArt,  html[data-theme-preset="light"] .home__heroMiniThumbWrap,  html[data-theme-preset="light"] .ui-dd__img,  html[data-theme-preset="light"] .sp-trackRowModern__cover,  html[data-theme-preset="light"] .track-hero__cover{
+  background: var(--surface-media-asset);
+  border-color: rgba(94, 74, 128, 0.16);
+  box-shadow: 0 10px 24px rgba(63, 47, 106, 0.12);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .tile__media img,  html[data-theme-preset="light"] .home__heroMainArt img,  html[data-theme-preset="light"] .home__heroMiniThumbWrap img,  html[data-theme-preset="light"] .ui-dd__img img,  html[data-theme-preset="light"] .sp-trackRowModern__cover img,  html[data-theme-preset="light"] .track-hero__cover img{
+  background: var(--surface-media-asset);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .sp-heroCard__avatarWrap--profile {
+  padding: 0;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-heroCard__avatar--profile,  html[data-theme-preset="light"] .sp-heroCard__avatar--profile .artistAvatar,  html[data-theme-preset="light"] .sp-heroCard__avatar--profile img{
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .topbarProfileMenu,  html[data-theme-preset="light"] .topbarSearchMenu,  html[data-theme-preset="light"] .adminPortalMenu,  html[data-theme-preset="violet"] .topbarProfileMenu,  html[data-theme-preset="violet"] .topbarSearchMenu,  html[data-theme-preset="violet"] .adminPortalMenu {
+  box-shadow: var(--theme-shadow-strong, var(--ctl-shadow));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .topbarProfileMenu,  html[data-theme-preset="light"] .topbarSearchMenu,  html[data-theme-preset="violet"] .topbarProfileMenu,  html[data-theme-preset="violet"] .topbarSearchMenu {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .topbarProfileMenu .ui-dd__item,  html[data-theme-preset="violet"] .topbarProfileMenu .ui-dd__item {
+  justify-content: center;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-page--profile .sp-metricCard,  html[data-theme-preset="light"] .sp-page--studio .sp-metricCard,  html[data-theme-preset="light"] .sp-page--profile .sp-infoRow,  html[data-theme-preset="light"] .sp-page--profile .sp-personCard,  html[data-theme-preset="light"] .sp-page--profile .sp-trackRowModern,  html[data-theme-preset="light"] .sp-page--studio .sp-trackRowModern {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(241, 233, 255, 0.98));
+  border-color: rgba(110, 91, 141, 0.14);
+  box-shadow: 0 10px 24px rgba(91, 72, 118, 0.06);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-metricCard__label,  html[data-theme-preset="light"] .sp-metricCard__sub,  html[data-theme-preset="light"] .sp-infoRow__label,  html[data-theme-preset="light"] .sp-section__sub,  html[data-theme-preset="light"] .sp-empty,  html[data-theme-preset="light"] .sp-personCard__meta,  html[data-theme-preset="light"] .sp-trackRowModern__meta,  html[data-theme-preset="light"] .sp-trackRowModern__side,  html[data-theme-preset="light"] .sp-metaCard__label,  html[data-theme-preset="light"] .sp-heroCard__subtitle,  html[data-theme-preset="light"] .sp-head-actions .sp-btn {
+  color: #6d5c84;
+  opacity: 1;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-metricCard__value,  html[data-theme-preset="light"] .sp-infoRow__value,  html[data-theme-preset="light"] .sp-personCard__title,  html[data-theme-preset="light"] .sp-trackRowModern__title,  html[data-theme-preset="light"] .sp-trackRowModern__index,  html[data-theme-preset="light"] .sp-h,  html[data-theme-preset="light"] .sp-metaCard__value {
+  color: #261a37;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-head-actions .sp-btn,  html[data-theme-preset="light"] .sp-head-actions a.sp-btn,  html[data-theme-preset="light"] .sp-heroCard__actions--profile .sp-btn,  html[data-theme-preset="light"] .sp-heroCard__actions--profile a.sp-btn {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(233, 221, 255, 0.98));
+  border-color: rgba(110, 91, 141, 0.14);
+  color: #2c203e;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .sp-head-actions .sp-btn:hover,  html[data-theme-preset="light"] .sp-head-actions a.sp-btn:hover,  html[data-theme-preset="light"] .sp-heroCard__actions--profile .sp-btn:hover,  html[data-theme-preset="light"] .sp-heroCard__actions--profile a.sp-btn:hover {
+  background: linear-gradient(180deg, rgba(236, 227, 255, 0.94), rgba(241, 232, 255, 0.98));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .brand-subtitle,  html[data-theme-preset="light"] .auth-subtitle,  html[data-theme-preset="light"] .auth-footer,  html[data-theme-preset="light"] .auth-footer span,  html[data-theme-preset="light"] .auth-radio-group,  html[data-theme-preset="light"] .auth-radio span,  html[data-theme-preset="light"] .auth-input-icon-btn {
+  color: #6d5c84;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .auth-link {
+  color: #734fa8;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .auth-link:hover {
+  color: #5c3d89;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .auth-footer {
+  border-top-color: rgba(110, 91, 141, 0.12);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .clarity-logo,  html[data-theme-preset="light"] .clarity-logo {
+  letter-spacing: -0.048em;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .topbar .clarity-logo,  html[data-theme-preset="violet"] .auth-card .clarity-logo,  html[data-theme-preset="light"] .topbar .clarity-logo,  html[data-theme-preset="light"] .auth-card .clarity-logo {
+  filter: drop-shadow(0 5px 10px rgba(118, 89, 176, 0.10));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__hero,  html[data-theme-preset="light"] .home__heroMainCard,  html[data-theme-preset="light"] .home__heroMiniCard,  html[data-theme-preset="light"] .home__genres,  html[data-theme-preset="light"] .home__card,  html[data-theme-preset="light"] .tile,  html[data-theme-preset="light"] .artist,  html[data-theme-preset="light"] .sp-page--profile .sp-section,  html[data-theme-preset="light"] .sp-page--profile .sp-metricCard,  html[data-theme-preset="light"] .sp-page--profile .sp-infoRow,  html[data-theme-preset="light"] .sp-page--profile .sp-trackRowModern,  html[data-theme-preset="light"] .sp-page--studio .sp-section,  html[data-theme-preset="light"] .sp-page--studio .sp-trackRowModern {
+  border: 1px solid rgba(109, 89, 145, 0.16);
+  box-shadow: 0 12px 30px rgba(91, 72, 118, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.48);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .home__hero,  html[data-theme-preset="violet"] .home__heroMainCard,  html[data-theme-preset="violet"] .home__heroMiniCard,  html[data-theme-preset="violet"] .home__genres,  html[data-theme-preset="violet"] .home__card,  html[data-theme-preset="violet"] .tile,  html[data-theme-preset="violet"] .artist,  html[data-theme-preset="violet"] .sp-page--profile .sp-section,  html[data-theme-preset="violet"] .sp-page--profile .sp-metricCard,  html[data-theme-preset="violet"] .sp-page--profile .sp-infoRow,  html[data-theme-preset="violet"] .sp-page--profile .sp-trackRowModern,  html[data-theme-preset="violet"] .sp-page--studio .sp-section,  html[data-theme-preset="violet"] .sp-page--studio .sp-trackRowModern {
+  border: 1px solid rgba(222, 206, 255, 0.11);
+  box-shadow: 0 18px 36px rgba(6, 4, 18, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] .home__genres {
+  background: linear-gradient(180deg, rgba(31, 23, 56, 0.78), rgba(18, 14, 34, 0.82));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.clarity-logo {
+  text-rendering: geometricPrecision;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] {
+  --logo-start: #fcf8ff;
+  --logo-mid: #d8b7ff;
+  --logo-end: #8d62f4;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] {
+  --logo-start: #8d6acc;
+  --logo-mid: #6d4ba9;
+  --logo-end: #b596ef;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .auth-card .clarity-logo,  html[data-theme-preset="light"] .auth-card .clarity-logo {
+  filter: drop-shadow(0 8px 18px rgba(114, 82, 176, 0.16));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .auth-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(241, 233, 255, 0.98));
+  border: 1px solid rgba(114, 92, 146, 0.16);
+  box-shadow: 0 26px 60px rgba(86, 68, 112, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.58);
+  color: #251a37;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .auth-label,  html[data-theme-preset="light"] .auth-back,  html[data-theme-preset="light"] .auth-divider,  html[data-theme-preset="light"] .auth-footer,  html[data-theme-preset="light"] .auth-footer span,  html[data-theme-preset="light"] .auth-radio-group,  html[data-theme-preset="light"] .auth-radio span {
+  color: #6a5a80;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .auth-input {
+  background: linear-gradient(180deg, rgba(244, 248, 255, 0.96), rgba(234, 241, 252, 0.94));
+  border: 1px solid rgba(137, 117, 170, 0.16);
+  color: #281c3a;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.68);
+}
+
+/* Стан фокуса підкреслює активний елемент і покращує навігацію з клавіатури */
+html[data-theme-preset="light"] .auth-input:focus {
+  border-color: rgba(118, 84, 175, 0.42);
+  box-shadow: 0 0 0 4px rgba(128, 92, 188, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+/* Ці стилі роблять текст підказки читабельним усередині поля */
+html[data-theme-preset="light"] .auth-input::placeholder {
+  color: rgba(102, 85, 132, 0.52);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .auth-input-icon-btn {
+  color: #786394;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .auth-input-icon-btn:hover {
+  color: #553a78;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .auth-divider::before,  html[data-theme-preset="light"] .auth-divider::after,  html[data-theme-preset="light"] .auth-footer {
+  border-color: rgba(114, 92, 146, 0.12);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .auth-divider::before,  html[data-theme-preset="light"] .auth-divider::after {
+  background: rgba(114, 92, 146, 0.12);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .brand-subtitle {
+  color: rgba(142, 118, 188, 0.64);
+  letter-spacing: 0.18em;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .auth-primary-btn {
+  background: linear-gradient(180deg, #9677c7 0%, #7556aa 100%);
+  box-shadow: 0 18px 34px rgba(110, 82, 150, 0.18);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .auth-social-btn,  html[data-theme-preset="light"] .auth-secondary-btn {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(243, 237, 231, 0.98));
+  color: #332349;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .nf-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(241, 233, 255, 0.98));
+  border: 1px solid rgba(114, 92, 146, 0.14);
+  box-shadow: 0 30px 80px rgba(86, 68, 112, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.60);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .nf-card::before {
+  background: radial-gradient(540px 420px at 20% 28%, rgba(178, 144, 236, 0.20) 0%, rgba(178, 144, 236, 0.08) 42%, transparent 70%),
+    radial-gradient(520px 420px at 80% 22%, rgba(151, 198, 246, 0.18) 0%, rgba(151, 198, 246, 0.08) 44%, transparent 72%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(238, 230, 246, 0.10) 100%);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .nf-kicker {
+  color: rgba(122, 100, 156, 0.82);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .nf-title {
+  background: linear-gradient(180deg, #2d2042, #6b4c98 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .nf-text,  html[data-theme-preset="light"] .nf-hint {
+  color: #6d5c84;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .nf-path {
+  background: linear-gradient(180deg, rgba(235, 223, 255, 0.96), rgba(233, 221, 255, 0.98));
+  border-color: rgba(114, 92, 146, 0.12);
+  color: #563b78;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .nf-secondary {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(238, 230, 255, 0.98));
+  color: #2e2142;
+  border-color: rgba(114, 92, 146, 0.14);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .nf-illustration {
+  border-color: rgba(114, 92, 146, 0.12);
+  background: radial-gradient(250px 220px at 35% 28%, rgba(179, 147, 236, 0.42) 0%, rgba(179, 147, 236, 0.14) 54%, transparent 72%),
+    radial-gradient(250px 220px at 78% 24%, rgba(137, 197, 255, 0.26) 0%, rgba(137, 197, 255, 0.08) 56%, transparent 72%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.54) 0%, rgba(233, 221, 255, 0.74) 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46), 0 26px 60px rgba(86, 68, 112, 0.20);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .nf-404 {
+  color: rgba(98, 72, 143, 0.14);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .nf-eq span {
+  background: linear-gradient(180deg, rgba(135, 105, 193, 0.82), rgba(117, 182, 244, 0.58));
+  box-shadow: 0 8px 18px rgba(86, 68, 112, 0.12);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-page .sp-heroCard,  html[data-theme-preset="light"] .sp-page .sp-heroCard--profile {
+  border-color: rgba(114, 92, 146, 0.16);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-page .sp-heroCard__badge--corner,  html[data-theme-preset="light"] .sp-page .sp-statPill {
+  background: linear-gradient(180deg, rgba(245, 239, 255, 0.98), rgba(236, 229, 255, 0.98));
+  border-color: rgba(114, 92, 146, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.56);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-page .sp-heroCard__title--profile,  html[data-theme-preset="light"] .sp-page .sp-statPill__value,  html[data-theme-preset="light"] .sp-page .sp-metaCard__value,  html[data-theme-preset="light"] .sp-page .sp-infoRow__value {
+  color: #2b1e40;
+  opacity: 1;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-page .sp-heroCard__subtitle,  html[data-theme-preset="light"] .sp-page .sp-statPill__label,  html[data-theme-preset="light"] .sp-page .sp-metaCard__label,  html[data-theme-preset="light"] .sp-page .sp-infoRow__label {
+  color: #6a597e;
+  opacity: 1;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .sp-page .sp-heroCard__actions--profile .sp-btn--primary {
+  background: var(--light-button-bg);
+  border-color: rgba(155, 123, 214, 0.30);
+  color: var(--theme-text-main, #2d2141);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 8px 20px rgba(128, 98, 190, 0.10);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] {
+  --logo-word-start: #fbf7ff;
+  --logo-word-mid: #efe3ff;
+  --logo-word-end: #d2b6ff;
+  --logo-music-start: #edddff;
+  --logo-music-end: #b788ff;
+  --logo-dot: #d9c2ff;
+  --logo-stroke: rgba(49, 32, 79, 0.78);
+  --logo-shadow-soft: rgba(10, 7, 24, 0.24);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] {
+  --logo-word-start: #7454ac;
+  --logo-word-mid: #8a67c5;
+  --logo-word-end: #b18af0;
+  --logo-music-start: #986de0;
+  --logo-music-end: #c19cff;
+  --logo-dot: #9065d4;
+  --logo-stroke: rgba(255, 255, 255, 0.42);
+  --logo-shadow-soft: rgba(93, 69, 132, 0.14);
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] {
+  --logo-word-start-2: #fef9ff;
+  --logo-word-mid-2: #f0e4ff;
+  --logo-word-end-2: #d4b4ff;
+  --logo-music-start-2: #f0e0ff;
+  --logo-music-end-2: #b981ff;
+  --logo-dot-2: #e4cdff;
+  --logo-stroke-2: rgba(42, 25, 70, 0.84);
+  --logo-shadow-2: rgba(12, 8, 25, 0.32);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] {
+  --logo-word-start-2: #8261be;
+  --logo-word-mid-2: #9b78dc;
+  --logo-word-end-2: #c3a5ff;
+  --logo-music-start-2: #9c73e4;
+  --logo-music-end-2: #d7b6ff;
+  --logo-dot-2: #8f64d8;
+  --logo-stroke-2: rgba(255, 255, 255, 0.52);
+  --logo-shadow-2: rgba(100, 74, 145, 0.18);
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .auth-card .clarity-logo,  html[data-theme-preset="light"] .auth-card .clarity-logo,  html[data-theme-preset="violet"] .nf-card .clarity-logo,  html[data-theme-preset="light"] .nf-card .clarity-logo {
+  filter: drop-shadow(0 9px 20px rgba(114, 82, 176, 0.12));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.clarity-logo {
+  position: relative;
+  isolation: isolate;
+  font-family: Inter, "Segoe UI", "Arial Black", "Avenir Next Heavy", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 1000;
+  padding: 0.04em 0.08em 0.12em;
+  transform: translateZ(0);
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-card .clarity-logo {
+  --logo-size: 41px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing .clarity-logo {
+  --logo-size: 34px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-card .clarity-logo {
+  --logo-size: 42px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] {
+  --logo-word-top-tone: #fff8ff;
+  --logo-word-mid-tone: #eed6ff;
+  --logo-word-bottom-tone: #c893ff;
+  --logo-music-top-tone: #f2dbff;
+  --logo-music-bottom-tone: #b37dff;
+  --logo-dot-tone: #e3c2ff;
+  --logo-dot-glow-tone: rgba(219, 177, 255, 0.88);
+  --logo-stroke-tone: rgba(255, 255, 255, 0.09);
+  --logo-glow-soft-tone: rgba(201, 136, 255, 0.36);
+  --logo-glow-wide-tone: rgba(137, 86, 255, 0.18);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] {
+  --logo-word-top-tone: #f8f2ff;
+  --logo-word-mid-tone: #e3cbff;
+  --logo-word-bottom-tone: #be89ff;
+  --logo-music-top-tone: #efd8ff;
+  --logo-music-bottom-tone: #ab75f5;
+  --logo-dot-tone: #dab7ff;
+  --logo-dot-glow-tone: rgba(191, 131, 255, 0.84);
+  --logo-stroke-tone: rgba(255, 255, 255, 0.08);
+  --logo-glow-soft-tone: rgba(189, 126, 255, 0.24);
+  --logo-glow-wide-tone: rgba(173, 112, 255, 0.10);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .topbar .clarity-logo,  html[data-theme-preset="light"] .topbar .clarity-logo {
+  filter: drop-shadow(0 0 0.36rem rgba(176, 111, 255, 0.18));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .auth-card .clarity-logo,  html[data-theme-preset="light"] .auth-card .clarity-logo,  html[data-theme-preset="violet"] .nf-card .clarity-logo,  html[data-theme-preset="light"] .nf-card .clarity-logo,  html[data-theme-preset="violet"] .landing .clarity-logo,  html[data-theme-preset="light"] .landing .clarity-logo {
+  filter: drop-shadow(0 0 0.56rem rgba(182, 120, 255, 0.18));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.clarity-logo {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  white-space: nowrap;
+  gap: 0;
+  filter: none;
+  text-shadow: none;
+  letter-spacing: normal;
+  font-size: inherit;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.clarity-logo svg {
+  display: block;
+  overflow: visible;
+  filter: none;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbar .clarity-logo {
+  --logo-size: initial;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.auth-card .clarity-logo,  .landing .clarity-logo {
+  --logo-size: initial;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .topbar .clarity-logo {
+  filter: drop-shadow(0 0 0.58rem rgba(194, 144, 255, 0.42))
+    drop-shadow(0 2px 6px rgba(86, 59, 142, 0.20));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] .topbar .clarity-logo {
+  filter: drop-shadow(0 0 0.34rem rgba(182, 120, 255, 0.18));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.topbar .clarity-logo,  .topbar .clarity-logo svg {
+  display: block;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] .topbar .clarity-logo svg {
+  filter: drop-shadow(0 0 10px rgba(185, 132, 255, 0.16));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .topbar .clarity-logo svg {
+  filter: brightness(0.80)
+    contrast(1.18)
+    saturate(1.1)
+    drop-shadow(0 2px 6px rgba(91, 63, 135, 0.20))
+    drop-shadow(0 0 10px rgba(194, 151, 255, 0.18));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] body:not([data-static-page="landing"]) {
+  background: var(--app-bg);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .app-sidebar .app-sticky,  html[data-theme-preset="light"] .topbar,  html[data-theme-preset="light"] .playerbar,  html[data-theme-preset="light"] .home__hero,  html[data-theme-preset="light"] .home__heroMainCard,  html[data-theme-preset="light"] .home__heroMiniCard,  html[data-theme-preset="light"] .home__genres,  html[data-theme-preset="light"] .tile,  html[data-theme-preset="light"] .track-item,  html[data-theme-preset="light"] .settings-panel,  html[data-theme-preset="light"] .settings-card{
+  background: radial-gradient(circle at top left, rgba(190, 170, 255, 0.14), transparent 38%),
+    linear-gradient(180deg, rgba(255,255,255,0.86), rgba(246,240,255,0.92) 68%, rgba(241,234,255,0.94));
+  border-color: rgba(170, 145, 220, 0.22);
+  box-shadow: 0 14px 34px rgba(103, 82, 150, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.64);
+  color: #2d2141;
+}
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+ html[data-theme-preset="light"] .home{
+  background: transparent;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .chip.is-active {
+  background: linear-gradient(180deg, rgba(231,220,255,0.96), rgba(225,214,252,0.98));
+  border-color: rgba(147, 118, 205, 0.34);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .playerbar__sliderWrap::before,  html[data-theme-preset="light"] .playerbar__range::-webkit-slider-runnable-track,  html[data-theme-preset="light"] .playerbar__range::-moz-range-track {
+  background: rgba(151, 121, 212, 0.22);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroMainCard,  html[data-theme-preset="light"] .home__heroMiniCard {
+  background: radial-gradient(circle at top left, rgba(188, 168, 255, 0.14), transparent 34%),
+    linear-gradient(180deg, rgba(255,255,255,0.82), rgba(245,238,255,0.90));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .home__genres {
+  background: radial-gradient(circle at left center, rgba(182, 155, 255, 0.10), transparent 30%),
+    linear-gradient(180deg, rgba(255,255,255,0.84), rgba(245,239,255,0.90));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.admin-shell .ui-selectMenu,  .admin-shell .ui-dd {
+  min-width: 180px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.admin-shell .ui-selectMenu__item,  .admin-shell .profile-dd-item,  .admin-shell .ui-dd__item,  .admin-shell .ui-dd__row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 40px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-shell .ui-selectTrigger {
+  line-height: 1.1;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .app-main,  html[data-theme-preset="light"] .app-right,  html[data-theme-preset="light"] .app-sidebar,  html[data-theme-preset="light"] .home,  html[data-theme-preset="light"] .sp-page,  html[data-theme-preset="light"] .sp-page--profile {
+  background: transparent;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .app-sidebar .app-sticky,  html[data-theme-preset="light"] .topbar,  html[data-theme-preset="light"] .playerbar,  html[data-theme-preset="light"] .home__hero,  html[data-theme-preset="light"] .home__heroMainCard,  html[data-theme-preset="light"] .home__heroMiniCard,  html[data-theme-preset="light"] .home__genres,  html[data-theme-preset="light"] .tile,  html[data-theme-preset="light"] .track-item,  html[data-theme-preset="light"] .settings-panel,  html[data-theme-preset="light"] .settings-card,  html[data-theme-preset="light"] .sp-card,  html[data-theme-preset="light"] .sp-metricCard,  html[data-theme-preset="light"] .sp-metaCard,  html[data-theme-preset="light"] .sp-trackRowModern{
+  background: var(--light-violet-glow),
+    linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(248,244,255,0.96) 56%, rgba(241,234,255,0.98) 100%);
+  border-color: rgba(177, 152, 225, 0.22);
+  box-shadow: 0 16px 36px rgba(102, 81, 150, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.72);
+  color: #2d2142;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__hero,  html[data-theme-preset="light"] .home__heroMainCard,  html[data-theme-preset="light"] .home__heroMiniCard,  html[data-theme-preset="light"] .sp-card {
+  background: var(--light-violet-glow-strong),
+    linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(247,242,255,0.97) 58%, rgba(241,234,255,0.98) 100%);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__genres,  html[data-theme-preset="light"] .chip {
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(243,236,255,0.96));
+  border-color: rgba(180, 157, 226, 0.32);
+  color: #47335f;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .chip.is-active{
+  background: linear-gradient(180deg, rgba(229,216,255,0.98), rgba(220,208,252,0.99));
+  border-color: rgba(148, 118, 207, 0.38);
+  color: #3a2754;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .libRow,  html[data-theme-preset="light"] .playlistMenu,  html[data-theme-preset="light"] .ui-dd {
+  background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(246,240,255,0.93));
+  border-color: rgba(180, 157, 226, 0.24);
+  box-shadow: 0 10px 24px rgba(105, 83, 150, 0.06);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .libRow:hover{
+  background: linear-gradient(180deg, rgba(248,243,255,0.96), rgba(241,234,255,0.98));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .app-sidebar .app-sticky {
+  background: var(--light-violet-glow),
+    linear-gradient(180deg, rgba(252,249,255,0.92), rgba(245,239,255,0.96), rgba(239,232,255,0.98));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .topbar,  html[data-theme-preset="light"] .playerbar {
+  background: var(--light-violet-glow),
+    linear-gradient(180deg, rgba(255,255,255,0.95), rgba(247,241,255,0.97), rgba(241,234,255,0.98));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .topbar__search,  html[data-theme-preset="light"] .profile-btn,  html[data-theme-preset="light"] .playerbar__control,  html[data-theme-preset="light"] .playerbar__action,  html[data-theme-preset="light"] .playerbar .icon-btn {
+  background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(243,236,255,0.96));
+  border-color: rgba(181, 159, 224, 0.30);
+  color: #40305e;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-card,  html[data-theme-preset="light"] .sp-trackRowModern,  html[data-theme-preset="light"] .sp-metricCard,  html[data-theme-preset="light"] .sp-metaCard{
+  backdrop-filter: blur(12px);
+}
+/* Стан наведення підсилює візуальний відгук елемента */
+ html[data-theme-preset="light"] .sp-trackRowModern:hover {
+  background: var(--light-violet-glow),
+    linear-gradient(180deg, rgba(252,248,255,0.98), rgba(242,235,255,0.99));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-section__sub,  html[data-theme-preset="light"] .sp-trackRowModern__meta {
+  color: rgba(98, 78, 136, 0.72);
+}
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+ html[data-theme-preset="light"] .sp-profileLayout {
+  background: transparent;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] {
+  --light-surface-base: linear-gradient(180deg, rgba(255,255,255,0.965) 0%, rgba(247,243,255,0.982) 54%, rgba(239,233,255,0.995) 100%);
+  --light-surface-strong: linear-gradient(180deg, rgba(255,255,255,0.972) 0%, rgba(244,239,255,0.988) 48%, rgba(236,229,255,0.998) 100%);
+  --light-surface-soft: linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(245,240,255,0.972) 100%);
+  --light-surface-chip: linear-gradient(180deg, rgba(255,255,255,0.93) 0%, rgba(241,235,255,0.97) 100%);
+  --light-violet-glow: linear-gradient(to top, rgba(196, 173, 255, 0.18) 0%, rgba(196, 173, 255, 0.08) 26%, transparent 64%);
+  --light-violet-glow-strong: linear-gradient(to top, rgba(188, 163, 255, 0.22) 0%, rgba(188, 163, 255, 0.1) 28%, transparent 64%);
+  --light-border: rgba(178, 154, 230, 0.22);
+  --light-border-strong: rgba(168, 142, 227, 0.28);
+  --light-shadow: 0 16px 34px rgba(106, 86, 152, 0.08), inset 0 1px 0 rgba(255,255,255,0.72);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__card,  html[data-theme-preset="light"] .home__hero,  html[data-theme-preset="light"] .home__heroMainCard,  html[data-theme-preset="light"] .home__heroMiniCard,  html[data-theme-preset="light"] .home__genres,  html[data-theme-preset="light"] .sp-page--profile > .sp-heroCard--profile,  html[data-theme-preset="light"] .sp-page--profile .sp-card,  html[data-theme-preset="light"] .sp-page--profile .sp-section,  html[data-theme-preset="light"] .sp-page--profile .sp-sideCard,  html[data-theme-preset="light"] .sp-page--profile .sp-metricCard,  html[data-theme-preset="light"] .sp-page--profile .sp-metaCard,  html[data-theme-preset="light"] .sp-page--profile .sp-trackRowModern,  html[data-theme-preset="light"] .sp-page--profile .sp-personCard,  html[data-theme-preset="light"] .sp-page--profile .sp-infoRow,  html[data-theme-preset="light"] .sp-page--profile .sp-empty,  html[data-theme-preset="light"] .sp-page--studio > .sp-heroCard--profile,  html[data-theme-preset="light"] .sp-page--studio .sp-card,  html[data-theme-preset="light"] .sp-page--studio .sp-section,  html[data-theme-preset="light"] .sp-page--studio .sp-sideCard,  html[data-theme-preset="light"] .sp-page--studio .sp-metricCard,  html[data-theme-preset="light"] .sp-page--studio .sp-metaCard,  html[data-theme-preset="light"] .sp-page--studio .sp-trackRowModern,  html[data-theme-preset="light"] .sp-page--studio .sp-personCard,  html[data-theme-preset="light"] .sp-page--studio .sp-infoRow,  html[data-theme-preset="light"] .sp-page--studio .sp-empty {
+  background: var(--light-violet-glow), var(--light-surface-base);
+  border-color: var(--light-border);
+  box-shadow: var(--light-shadow);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__hero,  html[data-theme-preset="light"] .home__heroMainCard,  html[data-theme-preset="light"] .home__heroMiniCard,  html[data-theme-preset="light"] .sp-page--profile > .sp-heroCard--profile,  html[data-theme-preset="light"] .sp-page--profile .sp-card,  html[data-theme-preset="light"] .sp-page--profile .sp-section,  html[data-theme-preset="light"] .sp-page--studio > .sp-heroCard--profile,  html[data-theme-preset="light"] .sp-page--studio .sp-card,  html[data-theme-preset="light"] .sp-page--studio .sp-section {
+  background: var(--light-violet-glow-strong), var(--light-surface-strong);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__card,  html[data-theme-preset="light"] .home__card.glass,  html[data-theme-preset="light"] .home .glass,  html[data-theme-preset="light"] .home__card > .row,  html[data-theme-preset="light"] .home__card .artists,  html[data-theme-preset="light"] .home__card .artist,  html[data-theme-preset="light"] .home__card .tile,  html[data-theme-preset="light"] .home__card .tile__body {
+  background-color: transparent;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .tile,  html[data-theme-preset="light"] .artist,  html[data-theme-preset="light"] .libRow {
+  background: var(--light-surface-soft);
+  border-color: rgba(178, 154, 230, 0.24);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .app-sidebar .app-sticky,  html[data-theme-preset="light"] .topbar,  html[data-theme-preset="light"] .playerbar {
+  background: var(--light-violet-glow), var(--light-surface-strong);
+  border-color: var(--light-border);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .playerbar::before,  html[data-theme-preset="light"] .topbar::before,  html[data-theme-preset="light"] .home__card::before,  html[data-theme-preset="light"] .sp-page--profile .sp-card::before {
+  background: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__genres,  html[data-theme-preset="light"] .chip {
+  background: var(--light-surface-chip);
+  border-color: rgba(174, 149, 229, 0.28);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .rp__creditRow,  html[data-theme-preset="light"] .sp-page--profile .sp-infoRow,  html[data-theme-preset="light"] .sp-page--profile .sp-personCard,  html[data-theme-preset="light"] .sp-page--profile .sp-empty,  html[data-theme-preset="light"] .sp-page--studio .sp-infoRow,  html[data-theme-preset="light"] .sp-page--studio .sp-personCard,  html[data-theme-preset="light"] .sp-page--studio .sp-empty {
+  background: var(--light-surface-soft);
+  border-color: rgba(174, 149, 229, 0.22);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .sp-page--profile,  html[data-theme-preset="light"] .sp-page--profile .sp-profileLayout,  html[data-theme-preset="light"] .sp-page--profile .sp-profileMain,  html[data-theme-preset="light"] .sp-page--profile .sp-profileSide,  html[data-theme-preset="light"] .sp-page--profile .sp-metricGrid,  html[data-theme-preset="light"] .sp-page--profile .sp-compactList,  html[data-theme-preset="light"] .sp-page--profile .sp-trackListModern,  html[data-theme-preset="light"] .sp-page--studio,  html[data-theme-preset="light"] .sp-page--studio .sp-profileLayout,  html[data-theme-preset="light"] .sp-page--studio .sp-profileMain,  html[data-theme-preset="light"] .sp-page--studio .sp-profileSide,  html[data-theme-preset="light"] .sp-page--studio .sp-metricGrid,  html[data-theme-preset="light"] .sp-page--studio .sp-compactList,  html[data-theme-preset="light"] .sp-page--studio .sp-trackListModern {
+  background: transparent;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .sp-page--profile .sp-trackRowModern:hover,  html[data-theme-preset="light"] .sp-page--studio .sp-trackRowModern:hover{
+  background: var(--light-violet-glow), linear-gradient(180deg, rgba(255,255,255,0.985), rgba(242,235,255,0.995));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .app-sidebar .libRow {
+  background: linear-gradient(180deg, rgba(249,245,255,0.92), rgba(242,236,255,0.96));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .rp__sub,  html[data-theme-preset="light"] .rp__artistHint,  html[data-theme-preset="light"] .rp__creditLabel,  html[data-theme-preset="light"] .sp-section__sub,  html[data-theme-preset="light"] .sp-trackRowModern__meta,  html[data-theme-preset="light"] .sp-infoRow__label {
+  color: rgba(95, 74, 140, 0.74);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+:root {
+  --bio-violet-1: 126, 93, 255;
+  --bio-violet-2: 98, 70, 210;
+  --bio-violet-3: 26, 18, 54;
+  --bio-violet-4: 12, 10, 24;
+  --surface-top-rgb: var(--bio-violet-1);
+  --surface-mid-rgb: 64, 42, 130;
+  --surface-bottom-rgb: var(--bio-violet-4);
+  --accent-rgb: var(--bio-violet-1);
+  --secondary-rgb: 182, 128, 255;
+  --accent: rgb(var(--bio-violet-1));
+  --accent-2: rgb(var(--bio-violet-2));
+  --panel: linear-gradient(180deg, rgba(74, 48, 154, 0.30), rgba(15, 12, 32, 0.86));
+  --card: linear-gradient(180deg, rgba(54, 36, 116, 0.72), rgba(14, 12, 28, 0.92));
+  --glass-bg: linear-gradient(180deg, rgba(88, 56, 184, 0.34), rgba(18, 12, 38, 0.92));
+  --topbar-bg: linear-gradient(180deg, rgba(90, 58, 186, 0.54), rgba(18, 12, 38, 0.68));
+  --footer-bg: linear-gradient(180deg, rgba(72, 46, 150, 0.54), rgba(15, 11, 31, 0.96));
+  --player-bg: linear-gradient(180deg, rgba(86, 55, 176, 0.58), rgba(13, 9, 28, 0.96));
+  --btn-bg: linear-gradient(180deg, rgba(126, 93, 255, 0.16), rgba(27, 17, 55, 0.78));
+  --btn-bg-hover: linear-gradient(180deg, rgba(144, 106, 255, 0.24), rgba(44, 26, 88, 0.88));
+  --btn-br: rgba(171, 143, 255, 0.18);
+  --btn-br-hover: rgba(188, 165, 255, 0.34);
+  --ctl-h: 38px;
+  --ctl-r: 14px;
+  --ctl-pad-x: 12px;
+  --ctl-bg: linear-gradient(180deg, rgba(50, 33, 104, 0.92), rgba(16, 11, 32, 0.96));
+  --ctl-bg-2: linear-gradient(180deg, rgba(60, 39, 124, 0.96), rgba(20, 14, 38, 0.98));
+  --ctl-br: rgba(180, 155, 255, 0.14);
+  --ctl-br-2: rgba(200, 180, 255, 0.28);
+  --ctl-text: rgba(255,255,255,.95);
+  --ctl-muted: rgba(231,224,255,.64);
+  --ctl-caret: rgba(245,240,255,.84);
+  --ctl-ring: rgba(157, 115, 255, 0.22);
+  --ctl-shadow: 0 24px 60px rgba(6, 4, 16, 0.56);
+  --menu-bg: linear-gradient(180deg, rgba(53, 34, 110, 0.97), rgba(17, 11, 33, 0.985));
+  --menu2-bg: linear-gradient(180deg, rgba(60, 39, 124, 0.96), rgba(15, 10, 30, 0.985));
+  --menu-border: rgba(194, 177, 255, 0.14);
+  --menu2-border: rgba(194, 177, 255, 0.16);
+  --menu2-radius: 18px;
+  --menu2-shadow: 0 30px 80px rgba(5, 4, 14, 0.62);
+  --menu-item-bg: rgba(255,255,255,0.02);
+  --menu-item-hover: linear-gradient(180deg, rgba(132, 96, 255, 0.18), rgba(255,255,255,0.04));
+  --menu-item-active: linear-gradient(180deg, rgba(149, 110, 255, 0.24), rgba(90, 58, 186, 0.18));
+  --menu-item-text: rgba(249,247,255,.96);
+  --menu-item-muted: rgba(224,217,255,.62);
+  --menu-item-active-text: #fff;
+  --menu-danger: #ffb9c6;
+  --menu-danger-hover: rgba(255, 87, 129, 0.14);
+  --footer-surface-bg: radial-gradient(680px 220px at 0% 0%, rgba(111, 76, 198, 0.10), transparent 54%),
+    linear-gradient(180deg, rgba(11, 8, 24, 0.992), rgba(6, 4, 16, 0.996));
+  --footer-surface-border: rgba(90, 68, 150, 0.18);
+  --footer-surface-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03), 0 18px 42px rgba(0, 0, 0, 0.28);
+  --footer-surface-overlay: none;
+  --footer-description-color: rgba(255,255,255,0.70);
+  --footer-link-color: rgba(255,255,255,0.82);
+  --footer-link-bg: rgba(255,255,255,0.05);
+  --footer-link-border: rgba(255,255,255,0.10);
+  --footer-link-hover-bg: rgba(255,255,255,0.09);
+  --footer-link-hover-border: rgba(168, 85, 247, 0.26);
+  --footer-meta-color: rgba(255,255,255,0.82);
+  --right-panel-section-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.012)),
+    rgba(17, 13, 32, 0.46);
+  --right-panel-section-bg-hover: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.018)),
+    rgba(22, 16, 40, 0.56);
+  --right-panel-section-border: rgba(136, 110, 205, 0.14);
+  --right-panel-section-border-hover: rgba(149, 123, 216, 0.20);
+  --right-panel-section-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.025);
+  --right-panel-section-shadow-hover: none;
+  --right-panel-cover-bg: radial-gradient(220px 160px at 50% 0%, rgba(132, 103, 208, 0.14), transparent 72%),
+    linear-gradient(180deg, rgba(27, 20, 48, 0.88), rgba(14, 10, 28, 0.96));
+  --right-panel-cover-border: rgba(139, 112, 208, 0.16);
+  --right-panel-cover-shadow: 0 14px 32px rgba(0, 0, 0, 0.30);
+  --right-panel-link-bg: var(--btn-bg);
+  --right-panel-link-bg-hover: var(--btn-bg-hover);
+  --right-panel-link-border: transparent;
+  --right-panel-link-border-hover: var(--btn-br-hover);
+  --right-panel-muted-color: rgba(232, 226, 255, 0.72);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] {
+  --bg: #f6f1ff;
+  --bg-1: #f1ebff;
+  --bg-2: #e9e0ff;
+  --text: #261c3d;
+  --muted: rgba(61, 45, 96, 0.78);
+  --muted-2: rgba(86, 69, 122, 0.58);
+  --border: rgba(113, 84, 183, 0.14);
+  --border-2: rgba(113, 84, 183, 0.22);
+  --surface-top-rgb: 255, 251, 255;
+  --surface-mid-rgb: 235, 226, 255;
+  --surface-bottom-rgb: 227, 217, 255;
+  --glass-bg: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(243,236,255,0.95), rgba(234,225,255,0.98));
+  --topbar-bg: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(244,237,255,0.96), rgba(236,228,255,0.98));
+  --footer-bg: linear-gradient(180deg, rgba(248,242,255,0.96), rgba(237,228,255,0.99));
+  --player-bg: linear-gradient(180deg, rgba(239,229,255,0.98), rgba(230,221,255,0.99));
+  --btn-bg: linear-gradient(180deg, rgba(255,255,255,0.90), rgba(243,236,255,0.96));
+  --btn-bg-hover: linear-gradient(180deg, rgba(241,232,255,0.98), rgba(234,224,255,0.99));
+  --btn-br: rgba(125, 98, 190, 0.16);
+  --btn-br-hover: rgba(125, 98, 190, 0.28);
+  --ctl-bg: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(244,237,255,0.98));
+  --ctl-bg-2: linear-gradient(180deg, rgba(249,243,255,1), rgba(239,231,255,0.99));
+  --ctl-br: rgba(125, 98, 190, 0.14);
+  --ctl-br-2: rgba(125, 98, 190, 0.22);
+  --ctl-text: #2b2142;
+  --ctl-muted: rgba(91,72,128,0.62);
+  --ctl-caret: rgba(88, 65, 146, 0.82);
+  --ctl-ring: rgba(126, 94, 202, 0.16);
+  --ctl-shadow: 0 24px 58px rgba(104, 79, 156, 0.16);
+  --menu-bg: linear-gradient(180deg, rgba(255,255,255,0.99), rgba(243,236,255,0.99));
+  --menu2-bg: linear-gradient(180deg, rgba(255,255,255,0.99), rgba(239,231,255,0.99));
+  --menu-border: rgba(125, 98, 190, 0.14);
+  --menu2-border: rgba(125, 98, 190, 0.16);
+  --menu2-shadow: 0 28px 70px rgba(104, 79, 156, 0.18);
+  --menu-item-bg: rgba(255,255,255,0.55);
+  --menu-item-hover: linear-gradient(180deg, rgba(235,224,255,0.92), rgba(244,238,255,0.98));
+  --menu-item-active: linear-gradient(180deg, rgba(223,210,255,0.95), rgba(232,221,255,0.99));
+  --menu-item-text: #2d2242;
+  --menu-item-muted: rgba(93,73,126,0.66);
+  --menu-item-active-text: #211733;
+  --menu-danger: #c45b73;
+  --menu-danger-hover: rgba(232, 121, 144, 0.12);
+  --footer-surface-bg: radial-gradient(720px 220px at 0% 0%, rgba(195, 166, 255, 0.16), transparent 52%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(246, 240, 255, 0.97), rgba(239, 232, 255, 0.98));
+  --footer-surface-border: rgba(181, 154, 233, 0.22);
+  --footer-surface-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.74), 0 14px 30px rgba(127, 100, 174, 0.09);
+  --footer-surface-overlay: none;
+  --footer-description-color: rgba(79, 60, 110, 0.78);
+  --footer-link-color: rgba(74, 56, 101, 0.82);
+  --footer-link-bg: rgba(255, 255, 255, 0.76);
+  --footer-link-border: rgba(103, 82, 134, 0.12);
+  --footer-link-hover-bg: rgba(244, 235, 250, 0.96);
+  --footer-link-hover-border: rgba(103, 82, 134, 0.20);
+  --footer-meta-color: rgba(74, 56, 101, 0.76);
+  --right-panel-section-bg: radial-gradient(220px 120px at 0% 0%, rgba(197, 170, 255, 0.10), transparent 64%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 242, 255, 0.97));
+  --right-panel-section-bg-hover: radial-gradient(220px 120px at 0% 0%, rgba(205, 180, 255, 0.12), transparent 64%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(247, 244, 255, 0.985));
+  --right-panel-section-border: rgba(181, 156, 233, 0.20);
+  --right-panel-section-border-hover: rgba(165, 136, 225, 0.24);
+  --right-panel-section-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.82), 0 10px 20px rgba(129, 102, 178, 0.05);
+  --right-panel-section-shadow-hover: none;
+  --right-panel-cover-bg: radial-gradient(220px 140px at 50% 0%, rgba(198, 171, 255, 0.14), transparent 72%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 240, 255, 0.97));
+  --right-panel-cover-border: rgba(181, 156, 233, 0.20);
+  --right-panel-cover-shadow: 0 12px 24px rgba(126, 99, 176, 0.08);
+  --right-panel-link-bg: var(--btn-bg);
+  --right-panel-link-bg-hover: var(--btn-bg-hover);
+  --right-panel-link-border: transparent;
+  --right-panel-link-border-hover: var(--btn-br-hover);
+  --right-panel-muted-color: rgba(84, 65, 122, 0.76);
+  --app-bg: radial-gradient(1080px 640px at 10% 0%, rgba(214, 199, 255, 0.92), transparent 62%),
+    radial-gradient(980px 560px at 100% 100%, rgba(236, 227, 255, 0.84), transparent 60%),
+    linear-gradient(180deg, #fbf7ff 0%, #f3edff 58%, #ece3ff 100%);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+body,  .app-shell,  .home,  .playlist-page,  .track-page,  .settings-pageShell,  .admin-shell {
+  background: transparent;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.app-topstrip__inner,  .app-sticky,  .playerbar,  .home__card,  .tile,  .artist__avatar,  .libRow,  .playlistMenu,  .ui-dd,  .modal,  .panel,  .auth-card,  .settings-card,  .settings-panel,  .admin-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--menu-border);
+  box-shadow: 0 24px 64px rgba(6, 4, 16, 0.34);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.app-topstrip__inner,  .playerbar {
+  background: var(--topbar-bg);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar {
+  background: var(--player-bg);
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.ui-selectMenu,  .ui-dd,  .playlistMenu {
+  padding: 8px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.ui-selectMenu__item,  .ui-dd__item,  .ui-dd__row,  .profile-dd-item,  .playlistMenu__item {
+  min-height: 38px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  font-size: 12.5px;
+  line-height: 1.2;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.ui-dd__title,  .home__genresLabel,  .playlistMenu__subtitle {
+  letter-spacing: .08em;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-dd__row {
+  grid-template-columns: 36px 1fr;
+  gap: 10px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.ui-dd__img,  .libRow__img,  .playerbar__cover,  .track-hero__cover,  .tile__media,  .artist__avatar {
+  border-radius: 14px;
+  border-color: rgba(205, 190, 255, 0.12);
+  background: linear-gradient(180deg, rgba(130, 96, 255, 0.18), rgba(18, 12, 38, 0.72));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__hero,  .track-hero,  .settings-card,  .settings-panel {
+  background: radial-gradient(900px 280px at 0% 0%, rgba(144, 106, 255, 0.22), transparent 56%),
+    linear-gradient(180deg, rgba(64, 42, 130, 0.46), rgba(14, 11, 28, 0.94));
+  border-color: rgba(195, 181, 255, 0.14);
+}
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+ .page-title,  .playlist-page__title,  .track-hero__title,  .rp__track,  .playerbar__track {
+  letter-spacing: -.02em;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playerbar__artist,  .rp__sub{
+  color: rgba(232, 226, 255, 0.72);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.libRow,  .tile {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(20,14,38,0.56));
+  border-color: rgba(198, 184, 255, 0.10);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.libRow:hover,  .tile:hover {
+  background: linear-gradient(180deg, rgba(142, 108, 255, 0.14), rgba(28,20,52,0.70));
+  border-color: rgba(204, 191, 255, 0.18);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.chip,  .settings-chipBtn {
+  min-height: 34px;
+  border-radius: 999px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.chip.is-active,  .settings-chipBtn.is-active,  .ui-selectMenu__item.is-active,  .profile-dd-item.is-active,  .playlistMenu__item.is-active {
+  background: linear-gradient(180deg, rgba(149, 111, 255, 0.30), rgba(78, 48, 162, 0.40));
+  border-color: rgba(211, 196, 255, 0.24);
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(79, 50, 164, 0.24);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlistMenu__item--danger,  .ui-dd__item.is-danger,  .profile-dd-item.danger {
+  color: var(--menu-danger);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.playlistMenu__item--danger:hover,  .ui-dd__item.is-danger:hover,  .profile-dd-item.danger:hover {
+  background: var(--menu-danger-hover);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.topbarProfileMenu,  .ui-selectMenu {
+  min-width: 200px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlistMenu__title,  .profile-name,  .libRow__title,  .rp__artistName {
+  font-weight: 800;
+}
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__hero .icon-btn,  .libMoreBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgba(var(--accent-rgb), .18);
+}
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+ .landing-hero{
+  background: radial-gradient(980px 640px at 12% 0%, rgba(145, 108, 255, 0.16), transparent 58%),
+    linear-gradient(180deg, rgba(20, 13, 38, 0.98), rgba(10, 8, 20, 1));
+}
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+ html[data-theme-preset="light"] .landing-hero{
+  background: radial-gradient(980px 640px at 12% 0%, rgba(196, 176, 255, 0.42), transparent 58%),
+    linear-gradient(180deg, rgba(251,248,255,0.98), rgba(241,233,255,0.99));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .app-topstrip__inner,  html[data-theme-preset="light"] .playerbar,  html[data-theme-preset="light"] .app-sticky,  html[data-theme-preset="light"] .home__card,  html[data-theme-preset="light"] .tile,  html[data-theme-preset="light"] .libRow,  html[data-theme-preset="light"] .playlistMenu,  html[data-theme-preset="light"] .ui-dd,  html[data-theme-preset="light"] .modal,  html[data-theme-preset="light"] .panel,  html[data-theme-preset="light"] .settings-card,  html[data-theme-preset="light"] .settings-panel,  html[data-theme-preset="light"] .admin-card {
+  box-shadow: 0 22px 56px rgba(104, 79, 156, 0.14);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .playerbar__artist,  html[data-theme-preset="light"] .rp__sub{
+  color: rgba(84, 65, 122, 0.76);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] {
+  --body-bg: radial-gradient(1300px 720px at 12% 2%, rgba(168, 120, 255, 0.18), transparent 54%),
+    radial-gradient(980px 580px at 88% 10%, rgba(146, 108, 255, 0.14), transparent 52%),
+    radial-gradient(900px 560px at 50% 100%, rgba(194, 166, 255, 0.14), transparent 56%),
+    linear-gradient(180deg, #fcf9ff 0%, #f4eefc 42%, #efe7fb 100%);
+  --surface-card: linear-gradient(180deg, rgba(255, 252, 255, 0.97), rgba(244, 236, 255, 0.95));
+  --surface-card-strong: radial-gradient(900px 260px at 0% 0%, rgba(176, 132, 255, 0.16), transparent 50%),
+    linear-gradient(180deg, rgba(255, 251, 255, 0.98), rgba(241, 232, 255, 0.96));
+  --surface-elevated: linear-gradient(180deg, rgba(253, 248, 255, 0.98), rgba(239, 228, 255, 0.97));
+  --surface-elevated-hover: linear-gradient(180deg, rgba(251, 245, 255, 1), rgba(236, 223, 255, 0.98));
+  --surface-field: linear-gradient(180deg, rgba(245, 236, 255, 0.88), rgba(239, 229, 255, 0.82));
+  --surface-field-hover: linear-gradient(180deg, rgba(240, 228, 255, 0.96), rgba(232, 219, 255, 0.9));
+  --surface-chip: linear-gradient(180deg, rgba(239, 228, 255, 0.88), rgba(231, 217, 255, 0.82));
+  --surface-chip-hover: linear-gradient(180deg, rgba(233, 219, 255, 0.96), rgba(224, 206, 255, 0.9));
+  --surface-chip-active: linear-gradient(180deg, rgba(183, 140, 255, 0.34), rgba(150, 108, 239, 0.28));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] body,  html[data-theme-preset="light"] .app-shell,  html[data-theme-preset="light"] .home,  html[data-theme-preset="light"] .track-page,  html[data-theme-preset="light"] .playlist-page,  html[data-theme-preset="light"] .liked-page {
+  background: var(--body-bg);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .app-topstrip__inner,  html[data-theme-preset="light"] .app-sticky,  html[data-theme-preset="light"] .home__card,  html[data-theme-preset="light"] .home__hero,  html[data-theme-preset="light"] .home__heroMainCard,  html[data-theme-preset="light"] .home__heroMiniCard,  html[data-theme-preset="light"] .playerbar,  html[data-theme-preset="light"] .panel,  html[data-theme-preset="light"] .track-item,  html[data-theme-preset="light"] .libRow,  html[data-theme-preset="light"] .tile {
+  background: radial-gradient(720px 180px at 0% 0%, rgba(176, 132, 255, 0.12), transparent 48%),
+    linear-gradient(180deg, rgba(255, 252, 255, 0.98), rgba(242, 233, 255, 0.96));
+  border-color: rgba(166, 132, 229, 0.22);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__hero,  html[data-theme-preset="light"] .home__heroMainCard,  html[data-theme-preset="light"] .home__heroMiniCard,  html[data-theme-preset="light"] .app-topstrip__inner,  html[data-theme-preset="light"] .app-sidebar .app-sticky,  html[data-theme-preset="light"] .app-right .app-sticky,  html[data-theme-preset="light"] .playerbar {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 18px 40px rgba(112, 78, 186, 0.10);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .playerbar {
+  background: radial-gradient(860px 180px at 50% 0%, rgba(165, 110, 255, 0.16), transparent 46%),
+    linear-gradient(180deg, rgba(255, 251, 255, 0.98), rgba(241, 231, 255, 0.97));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .playerbar__control,  html[data-theme-preset="light"] .playerbar__action,  html[data-theme-preset="light"] .playerbar .icon-btn {
+  background: linear-gradient(180deg, rgba(239, 228, 255, 0.92), rgba(229, 214, 255, 0.84));
+  border: 1px solid rgba(164, 124, 232, 0.24);
+  color: #5f4597;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .playerbar__playBtn {
+  background: linear-gradient(180deg, #9f6cff, #7f4cf2);
+  border-color: rgba(130, 79, 237, 0.52);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(127, 76, 242, 0.28);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .playerbar__playBtn:hover {
+  transform: none;
+  box-shadow: 0 16px 34px rgba(118, 92, 164, 0.28);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .playerbar__sliderWrap::before {
+  background: rgba(157, 125, 224, 0.18);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .playerbar__range::-webkit-slider-runnable-track {
+  background: linear-gradient(90deg, rgba(124, 76, 242, 0.92) 0%, rgba(124, 76, 242, 0.92) var(--player-range-progress, 0%), rgba(175, 152, 223, 0.22) var(--player-range-progress, 0%), rgba(175, 152, 223, 0.22) 100%);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .playerbar__range::-moz-range-track {
+  background: rgba(175, 152, 223, 0.22);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .playerbar__range::-moz-range-progress {
+  background: rgba(124, 76, 242, 0.92);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .glass,  html[data-theme-preset="light"] .home__card,  html[data-theme-preset="light"] .app-sticky,  html[data-theme-preset="light"] .panel,  html[data-theme-preset="light"] .admin-card,  html[data-theme-preset="light"] .track-item,  html[data-theme-preset="light"] .settings-panel,  html[data-theme-preset="light"] .settings-card,  html[data-theme-preset="light"] .home__hero,  html[data-theme-preset="light"] .home__heroMainCard,  html[data-theme-preset="light"] .home__heroMiniCard {
+  background: var(--light-surface-soft);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .home__hero {
+  background: var(--theme-hero-glow), var(--light-surface-hero);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .topbar,  html[data-theme-preset="light"] .app-topstrip__inner,  html[data-theme-preset="light"] .admin-top,  html[data-theme-preset="light"] .admin-sidebar,  html[data-theme-preset="light"] .playerbar {
+  background: var(--light-surface-base);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .tile,  html[data-theme-preset="light"] .libRow,  html[data-theme-preset="light"] .playlistMenu,  html[data-theme-preset="light"] .ui-dd,  html[data-theme-preset="light"] .admin-nav-item,  html[data-theme-preset="light"] .admin-pill,  html[data-theme-preset="light"] .admin-btn,  html[data-theme-preset="light"] .admin-iconbtn,  html[data-theme-preset="light"] .chip {
+  background: var(--light-surface-subtle);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .tile:hover,  html[data-theme-preset="light"] .libRow:hover,  html[data-theme-preset="light"] .admin-nav-item:hover,  html[data-theme-preset="light"] .admin-btn:hover,  html[data-theme-preset="light"] .admin-pill:hover,  html[data-theme-preset="light"] .playlistMenu__item:hover,  html[data-theme-preset="light"] .ui-dd__item:hover,  html[data-theme-preset="light"] .ui-dd__row:hover{
+  background: var(--light-surface-hover);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .chip.is-active,  html[data-theme-preset="light"] .admin-nav-item.is-active,  html[data-theme-preset="light"] .settings-chipBtn.is-active,  html[data-theme-preset="light"] .settings-themeCard.is-active {
+  background: var(--light-surface-active);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .topbar__search,  html[data-theme-preset="light"] .searchbox input,  html[data-theme-preset="light"] .input,  html[data-theme-preset="light"] .admin-input,  html[data-theme-preset="light"] .sp-select,  html[data-theme-preset="light"] .sp-profileField__control,  html[data-theme-preset="light"] select {
+  background: var(--light-button-bg);
+}
+
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .profile-btn:hover,  html[data-theme-preset="light"] .icon-btn:hover,  html[data-theme-preset="light"] .libMoreBtn:hover,  html[data-theme-preset="light"] .sp-profileEditUploadBtn:hover,  html[data-theme-preset="light"] .btn:hover {
+  background: var(--light-button-bg-hover);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .btn.primary,  html[data-theme-preset="light"] .auth-primary-btn,  html[data-theme-preset="light"] .playerbar__playBtn {
+  background: var(--light-button-primary);
+  color: #fff;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .btn.primary:hover,  html[data-theme-preset="light"] .auth-primary-btn:hover {
+  background: var(--light-button-primary-hover);
+}
+.app-shell :is(
+  .tile__open,
+  .tile__bodyButton,
+  .artist,
+  .track-title
+),  .app-shell :is(
+  .tile__open,
+  .tile__bodyButton,
+  .artist,
+  .track-title
+):hover,  .app-shell :is(
+  .tile__open,
+  .tile__bodyButton,
+  .artist,
+  .track-title
+
+/* Стан фокуса підкреслює активний елемент і покращує навігацію з клавіатури */
+):focus-visible {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .playerbar__control.is-active,  html[data-theme-preset="light"] .playerbar__action.is-active {
+  border-color: rgba(123, 83, 216, 0.54);
+  background: linear-gradient(180deg, rgba(208, 188, 255, 0.98), rgba(188, 160, 247, 0.96));
+  color: #4f2d9f;
+  box-shadow: 0 14px 26px rgba(128, 92, 214, 0.20), inset 0 1px 0 rgba(255,255,255,.72);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .playerbar__control.is-active:hover:not(:disabled),  html[data-theme-preset="light"] .playerbar__action.is-active:hover:not(:disabled) {
+  border-color: rgba(113, 74, 208, 0.62);
+  background: linear-gradient(180deg, rgba(214, 195, 255, 1), rgba(194, 167, 250, 0.98));
+  color: #43208d;
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .playerbar__control,  html[data-theme-preset="violet"] .playerbar__action,  html[data-theme-preset="violet"] .playerbar__playlistAction {
+  border-color: rgba(122, 96, 186, 0.14);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  box-shadow: none;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="violet"] .playerbar__control:hover:not(:disabled),  html[data-theme-preset="violet"] .playerbar__action:hover:not(:disabled),  html[data-theme-preset="violet"] .playerbar__playlistAction:hover:not(:disabled) {
+  border-color: rgba(142, 112, 205, 0.24);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.028));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] .playerbar__playBtn {
+  border-color: rgba(144, 114, 209, 0.24);
+  background: linear-gradient(180deg, rgba(141, 106, 224, 0.96), rgba(108, 75, 194, 0.96));
+  color: rgba(251, 247, 255, 0.98);
+  box-shadow: 0 12px 28px rgba(24, 8, 56, 0.28);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .playerbar__control.is-active,  html[data-theme-preset="violet"] .playerbar__action.is-active {
+  border-color: rgba(214, 180, 255, 0.62);
+  background: linear-gradient(180deg, rgba(186, 136, 255, 0.40), rgba(112, 72, 214, 0.34));
+  color: rgba(250, 246, 255, 0.99);
+  box-shadow: 0 14px 28px rgba(64, 34, 144, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="violet"] .playerbar__control.is-active:hover:not(:disabled),  html[data-theme-preset="violet"] .playerbar__action.is-active:hover:not(:disabled) {
+  border-color: rgba(224, 194, 255, 0.72);
+  background: linear-gradient(180deg, rgba(198, 148, 255, 0.48), rgba(120, 80, 222, 0.40));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .playerbar__control.is-active svg,  html[data-theme-preset="violet"] .playerbar__action.is-active svg {
+  filter: drop-shadow(0 0 9px rgba(214, 184, 255, 0.28));
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="violet"] .playerbar__playBtn:hover:not(:disabled) {
+  box-shadow: 0 14px 32px rgba(24, 8, 56, 0.34);
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] :is(.admin-subtitle, .admin-table__subline, .admin-trackModal__uploadMeta, .sp-loadingLine, .sp-bannerError, .track-playlist__message, .playerbar__menuTitle, .playerbar__menuMsg, .mobileNowPlaying__sheetMsg, .mobileNowPlaying__artistBody small, .mobileNowPlaying__artistKicker) {
+  color: rgba(61, 45, 96, 0.78);
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] :is(.sp-page--profile, .sp-page--studio) :is(.sp-label, .sp-fieldHint, .sp-metaCard__label, .sp-statPill__label, .sp-infoRow__label) {
+  color: rgba(61, 45, 96, 0.74);
+}

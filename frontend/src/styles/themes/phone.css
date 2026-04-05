@@ -1,0 +1,2333 @@
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+
+@media (max-width: 767px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  html,  body,  #root {
+    min-height: 100dvh;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  body {
+    overflow-x: hidden;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  body.app-phone-panel-open {
+    touch-action: none;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .app-topstrip {
+    padding: 8px 8px 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .app-topstrip__inner {
+    border-radius: 18px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__phoneBrand {
+    background: rgba(255, 255, 255, 0.038);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__phoneBrand .clarity-logo--phone {
+    transform: none;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__phoneSearchLauncher {
+    padding: 0 12px;
+    gap: 7px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__phoneSearchIcon {
+    font-size: 13px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__phoneSearchText{
+    line-height: 1.2;
+  }
+  
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .app-body {
+    padding: 6px 8px 0;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .app-main {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .app-content {
+    min-height: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-mobileNav {
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.32);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-mobileNav__item {
+    gap: 3px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-mobileNav__label {
+    font-weight: 700;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar--mini {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.26);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__meta {
+    padding-top: 0;
+  }
+  
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .home,  .app-shell--phone .mobile-searchPage,  .app-shell--phone .mobile-libraryPage,  .app-shell--phone .settings-pageShell,  .app-shell--phone .playlist-page,  .app-shell--phone .liked-page,  .app-shell--phone .track-page,  .app-shell--phone .sp-page,  .app-shell--phone .sp-page--profile,  .app-shell--phone .sp-page--studio {
+    gap: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone .settings-pageShell,  .app-shell--phone .playlist-page,  .app-shell--phone .liked-page,  .app-shell--phone .track-page,  .app-shell--phone .sp-page,  .app-shell--phone .sp-page--profile,  .app-shell--phone .sp-page--studio {
+    padding-inline: 0;
+    padding-bottom: 6px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .home__hero,  .app-shell--phone .home__card,  .app-shell--phone .playlist-page__head,  .app-shell--phone .playlist-page .track-item,  .app-shell--phone .liked-page .track-item,  .app-shell--phone .panel,  .app-shell--phone .settings-card,  .app-shell--phone .settings-panel,  .app-shell--phone .sp-card,  .app-shell--phone .sp-section,  .app-shell--phone .mobile-emptyState,  .app-shell--phone .mobile-resultCard,  .app-shell--phone .sidecard--page,  .app-shell--phone .sitefooter__inner {
+    border-radius: 18px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__heroTop {
+    display: grid;
+    gap: 8px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .home__heroFilterLabel,  .app-shell--phone .home__genresLabel {
+    font-size: 11px;
+    font-weight: 800;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .home__heroChips,  .app-shell--phone .home__genresScroll {
+    gap: 6px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home .chip {
+    min-height: 30px;
+    padding: 6px 10px;
+    font-size: 11px;
+    gap: 6px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home .chip__icon {
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__heroCompact {
+    grid-template-columns: 1fr;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__heroMainCard {
+    align-items: center;
+    border-radius: 18px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .home__heroMainVisual,  .app-shell--phone .home__heroMainArtFrame {
+    width: 88px;
+    min-width: 88px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__heroMainArt {
+    width: 88px;
+    height: 88px;
+    border-radius: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__heroMainContent {
+    gap: 7px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__heroMainTitle {
+    line-height: 0.92;
+    letter-spacing: -0.05em;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .home__heroMainMeta,  .app-shell--phone .home__heroMainText {
+    line-height: 1.4;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .home__heroBadge,  .app-shell--phone .home__heroMetaPill {
+    min-height: 28px;
+    padding: 5px 9px;
+    border-radius: 999px;
+    font-size: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__heroPlayBtn {
+    height: 34px;
+    padding-inline: 14px;
+    border-radius: 12px;
+    margin-left: auto;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__heroMetaRow {
+    gap: 6px;
+    align-items: center;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__heroMiniCard {
+    border-radius: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__sectionHead {
+    margin-top: 2px;
+    margin-bottom: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__title {
+    font-size: 13px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .row {
+    gap: 8px;
+    padding-bottom: 2px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .tile{
+    min-width: 136px;
+    width: 136px;
+    padding: 8px;
+    border-radius: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .tile__media{
+    border-radius: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .tile__title{
+    font-size: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .tile__sub{
+    font-size: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .artists {
+    gap: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .artist {
+    min-width: 88px;
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .artist__avatar {
+    width: 62px;
+    height: 62px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .artist__name {
+    font-size: 11px;
+  }
+  
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .mobile-pageHeader h1 {
+    margin: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .mobile-pageHeader p {
+    margin: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .mobile-searchPage__clear {
+    width: 30px;
+    height: 30px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .mobile-filterChip {
+    border-radius: 999px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .mobile-searchSection {
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .mobile-searchSection__head h2 {
+    font-size: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .mobile-searchSection__head span {
+    font-size: 11px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .mobile-resultList {
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .mobile-resultCard {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .mobile-resultCard__cover,  .app-shell--phone .mobile-resultCard__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .mobile-resultCard__meta strong {
+    font-size: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .mobile-resultCard__meta small {
+    font-size: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .mobile-libraryPage .sidecard,  .app-shell--phone .mobile-libraryPage .sidecard--page {
+    gap: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .libraryHead {
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .libraryHead__title {
+    line-height: 0.95;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .libToolsRow {
+    gap: 8px;
+    justify-content: space-between;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .libSort__btn,  .app-shell--phone .iconBtn,  .app-shell--phone .icon-btn,  .app-shell--phone .libMoreBtn {
+    min-height: 34px;
+    height: 34px;
+    border-radius: 11px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .libSort__btn {
+    padding: 0 10px;
+    font-size: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .libSearch .input {
+    min-height: 38px;
+    font-size: 13px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .sidecard--page .libRow,  .app-shell--phone .mobile-libraryPage .libRow {
+    border-radius: 16px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .sidecard--page .libRow__img,  .app-shell--phone .mobile-libraryPage .libRow__img {
+    border-radius: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .sidecard--page .libRow__title,  .app-shell--phone .mobile-libraryPage .libRow__title {
+    font-size: 13px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .sidecard--page .libRow__sub,  .app-shell--phone .mobile-libraryPage .libRow__sub {
+    font-size: 11px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .settings-kicker {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .settings-head h1 {
+    margin: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .settings-subtitle {
+    max-width: 32ch;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .settings-grid,  .app-shell--phone .settings-grid--top,  .app-shell--phone .settings-themeGrid,  .app-shell--phone .settings-formGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .settings-panel__head p,  .app-shell--phone .settings-accountRow__label,  .app-shell--phone .settings-field__label,  .app-shell--phone .settings-formHint,  .app-shell--phone .settings-themeCard__note {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .settings-chipBtn {
+    border-radius: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .settings-accountRow__value,  .app-shell--phone .settings-formMessage {
+    font-size: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .settings-statusBadge {
+    font-size: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .settings-themeCard {
+    border-radius: 18px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .settings-themeCard__title {
+    line-height: 1.02;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .settings-themeCard__swatches {
+    gap: 6px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) {
+    gap: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-card,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-section {
+    padding: 12px;
+    gap: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-profileLayout,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-cards,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-metricGrid,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-compactList,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-metaStack--profile {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard {
+    padding: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__avatar--profile {
+    width: 72px;
+    height: 72px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__body--profile {
+    gap: 8px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__title--profile {
+    word-break: break-word;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__stats--profile {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-statPill__label,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-section__sub,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-metaCard__label,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-metricCard__label,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-metricCard__sub,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-trackRowModern__meta,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-trackRowModern__side,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-miniTrack__meta,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-bannerError,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-empty {
+    line-height: 1.35;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__actions--profile {
+    gap: 8px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-btn,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-btn--ghost,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-btn--primary,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-head-actions .sp-btn {
+    min-height: 34px;
+    padding-inline: 12px;
+    border-radius: 12px;
+    font-size: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-h {
+    font-size: 14px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-metricCard {
+    min-height: 0;
+    border-radius: 14px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-trackListModern {
+    gap: 8px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-trackRowModern {
+    gap: 8px;
+    padding: 9px 10px;
+    border-radius: 14px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-trackRowModern__cover,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-miniTrack__cover {
+    border-radius: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-trackRowModern__title,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-miniTrack__title,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-metaCard__value {
+    font-size: 13px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .playlist-page,  .app-shell--phone .liked-page,  .app-shell--phone .track-page {
+    gap: 12px;
+    padding-inline: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .playlist-page__identity {
+    min-width: 0;
+    align-items: flex-start;
+    gap: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .playlist-page__cover,  .app-shell--phone .track-hero__cover {
+    border-radius: 14px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .playlist-page__title,  .app-shell--phone .track-hero__title {
+    line-height: 0.96;
+    white-space: normal;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .playlist-page__count,  .app-shell--phone .playlist-page__hint,  .app-shell--phone .track-hero__sub--flush,  .app-shell--phone .track-hero__sub--meta,  .app-shell--phone .track-login-hint,  .app-shell--phone .track-playlist__message {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .playlist-page__controls,  .app-shell--phone .playlist-page__sort,  .app-shell--phone .track-playlist__actions {
+    width: 100%;
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .track-hero {
+    grid-template-columns: 84px minmax(0, 1fr);
+    gap: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .track-hero__actions {
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .track-playlist__actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .playlist-page .track-item,  .app-shell--phone .liked-page .track-item,  .app-shell--phone .track-item {
+    grid-template-columns: 44px minmax(0, 1fr) auto;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 14px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .playlist-page .track-cover,  .app-shell--phone .liked-page .track-cover,  .app-shell--phone .track-cover {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .playlist-page .track-actions,  .app-shell--phone .liked-page .track-actions,  .app-shell--phone .track-actions {
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .playlist-page .track-right,  .app-shell--phone .liked-page .track-right,  .app-shell--phone .track-right {
+    display: none;
+  }
+  
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter--phone .sitefooter__metaCompact {
+    min-height: 28px;
+    padding-inline: 10px;
+    font-size: 10.5px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter--phone .sitefooter__linksCompact--phone a {
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .playlistMenu,  .topbarProfileMenu,  .topbarSearchMenu,  .ui-selectMenu {
+    max-width: min(100vw - 28px, 320px);
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 430px) {
+  
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .home__heroMainTitle,  .app-shell--phone .settings-head h1,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__title--profile,  .app-shell--phone .playlist-page__title,  .app-shell--phone .track-hero__title {
+    font-size: clamp(24px, 10vw, 34px);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .sp-cards {
+    grid-template-columns: 1fr;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .tile{
+    min-width: 128px;
+    width: 128px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 390px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .home__hero,  .app-shell--phone .home__card,  .app-shell--phone .settings-card,  .app-shell--phone .settings-panel,  .app-shell--phone .sp-card,  .app-shell--phone .sp-section,  .app-shell--phone .panel,  .app-shell--phone .playlist-page__head,  .app-shell--phone .sitefooter__inner,  .app-shell--phone .mobile-emptyState,  .app-shell--phone .mobile-resultCard,  .app-shell--phone .sidecard--page {
+    border-radius: 16px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .playlist-page .track-item,  .app-shell--phone .liked-page .track-item,  .app-shell--phone .track-item,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-trackRowModern,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-miniTrack {
+    padding: 8px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .modal,  .modal--compact,  .modal--sm,  .modal--md{
+    width: min(100vw - 20px, 400px);
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 360px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .mobile-pageHeader h1,  .app-shell--phone .settings-head h1,  .app-shell--phone .home__heroMainTitle,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__title--profile,  .app-shell--phone .playlist-page__title,  .app-shell--phone .track-hero__title {
+    font-size: clamp(22px, 10vw, 30px);
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 767px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  html.app-phone-mode,  body.app-phone-mode,  body.app-phone-mode #root {
+    height: auto;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  body.app-phone-mode:not(.app-phone-panel-open) {
+    touch-action: pan-y;
+    overscroll-behavior-y: auto;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.app-shell--phone {
+    --phone-nav-height: 58px;
+    --phone-player-height: 52px;
+    --phone-bottom-gap: 6px;
+    min-height: 100dvh;
+    height: auto;
+    overflow: visible;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .app-body,  .app-shell--phone .app-main,  .app-shell--phone .app-content {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .app-main {
+    display: block;
+    padding-bottom: calc(var(--phone-nav-height) + var(--phone-player-height) + 26px + env(safe-area-inset-bottom));
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .app-content {
+    padding-bottom: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-mobileNav {
+    left: 8px;
+    right: 8px;
+    bottom: max(6px, env(safe-area-inset-bottom));
+    padding: 4px 6px;
+    border-radius: 16px;
+    z-index: 69;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-mobileNav__item {
+    padding: 4px 4px;
+    border-radius: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-mobileNav__icon {
+    font-size: 13px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-mobileNav__label {
+    line-height: 1.05;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__phoneBrand {
+    width: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0;
+    border-radius: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .clarity-logo--phoneCompact {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0;
+    font-family: Inter, Segoe UI, Arial, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    line-height: 1;
+    user-select: none;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .clarity-logo--phoneCompact .clarity-logo__phoneLetter {
+    font-size: 18px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .clarity-logo--phoneCompact .clarity-logo__phoneDot {
+    font-size: 18px;
+    margin-left: 1px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .topbar {
+    min-height: 48px;
+    padding: 6px 8px;
+    grid-template-columns: 36px minmax(0, 1fr) 36px;
+    gap: 8px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .topbar__phoneSearchLauncher,  .topbar__phoneSettings {
+    min-height: 36px;
+    border-radius: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__phoneSearchLauncher {
+    padding-inline: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__phoneSearchText{
+    font-size: 11.5px;
+  }
+  
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__phoneSettings {
+    width: 36px;
+    min-width: 36px;
+    font-size: 15px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__hero {
+    padding: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .home__heroMainVisual,  .app-shell--phone .home__heroMainArtFrame,  .app-shell--phone .home__heroMainArt {
+    width: 72px;
+    height: 72px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__heroMainTitle {
+    font-size: clamp(28px, 11vw, 38px);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .home__heroMainMeta,  .app-shell--phone .home__heroMainText {
+    font-size: 11.5px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__heroMiniCard {
+    padding: 9px 10px;
+    gap: 6px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .home__heroMiniThumb,  .app-shell--phone .home__heroMiniAvatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__heroMiniTitle {
+    font-size: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .home__heroMiniSub,  .app-shell--phone .home__mutedState {
+    font-size: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__card {
+    padding: 9px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard--profile,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-card,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-section {
+    padding: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__content--profile {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__main--profile {
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 10px;
+    align-items: start;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__avatarWrap--profile,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) :is(.sp-heroCard__avatar--profile, .sp-heroCard__avatar--profile img, .sp-heroCard__avatar--profile .artistAvatar, .sp-heroCard__avatar--profile .media-thumb__img) {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__title--profile {
+    font-size: clamp(24px, 9vw, 32px);
+    line-height: 0.94;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__subtitle {
+    font-size: 11px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-statPill {
+    min-height: 34px;
+    padding: 7px 10px;
+    border-radius: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-statPill__value {
+    font-size: 14px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-statPill__label,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-section__sub,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-metaCard__label,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-metricCard__label,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-metricCard__sub,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-trackRowModern__meta,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-trackRowModern__side,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-miniTrack__meta,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-bannerError,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-empty {
+    font-size: 10.5px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-btn,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-btn--ghost,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-btn--primary {
+    min-height: 32px;
+    padding-inline: 10px;
+    font-size: 11px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-metricCard {
+    padding: 9px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-metricCard__value {
+    font-size: 20px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-trackRowModern {
+    grid-template-columns: 16px 40px minmax(0, 1fr) auto;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-trackRowModern__cover,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-miniTrack__cover {
+    width: 40px;
+    height: 40px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .mobile-libraryPage .sidecard,  .app-shell--phone .mobile-libraryPage .sidecard--page {
+    padding: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .libraryHead__title {
+    font-size: clamp(26px, 9vw, 34px);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .sidecard--page .libRow__link,  .app-shell--phone .mobile-libraryPage .libRow__link {
+    padding: 8px 10px;
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+    gap: 8px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .sidecard--page .libRow__img,  .app-shell--phone .mobile-libraryPage .libRow__img {
+    width: 40px;
+    height: 40px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .libMoreBtn,  .app-shell--phone .iconBtn,  .app-shell--phone .icon-btn {
+    min-height: 32px;
+    height: 32px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .mobile-searchPage__input {
+    font-size: 13px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .mobile-emptyState,  .app-shell--phone .mobile-resultCard {
+    padding: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .playlist-page__head,  .app-shell--phone .panel {
+    padding: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .playlist-page__cover,  .app-shell--phone .track-hero__cover {
+    width: 64px;
+    height: 64px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .playlist-page__title,  .app-shell--phone .track-hero__title {
+    font-size: clamp(24px, 8.5vw, 30px);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .sitefooter {
+    margin-top: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .sitefooter__inner {
+    padding: 10px 12px;
+  }
+  
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .sitefooter--phone .sitefooter__linksCompact--phone a,  .sitefooter--phone .sitefooter__metaCompact {
+    min-height: 28px;
+    padding-inline: 9px;
+    font-size: 10px;
+  }
+  
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 430px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .topbar__phoneSearchText{
+    font-size: 11px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .clarity-logo--phoneCompact .clarity-logo__phoneLetter,  .clarity-logo--phoneCompact .clarity-logo__phoneDot {
+    font-size: 17px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 390px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.app-shell--phone {
+    --phone-nav-height: 56px;
+    --phone-player-height: 50px;
+  }
+  
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__main--profile {
+    grid-template-columns: 56px minmax(0, 1fr);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__avatarWrap--profile,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) :is(.sp-heroCard__avatar--profile, .sp-heroCard__avatar--profile img, .sp-heroCard__avatar--profile .artistAvatar, .sp-heroCard__avatar--profile .media-thumb__img) {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .settings-head h1,  .app-shell--phone .home__heroMainTitle,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__title--profile,  .app-shell--phone .playlist-page__title,  .app-shell--phone .track-hero__title {
+    font-size: clamp(22px, 9vw, 28px);
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 767px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__heroSideCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__heroMiniCard {
+    min-height: 104px;
+    align-content: start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .home__heroMiniHead {
+    align-items: center;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .home__heroMiniAvatarWrap,  .app-shell--phone .home__heroMiniAvatar,  .app-shell--phone .home__heroMiniAvatar.media-thumb--avatar,  .app-shell--phone .home__heroMiniAvatarWrap img,  .app-shell--phone .home__heroMiniAvatar .media-thumb__img {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    aspect-ratio: 1 / 1;
+    border-radius: 999px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .mobile-pageHeader {
+    padding-top: 2px;
+  }
+  
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .mobile-emptyState {
+    padding: 10px 12px;
+    gap: 5px;
+    font-size: 11.5px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.playlist-page, .liked-page) .playlist-page__head {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.playlist-page, .liked-page) .playlist-page__identity {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.playlist-page, .liked-page) .playlist-page__cover,  .app-shell--phone :is(.playlist-page, .liked-page) .track-hero__cover {
+    width: 56px;
+    height: 56px;
+    border-radius: 13px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.playlist-page, .liked-page) .playlist-page__meta {
+    gap: 4px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.playlist-page, .liked-page) .playlist-page__title {
+    font-size: clamp(22px, 8vw, 28px);
+    line-height: 0.98;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.playlist-page, .liked-page) :is(.playlist-page__count, .playlist-page__hint, .playlist-page__sortLabel) {
+    font-size: 11px;
+    line-height: 1.32;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.playlist-page, .liked-page) .playlist-page__controls {
+    align-items: center;
+    gap: 8px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.playlist-page, .liked-page) .playlist-page__sort {
+    width: auto;
+    flex: 1 1 100%;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.playlist-page, .liked-page) .playlist-page__controls :is(.btn, .icon-btn, .playerbar__control) {
+    min-height: 34px;
+    border-radius: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) {
+    gap: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__avatarWrap--profile,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) :is(.sp-heroCard__avatar--profile, .sp-heroCard__avatar--profile img, .sp-heroCard__avatar--profile .artistAvatar, .sp-heroCard__avatar--profile .media-thumb__img) {
+    aspect-ratio: 1 / 1;
+    border-radius: 999px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__body--profile {
+    gap: 6px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-statPill {
+    border-radius: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) :is(.sp-metaCard, .sp-metricCard, .sp-section) {
+    border-radius: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .settings-head h1 {
+    line-height: 0.96;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell--phone .settings-subtitle,  .app-shell--phone .settings-panel__head p,  .app-shell--phone .settings-themeCard__note {
+    font-size: 11.5px;
+    line-height: 1.35;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .settings-accountRow {
+    padding: 6px 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .settings-statusBadge {
+    min-height: 24px;
+    padding-inline: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .settings-themeGrid {
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--phone .settings-themeCard__previewShell {
+    transform-origin: center center;
+  }
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+  @media (max-width: 430px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .sitefooter--phone .sitefooter__compactRow--phone {
+      flex-wrap: wrap;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .sitefooter--phone .sitefooter__brandInline {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      margin-right: 2px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .sitefooter--phone .sitefooter__brandInline .clarity-logo--footer svg {
+      height: 18px;
+      width: auto;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .sitefooter--phone .sitefooter__metaCompact {
+      margin-left: 0;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone-panel-open .app-player {
+      display: none;
+    }
+    
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__heroSideCards {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+  }
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+  @media (max-width: 390px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__heroMiniCard {
+      min-height: 98px;
+    }
+    
+  }
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+  @media (max-width: 767px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-mobileNav {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-mobileNav__item {
+      min-height: 48px;
+      padding-inline: 6px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-mobileNav__label {
+      font-size: 10.5px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__heroSideCards {
+      align-content: start;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__genres {
+      padding-top: 0;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .mobile-pageHeader h1 {
+      font-size: clamp(24px, 8.4vw, 32px);
+      line-height: 0.98;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .mobile-pageHeader p {
+      font-size: 12px;
+      line-height: 1.42;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .mobile-searchPage__field {
+      min-height: 44px;
+      padding: 0 12px;
+      border-radius: 14px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .mobile-filterRow {
+      gap: 8px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .mobile-filterChip {
+      min-height: 32px;
+      padding-inline: 12px;
+      font-size: 11px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard {
+      padding: 8px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__content--profile {
+      gap: 8px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__copy--profile {
+      gap: 8px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__main--profile {
+      grid-template-columns: 46px minmax(0, 1fr);
+      gap: 8px;
+      align-items: start;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__avatarWrap--profile,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) :is(.sp-heroCard__avatar--profile, .sp-heroCard__avatar--profile img, .sp-heroCard__avatar--profile .artistAvatar, .sp-heroCard__avatar--profile .media-thumb__img) {
+      width: 46px;
+      height: 46px;
+      min-width: 46px;
+      min-height: 46px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__title--profile {
+      font-size: clamp(18px, 7.4vw, 24px);
+      line-height: 0.98;
+      margin: 0;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__subtitle {
+      font-size: 10.5px;
+      line-height: 1.28;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__stats--profile {
+      gap: 6px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-statPill {
+      min-height: 30px;
+      padding: 5px 8px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-statPill__value {
+      font-size: 12.5px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-statPill__label {
+      font-size: 9.5px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__actions--profile {
+      gap: 6px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-btn,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-btn--ghost,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-btn--primary {
+      min-height: 30px;
+      padding-inline: 10px;
+      font-size: 10.5px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__side--profile,  .app-shell--phone :is(.sp-page--profile, .sp-page--studio) .sp-metaStack--profile {
+      gap: 8px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone :is(.sp-page--profile, .sp-page--studio) :is(.sp-metaCard, .sp-metricCard, .sp-section) {
+      padding: 9px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .settings-pageShell {
+      gap: 8px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone .settings-card,  .app-shell--phone .settings-panel {
+      padding: 9px;
+      gap: 8px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .settings-head {
+      gap: 6px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .settings-head h1 {
+      font-size: clamp(22px, 8.2vw, 30px);
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone .settings-subtitle,  .app-shell--phone .settings-panel__head p,  .app-shell--phone .settings-accountRow__label,  .app-shell--phone .settings-field__label,  .app-shell--phone .settings-formHint,  .app-shell--phone .settings-themeCard__note {
+      font-size: 11px;
+      line-height: 1.36;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .settings-panel__head h2 {
+      font-size: 14px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .settings-actionsRow {
+      gap: 6px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .settings-chipBtn {
+      min-height: 30px;
+      padding-inline: 10px;
+      font-size: 10.5px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone .settings-grid--top,  .app-shell--phone .settings-themeGrid {
+      gap: 8px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .settings-themeCard {
+      padding: 8px;
+      gap: 8px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .settings-themeCard__preview {
+      min-height: 104px;
+      max-height: 104px;
+      border-radius: 12px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .settings-themeCard__previewShell {
+      transform: scale(0.74);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .settings-themeCard__title {
+      font-size: 16px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone .settings-themeCard__eyebrow,  .app-shell--phone .settings-themeCard__status {
+      min-height: 24px;
+      font-size: 10px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .sitefooter--phone .sitefooter__compactRow--phone {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 8px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .sitefooter--phone .sitefooter__brandInline {
+      min-width: 0;
+      margin: 0;
+      align-self: center;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .sitefooter--phone .sitefooter__linksCompact--phone {
+      flex: 0 1 auto;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 6px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .sitefooter--phone .sitefooter__metaCompact {
+      justify-self: end;
+      margin: 0;
+    }
+  }
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+  @media (min-width: 431px) and (max-width: 767px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .settings-grid--top {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .settings-themeGrid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+  @media (max-width: 430px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .sitefooter--phone .sitefooter__compactRow--phone {
+      grid-template-columns: 1fr auto;
+      align-items: start;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .sitefooter--phone .sitefooter__brandInline,  .sitefooter--phone .sitefooter__linksCompact--phone {
+      grid-column: 1 / 2;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .sitefooter--phone .sitefooter__metaCompact {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+  }
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+  @media (max-width: 767px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .mobile-searchPage {
+      gap: 10px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .mobile-pageHeader {
+      gap: 4px;
+      padding: 2px 0 0;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .mobile-pageHeader p {
+      max-width: 28ch;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .mobile-filterRow {
+      margin-bottom: 2px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone .home__heroMiniCard,  .app-shell--phone .home__heroMiniCard--queue,  .app-shell--phone .home__heroMiniCard--artist {
+      gap: 4px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__heroMiniHead {
+      gap: 8px;
+      margin-bottom: 2px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__hero {
+      gap: 6px;
+      padding-bottom: 10px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__heroCompact {
+      gap: 6px;
+      margin-bottom: -2px;
+      align-items: start;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__heroMainCard {
+      grid-template-columns: 108px minmax(0, 1fr);
+      gap: 14px;
+      padding: 14px;
+      min-height: 0;
+      height: auto;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone .home__heroMainVisual,  .app-shell--phone .home__heroMainArtFrame,  .app-shell--phone .home__heroMainArt,  .app-shell--phone .home__heroMainArt.media-thumb,  .app-shell--phone .home__heroMainArtFrame .home__heroMainArt {
+      width: 108px;
+      height: 108px;
+      min-width: 108px;
+      min-height: 108px;
+      flex: 0 0 108px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__heroSideCards {
+      height: auto;
+      min-height: 0;
+      align-self: start;
+      grid-template-rows: none;
+      grid-auto-rows: minmax(0, auto);
+      gap: 8px;
+      margin-bottom: 0;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone .home__heroMiniCard,  .app-shell--phone .home__heroMiniCard--queue,  .app-shell--phone .home__heroMiniCard--artist {
+      min-height: 0;
+      height: auto;
+      padding: 12px;
+      align-content: start;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__genres {
+      margin-top: 2px;
+      padding: 10px 14px 12px;
+      gap: 8px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__genresLabel {
+      margin-inline: 4px;
+      min-width: 0;
+      padding-inline: 16px;
+    }
+  }
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+  @media (max-width: 430px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__heroMainCard {
+      grid-template-columns: 100px minmax(0, 1fr);
+      gap: 12px;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone .home__heroMainVisual,  .app-shell--phone .home__heroMainArtFrame,  .app-shell--phone .home__heroMainArt,  .app-shell--phone .home__heroMainArt.media-thumb,  .app-shell--phone .home__heroMainArtFrame .home__heroMainArt {
+      width: 100px;
+      height: 100px;
+      min-width: 100px;
+      min-height: 100px;
+      flex-basis: 100px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__genres {
+      margin-top: 0;
+      padding-inline: 12px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__genresLabel {
+      margin-inline: 2px;
+      padding-inline: 14px;
+    }
+  }
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+  @media (max-width: 390px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__heroMainCard {
+      grid-template-columns: 94px minmax(0, 1fr);
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .app-shell--phone .home__heroMainVisual,  .app-shell--phone .home__heroMainArtFrame,  .app-shell--phone .home__heroMainArt,  .app-shell--phone .home__heroMainArt.media-thumb,  .app-shell--phone .home__heroMainArtFrame .home__heroMainArt {
+      width: 94px;
+      height: 94px;
+      min-width: 94px;
+      min-height: 94px;
+      flex-basis: 94px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .home__genres {
+      margin-top: 0;
+      padding: 9px 10px 11px;
+    }
+  }
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+  @media (max-width: 767px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    body.app-phone-panel-open {
+      overflow: hidden;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .app-player {
+      z-index: 44;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbar--mini {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(24, 18, 44, 0.96), rgba(10, 10, 20, 0.94));
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__main {
+      min-width: 0;
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      align-items: center;
+      gap: 10px;
+      text-align: left;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__cover {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__meta {
+      min-width: 0;
+      display: grid;
+      gap: 2px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__meta strong {
+      font-size: 12px;
+      line-height: 1.18;
+      font-weight: 900;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__meta small {
+      font-size: 10px;
+      line-height: 1.18;
+      color: rgba(255, 255, 255, 0.68);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__actions {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__action {
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__action:first-child {
+      background: linear-gradient(180deg, rgba(151, 95, 255, 0.96), rgba(116, 63, 238, 0.9));
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(100, 57, 205, 0.32);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__progress {
+      height: 3px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__progress > span {
+      background: rgba(248, 247, 255, 0.98);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-phonePlayerScreen {
+      position: fixed;
+      inset: 0;
+      z-index: 70;
+      background: radial-gradient(circle at top, rgba(119, 86, 255, 0.24), transparent 36%),
+      linear-gradient(180deg, rgba(12, 11, 24, 0.98), rgba(8, 8, 16, 0.99));
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-phonePlayerScreen__surface {
+      min-height: 100%;
+      max-width: 460px;
+      margin: 0 auto;
+      display: flex;
+      align-items: stretch;
+      overscroll-behavior: contain;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying {
+      width: 100%;
+      grid-template-rows: auto auto auto auto auto auto auto;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__eyebrow {
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      color: rgba(255, 255, 255, 0.96);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__close {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artWrap {
+      display: flex;
+      justify-content: center;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__cover {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      box-shadow: 0 22px 54px rgba(0, 0, 0, 0.34);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    .mobileNowPlaying__cover img,  .mobileNowPlaying__cover.media-thumb,  .mobileNowPlaying__cover.media-thumb__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__meta {
+      display: grid;
+      text-align: center;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__title {
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artist {
+      margin: 0 auto;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.72);
+      font-weight: 700;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artist.is-clickable {
+      cursor: pointer;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__progressBlock {
+      display: grid;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__range {
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      margin: 0;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__range::-webkit-slider-runnable-track {
+      height: 5px;
+      border-radius: 999px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__range::-moz-range-track {
+      height: 5px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__range::-moz-range-progress {
+      height: 5px;
+      border-radius: 999px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      margin-top: -5.5px;
+      border-radius: 999px;
+      border: 2px solid rgba(18, 18, 30, 0.56);
+      background: #f8f7ff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__range::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      border: 2px solid rgba(18, 18, 30, 0.56);
+      background: #f8f7ff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__times {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.62);
+      font-variant-numeric: tabular-nums;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__controlRow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__control {
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.9);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__control.is-active {
+      color: rgba(202, 180, 255, 0.98);
+      border-color: rgba(161, 123, 255, 0.24);
+      background: rgba(120, 80, 220, 0.16);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__playBtn {
+      border: 1px solid rgba(184, 153, 255, 0.32);
+      background: linear-gradient(180deg, rgba(164, 106, 255, 0.98), rgba(109, 58, 236, 0.92));
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 18px 40px rgba(93, 49, 195, 0.36);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__actionsRow {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__pillAction {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 12px;
+      font-weight: 800;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__pillAction.is-active {
+      color: rgba(207, 184, 255, 0.98);
+      border-color: rgba(171, 133, 255, 0.24);
+      background: rgba(120, 80, 220, 0.14);
+    }
+    
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__sheetTitle {
+      font-size: 12px;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.96);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__sheetActions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__sheetBtn {
+      min-height: 40px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 800;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__sheetBtn--primary {
+      background: linear-gradient(180deg, rgba(151, 95, 255, 0.96), rgba(116, 63, 238, 0.9));
+      color: #fff;
+      border-color: transparent;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__sheetMsg {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artistCard {
+      display: grid;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      background: rgba(255, 255, 255, 0.04);
+      text-align: left;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artistMedia {
+      overflow: hidden;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artistBody {
+      display: grid;
+      gap: 3px;
+      min-width: 0;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artistKicker {
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.56);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artistBody strong {
+      line-height: 1.1;
+      color: rgba(255, 255, 255, 0.96);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artistBody small {
+      color: rgba(255, 255, 255, 0.68);
+    }
+  }
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+  @media (max-width: 390px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbar--mini {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__main {
+      gap: 8px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__cover {
+      width: 38px;
+      height: 38px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying {
+      padding-inline: 0;
+    }
+  }
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+  @media (max-width: 767px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .app-player {
+      left: 8px;
+      right: 8px;
+      width: auto;
+      transform: none;
+      bottom: calc(var(--phone-nav-height, 62px) + 4px + env(safe-area-inset-bottom));
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbar--mini {
+      align-items: center;
+      gap: 8px;
+      min-height: 62px;
+      padding: 9px 12px 11px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__actions {
+      gap: 0;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__action {
+      width: 38px;
+      min-width: 38px;
+      height: 38px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__progress {
+      left: 12px;
+      right: 12px;
+      bottom: 4px;
+      background: rgba(255, 255, 255, 0.14);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__progress span {
+      background: rgba(255, 255, 255, 0.98);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-phonePlayerScreen {
+      padding: calc(12px + env(safe-area-inset-top)) 14px calc(14px + env(safe-area-inset-bottom));
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-phonePlayerScreen__surface {
+      overflow: visible;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying {
+      position: relative;
+      min-height: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      overflow: visible;
+      padding: 4px 0 calc(20px + env(safe-area-inset-bottom));
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__body {
+      flex: 1 1 auto;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      overflow: visible;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artWrap {
+      flex: 0 0 auto;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__cover {
+      width: min(100%, 270px);
+      border-radius: 26px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__meta {
+      gap: 2px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__title {
+      font-size: clamp(24px, 8.4vw, 30px);
+      line-height: 1.02;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artist {
+      font-size: 14px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__progressBlock {
+      gap: 6px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__range::-webkit-slider-runnable-track {
+      background: linear-gradient(90deg, #ffffff 0%, #ffffff var(--player-range-progress, 0%), rgba(255, 255, 255, 0.14) var(--player-range-progress, 0%), rgba(255, 255, 255, 0.14) 100%);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__range::-moz-range-progress {
+      background: #ffffff;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__volumeRow {
+      display: grid;
+      grid-template-columns: 40px minmax(0, 1fr);
+      align-items: center;
+      gap: 10px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__volumeToggle {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.9);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__volumeToggle.is-muted {
+      color: rgba(214, 196, 255, 0.96);
+      border-color: rgba(171, 133, 255, 0.24);
+      background: rgba(120, 80, 220, 0.14);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__volumeRange {
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      margin: 0;
+      background: transparent;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__volumeRange::-webkit-slider-runnable-track {
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ffffff 0%, #ffffff var(--player-range-progress, 0%), rgba(255, 255, 255, 0.14) var(--player-range-progress, 0%), rgba(255, 255, 255, 0.14) 100%);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__volumeRange::-moz-range-track {
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__volumeRange::-moz-range-progress {
+      height: 4px;
+      border-radius: 999px;
+      background: #ffffff;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__volumeRange::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      margin-top: -5px;
+      border-radius: 999px;
+      border: 2px solid rgba(18, 18, 30, 0.56);
+      background: #f8f7ff;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__volumeRange::-moz-range-thumb {
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      border: 2px solid rgba(18, 18, 30, 0.56);
+      background: #f8f7ff;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__controlRow {
+      gap: 10px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__control {
+      width: 40px;
+      height: 40px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__playBtn {
+      width: 62px;
+      height: 62px;
+      border-radius: 22px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__actionsRow {
+      gap: 8px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__pillAction {
+      min-height: 44px;
+      padding: 0 12px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artistCard {
+      margin-top: 0;
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 10px;
+      padding: 11px;
+      border-radius: 16px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artistMedia {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artistKicker {
+      font-size: 10px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artistBody strong {
+      font-size: 15px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__artistBody small {
+      font-size: 11px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__sheetBackdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(6, 6, 12, 0.56);
+      border: 0;
+      z-index: 2;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__sheetDialog {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      display: grid;
+      gap: 10px;
+      padding: 14px;
+      border-radius: 20px 20px 0 0;
+      background: rgba(17, 14, 32, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      box-shadow: 0 -18px 42px rgba(0, 0, 0, 0.36);
+    }
+    
+  }
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+  @media (max-width: 430px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__cover {
+      width: min(100%, 246px);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__title {
+      font-size: clamp(22px, 8vw, 26px);
+    }
+  }
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+  @media (max-width: 390px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .app-shell--phone .app-player {
+      width: min(calc(100% - 18px), 760px);
+      bottom: calc(var(--phone-nav-height, 62px) + 2px + env(safe-area-inset-bottom));
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbar--mini {
+      min-height: 60px;
+      padding: 8px 10px 10px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .playerbarMini__main {
+      grid-template-columns: 38px minmax(0, 1fr);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying {
+      gap: 10px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__body {
+      gap: 10px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__cover {
+      width: min(100%, 224px);
+      border-radius: 22px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__control {
+      width: 38px;
+      height: 38px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__playBtn {
+      width: 58px;
+      height: 58px;
+      border-radius: 20px;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__actionsRow {
+      grid-template-columns: 1fr 1fr;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    .mobileNowPlaying__pillAction {
+      min-height: 42px;
+      font-size: 11px;
+      gap: 8px;
+    }
+  }
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+  @media (max-width: 767px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    html[data-theme-preset="light"] .app-mobileNav {
+      background: linear-gradient(180deg, rgba(255, 250, 255, 0.94), rgba(242, 233, 252, 0.96));
+      border-color: rgba(118, 92, 164, 0.16);
+      box-shadow: 0 14px 30px rgba(132, 108, 176, 0.14);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    html[data-theme-preset="light"] .app-mobileNav__item {
+      color: var(--theme-text-soft);
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .app-mobileNav__icon,  html[data-theme-preset="light"] .app-mobileNav__label {
+      color: var(--theme-text-soft);
+      opacity: 1;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    html[data-theme-preset="light"] .app-mobileNav__item.is-active {
+      background: linear-gradient(180deg, rgba(232, 218, 252, 0.98), rgba(223, 207, 248, 0.98));
+      border-color: rgba(111, 79, 198, 0.22);
+      box-shadow: 0 10px 24px rgba(125, 95, 182, 0.16);
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .app-mobileNav__item.is-active .app-mobileNav__icon,  html[data-theme-preset="light"] .app-mobileNav__item.is-active .app-mobileNav__label {
+      color: #5134b1;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    html[data-theme-preset="light"] .playerbar--mini {
+      background: linear-gradient(180deg, rgba(252, 247, 255, 0.96), rgba(237, 228, 251, 0.98));
+      border-color: rgba(118, 92, 164, 0.16);
+      box-shadow: 0 12px 28px rgba(126, 100, 171, 0.14);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    html[data-theme-preset="light"] .playerbarMini__meta strong {
+      color: var(--theme-text-main);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    html[data-theme-preset="light"] .playerbarMini__meta small {
+      color: var(--theme-text-muted);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    html[data-theme-preset="light"] .playerbarMini__action {
+      background: linear-gradient(180deg, rgba(245, 238, 255, 0.96), rgba(236, 227, 252, 0.98));
+      border-color: rgba(118, 92, 164, 0.18);
+      color: #5c42b5;
+      box-shadow: 0 8px 18px rgba(116, 84, 176, 0.12);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    html[data-theme-preset="light"] .playerbarMini__progress {
+      background: rgba(122, 96, 181, 0.16);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    html[data-theme-preset="light"] .playerbarMini__progress span {
+      background: rgba(102, 72, 182, 0.92);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    html[data-theme-preset="light"] .app-phonePlayerScreen {
+      background: radial-gradient(circle at top, rgba(214, 198, 255, 0.65), transparent 42%),
+      linear-gradient(180deg, rgba(250, 245, 255, 0.98), rgba(240, 232, 252, 0.99));
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .mobileNowPlaying__eyebrow,  html[data-theme-preset="light"] .mobileNowPlaying__title,  html[data-theme-preset="light"] .mobileNowPlaying__artistBody strong,  html[data-theme-preset="light"] .mobileNowPlaying__sheetTitle {
+      color: var(--theme-text-main);
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .mobileNowPlaying__artist,  html[data-theme-preset="light"] .mobileNowPlaying__times,  html[data-theme-preset="light"] .mobileNowPlaying__artistBody small,  html[data-theme-preset="light"] .mobileNowPlaying__artistKicker,  html[data-theme-preset="light"] .mobileNowPlaying__sheetMsg {
+      color: var(--theme-text-muted);
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .mobileNowPlaying__close,  html[data-theme-preset="light"] .mobileNowPlaying__control,  html[data-theme-preset="light"] .mobileNowPlaying__volumeToggle,  html[data-theme-preset="light"] .mobileNowPlaying__pillAction,  html[data-theme-preset="light"] .mobileNowPlaying__sheetBtn,  html[data-theme-preset="light"] .mobileNowPlaying__artistCard,  html[data-theme-preset="light"] .mobileNowPlaying__sheetDialog {
+      border-color: rgba(118, 92, 164, 0.16);
+      background: linear-gradient(180deg, rgba(255, 250, 255, 0.94), rgba(241, 233, 252, 0.96));
+      color: var(--theme-text-main);
+      box-shadow: 0 14px 30px rgba(126, 100, 171, 0.12);
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .mobileNowPlaying__control.is-active,  html[data-theme-preset="light"] .mobileNowPlaying__pillAction.is-active,  html[data-theme-preset="light"] .mobileNowPlaying__volumeToggle.is-muted {
+      background: linear-gradient(180deg, rgba(233, 220, 255, 0.98), rgba(224, 209, 250, 0.98));
+      border-color: rgba(111, 79, 198, 0.24);
+      color: #5337b2;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .mobileNowPlaying__playBtn,  html[data-theme-preset="light"] .mobileNowPlaying__sheetBtn--primary {
+      color: #ffffff;
+      border-color: rgba(111, 79, 198, 0.24);
+      box-shadow: 0 16px 34px rgba(105, 74, 185, 0.22);
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    html[data-theme-preset="light"] .mobileNowPlaying__cover {
+      border-color: rgba(118, 92, 164, 0.18);
+      box-shadow: 0 20px 44px rgba(120, 95, 166, 0.16);
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .mobileNowPlaying__range::-webkit-slider-runnable-track,  html[data-theme-preset="light"] .mobileNowPlaying__volumeRange::-webkit-slider-runnable-track {
+      background: linear-gradient(90deg, var(--theme-player-fill) 0%, var(--theme-player-fill) var(--player-range-progress, 0%), var(--theme-player-track) var(--player-range-progress, 0%), var(--theme-player-track) 100%);
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .mobileNowPlaying__range::-moz-range-track,  html[data-theme-preset="light"] .mobileNowPlaying__volumeRange::-moz-range-track {
+      background: var(--theme-player-track);
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .mobileNowPlaying__range::-moz-range-progress,  html[data-theme-preset="light"] .mobileNowPlaying__volumeRange::-moz-range-progress {
+      background: var(--theme-player-fill);
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .mobileNowPlaying__range::-webkit-slider-thumb,  html[data-theme-preset="light"] .mobileNowPlaying__volumeRange::-webkit-slider-thumb,  html[data-theme-preset="light"] .mobileNowPlaying__range::-moz-range-thumb,  html[data-theme-preset="light"] .mobileNowPlaying__volumeRange::-moz-range-thumb {
+      border-color: rgba(117, 96, 149, 0.42);
+      background: #ffffff;
+      box-shadow: 0 8px 18px rgba(91, 72, 118, 0.16);
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .app-shell--phone .home__heroMiniThumbWrap,  html[data-theme-preset="light"] .app-shell--phone .home__heroMiniAvatarWrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .app-shell--phone .home__heroMiniThumb,  html[data-theme-preset="light"] .app-shell--phone .home__heroMiniAvatar,  html[data-theme-preset="light"] .app-shell--phone .home__heroMiniAvatar.media-thumb--avatar,  html[data-theme-preset="light"] .app-shell--phone .home__heroMiniThumb img,  html[data-theme-preset="light"] .app-shell--phone .home__heroMiniAvatar img {
+      width: 42px;
+      height: 42px;
+      object-fit: cover;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .app-shell--phone .mobile-searchPage,  html[data-theme-preset="light"] .app-shell--phone .mobile-searchSection {
+      color: #3a2d56;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+      html[data-theme-preset="light"] .app-shell--phone .mobile-searchSection__head span {
+      color: #8b7aa9;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .app-shell--phone .mobile-pageHeader h1,  html[data-theme-preset="light"] .app-shell--phone .mobile-searchSection__head h2,  html[data-theme-preset="light"] .app-shell--phone .mobile-resultCard__meta strong,  html[data-theme-preset="light"] .app-shell--phone .mobile-emptyState {
+      color: #2f2448;
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .app-shell--phone .mobile-pageHeader p,  html[data-theme-preset="light"] .app-shell--phone .mobile-resultCard__meta small {
+      color: #7f6f9f;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    html[data-theme-preset="light"] .app-shell--phone .mobile-searchPage__field {
+      background: rgba(255, 255, 255, 0.82);
+      border-color: rgba(155, 126, 214, 0.18);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .app-shell--phone .mobile-searchPage__input,  html[data-theme-preset="light"] .app-shell--phone .mobile-searchPage__clear {
+      color: #443463;
+    }
+/* Ці стилі роблять текст підказки читабельним усередині поля */
+    html[data-theme-preset="light"] .app-shell--phone .mobile-searchPage__input::placeholder {
+      color: #a18fbe;
+      opacity: 1;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    html[data-theme-preset="light"] .app-shell--phone .mobile-filterChip {
+      background: rgba(255, 255, 255, 0.72);
+      border-color: rgba(155, 126, 214, 0.16);
+      color: #52406e;
+    }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+    html[data-theme-preset="light"] .app-shell--phone .mobile-filterChip.is-active {
+      background: linear-gradient(180deg, rgba(223, 206, 255, 0.95), rgba(208, 188, 247, 0.95));
+      border-color: rgba(138, 108, 205, 0.28);
+      color: #412e65;
+      box-shadow: 0 10px 22px rgba(141, 115, 202, 0.14);
+    }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+    html[data-theme-preset="light"] .app-shell--phone .mobile-emptyState,  html[data-theme-preset="light"] .app-shell--phone .mobile-resultCard {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(243, 236, 255, 0.96));
+      border-color: rgba(155, 126, 214, 0.14);
+      box-shadow: 0 14px 30px rgba(176, 153, 219, 0.12);
+    }
+  }
+}

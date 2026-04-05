@@ -1,0 +1,1264 @@
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+
+.glass,  .app-topstrip__inner,  .app-sticky,  .home__card,  .home__hero,  .playerbar,  .playlistMenu,  .ui-dd {
+  background: var(--surface-card);
+  border-color: var(--menu-border, var(--border));
+  box-shadow: var(--shadow-2);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-topstrip {
+  padding: 10px 8px 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-topstrip__inner {
+  border-radius: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-body {
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-sticky {
+  border-radius: 18px;
+  padding: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__content {
+  width: 100%;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbar {
+  gap: 14px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.topbar__search,  .profile-btn,  .btn,  .icon-btn,  .chip,  .input,  select,  .ui-selectTrigger {
+  background: var(--surface-field);
+  border-color: var(--ctl-br);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.topbar__search:hover,  .profile-btn:hover,  .btn:hover,  .icon-btn:hover,  .chip:hover {
+  background: var(--surface-field-hover);
+  border-color: var(--ctl-br-2);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.btn.primary {
+  background: linear-gradient(180deg, rgba(168, 85, 247, 0.58), rgba(124, 58, 237, 0.42));
+  border-color: rgba(192, 145, 255, 0.32);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.profile-avatar {
+  background: var(--surface-media);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home {
+  gap: 16px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__content {
+  display: grid;
+  gap: 16px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__hero {
+  border-radius: 22px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroTop {
+  justify-content: flex-start;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainCard {
+  border-radius: 20px;
+  border: 1px solid var(--menu-border);
+  background: var(--surface-card-strong);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainArt {
+  overflow: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainTitle {
+  font-size: clamp(30px, 3.6vw, 54px);
+  letter-spacing: -0.03em;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainMeta {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniCard {
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(37, 27, 69, 0.92), rgba(19, 16, 34, 0.90));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__genres {
+  grid-template-columns: auto auto minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__genresLabel,  .home__hero .icon-btn,  .chip {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__genresLabel {
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__sectionHead {
+  padding-right: 0;
+  margin-top: 2px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__title {
+  font-size: clamp(24px, 2.4vw, 32px);
+  line-height: 1.1;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__card {
+  padding: 16px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(23, 19, 38, 0.92), rgba(14, 12, 25, 0.92));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.row {
+  gap: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile {
+  flex: 0 0 clamp(180px, 15vw, 220px);
+  min-width: 0;
+  width: clamp(180px, 15vw, 220px);
+  padding: 12px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(35, 28, 61, 0.92), rgba(18, 15, 30, 0.92));
+  border-color: rgba(255,255,255,0.10);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile__media {
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile__body {
+  padding: 12px 2px 2px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile__title {
+  font-size: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile__sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.68);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artist {
+  min-width: 148px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artist__avatar {
+  width: 92px;
+  height: 92px;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-body {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 760px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainArt {
+    aspect-ratio: 1 / 1;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__genres {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+:root {
+  --bg: #0c0c18;
+  --bg-1: #131427;
+  --bg-2: #1a1d37;
+  --panel: rgba(34, 28, 59, 0.88);
+  --panel-2: rgba(255, 255, 255, 0.08);
+  --card: rgba(36, 29, 63, 0.84);
+  --border: rgba(255, 255, 255, 0.12);
+  --border-2: rgba(255, 255, 255, 0.18);
+  --player-h: 68px;
+  --app-bg: radial-gradient(1000px 720px at 14% 16%, rgba(132, 74, 255, 0.48) 0%, rgba(132, 74, 255, 0.14) 56%, transparent 72%),
+    radial-gradient(920px 720px at 82% 18%, rgba(112, 70, 212, 0.28) 0%, rgba(112, 70, 212, 0.1) 54%, transparent 72%),
+    radial-gradient(1200px 860px at 50% 108%, rgba(53, 109, 255, 0.12) 0%, rgba(53, 109, 255, 0.04) 46%, transparent 65%),
+    linear-gradient(115deg, #702aff 0%, #3e186f 33%, #171936 68%, #0a0b18 100%);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+body {
+  background: radial-gradient(980px 620px at 16% 12%, rgba(142, 84, 255, 0.38), transparent 58%),
+    radial-gradient(900px 560px at 78% 16%, rgba(110, 70, 214, 0.2), transparent 56%),
+    var(--app-bg);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.glass,  .app-topstrip__inner,  .app-sticky,  .home__card,  .home__hero,  .playerbar,  .playlistMenu,  .ui-dd,  .sp-card,  .tile {
+  background: linear-gradient(180deg, rgba(40, 31, 69, 0.94), rgba(20, 17, 35, 0.92));
+  border-color: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-right {
+  min-width: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-player {
+  padding: 0 10px 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-player > * {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__hero {
+  padding: 18px;
+  gap: 18px;
+  background: radial-gradient(900px 340px at 3% 0%, rgba(157, 96, 255, 0.25), transparent 52%),
+    linear-gradient(180deg, rgba(51, 37, 94, 0.92), rgba(20, 17, 36, 0.92));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroTop {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroFilterLabel {
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 12px;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroChips {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 2px;
+  scrollbar-width: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroChips::-webkit-scrollbar {
+  display: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroCompact {
+  grid-template-columns: minmax(0, 1.36fr) minmax(280px, 0.76fr);
+  gap: 16px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainCard {
+  position: relative;
+  grid-template-columns: 190px minmax(0, 1fr);
+  min-height: 218px;
+  padding: 18px;
+  gap: 18px;
+  overflow: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainVisual {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 28px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroBadge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(168, 85, 247, 0.18);
+  border-color: rgba(200, 160, 255, 0.26);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainArt {
+  width: 176px;
+  height: 176px;
+  margin-top: 8px;
+  border-radius: 22px;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainContent {
+  gap: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainText {
+  max-width: 580px;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniCard {
+  min-height: 104px;
+  padding: 16px;
+  gap: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.chip {
+  padding: 8px 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.chip__icon {
+  margin-right: 6px;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1220px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1180px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroCompact,  .sp-profileLayout,  .sp-heroCard__content {
+    grid-template-columns: 1fr;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-sideCard {
+    position: static;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1101px) and (max-width: 1280px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__hero {
+    gap: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroCompact {
+    grid-template-columns: minmax(0, 1.16fr) minmax(228px, 0.82fr);
+    gap: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    min-height: 248px;
+    padding: 20px 22px;
+    gap: 18px;
+    grid-template-columns: 176px minmax(0, 1fr);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMainArtFrame,  .home__heroMainArt,  .home__heroMainArt.media-thumb {
+    width: 168px;
+    height: 168px;
+    min-width: 168px;
+    min-height: 168px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainTitle {
+    font-size: clamp(34px, 3.5vw, 46px);
+    max-width: 620px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainMeta {
+    font-size: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainText {
+    max-width: 560px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMetaRow {
+    margin-top: 14px;
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMetaPill {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroPlayBtn {
+    min-width: 108px;
+    min-height: 48px;
+    font-size: 18px;
+    padding: 0 20px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniCard {
+    min-height: 122px;
+    padding: 14px 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniTitle {
+    font-size: 18px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniSub {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1100px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__hero {
+    gap: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroCompact {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    min-height: 224px;
+    padding: 18px 20px;
+    gap: 16px;
+    grid-template-columns: 160px minmax(0, 1fr);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMainArtFrame,  .home__heroMainArt,  .home__heroMainArt.media-thumb {
+    width: 152px;
+    height: 152px;
+    min-width: 152px;
+    min-height: 152px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainTitle {
+    font-size: clamp(30px, 4vw, 40px);
+    max-width: 560px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainMeta {
+    font-size: 15px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainText {
+    max-width: 520px;
+    font-size: 13px;
+    line-height: 1.38;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMetaRow {
+    margin-top: 12px;
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMetaPill {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroPlayBtn {
+    min-width: 102px;
+    min-height: 46px;
+    font-size: 17px;
+    padding: 0 18px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroSideCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniCard {
+    min-height: 108px;
+    padding: 14px 15px;
+    gap: 6px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniTitle {
+    font-size: 17px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniSub {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.app-player.has-right > *,  .app-player.no-right > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1920px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidecard__nav {
+  gap: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libRow {
+  padding: 7px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--surface-chip);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.libRow:hover,  .libRow.is-menu-open {
+  background: var(--surface-chip-hover);
+  border-color: var(--border-2);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libRow__link {
+  padding: 5px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libRow__actions {
+  opacity: 1;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libMoreBtn {
+  opacity: 1;
+  background: var(--surface-field);
+  border-color: var(--ctl-br);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.libMoreBtn:hover {
+  background: var(--surface-field-hover);
+  border-color: var(--ctl-br-2);
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-sidebar .app-sticky,  .app-right .app-sticky {
+    height: 100%;
+    margin-bottom: 0;
+  }
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+:root {
+  --clarity-shell-radius: 18px;
+  --clarity-media-radius: 16px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.app-topstrip__inner,  .app-sticky,  .home__hero,  .home__heroMainCard,  .home__heroMiniCard,  .home__card,  .playerbar,  .profile-btn,  .topbar__search,  .libRow {
+  border-radius: var(--clarity-shell-radius);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMainArt,  .home__heroMiniThumb,  .home__heroMiniAvatar,  .home__card .media-thumb,  .home__card .cover,  .playerbar__cover,  .libRow__img {
+  border-radius: var(--clarity-media-radius);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMainVisual,  .home__heroMainArtFrame,  .sp-heroCard__avatarWrap--profile {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell {
+    grid-template-rows: auto minmax(0, 1fr) auto;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-topstrip,  .app-body,  .app-player {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] .topbar__brandText .clarity-logo,  html[data-theme-preset] .clarity-logo--topbar {
+  transform: none;
+  transform-origin: center left;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset] .settings-pageShell {
+  width: 100%;
+  display: grid;
+  padding: 0 6px 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset] .settings-card {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset] .settings-head {
+  gap: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset] .settings-themeCard {
+  padding: 14px;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset] .settings-themeCard:hover {
+  transform: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset] .settings-themeCard__preview {
+  min-height: 214px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset] .sp-metaCard {
+  min-height: 78px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset] .app-player {
+  padding-bottom: var(--shell-chrome-gap);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset] .app-sidebar > .app-sticky > .app-sticky__scroll {
+  padding-right: 4px;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 640px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-themeCard__preview {
+    min-height: 210px;
+  }
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroPlayBtn,  html[data-theme-preset="light"] .btn.primary.home__heroPlayBtn {
+  color: #fff;
+  background: linear-gradient(180deg, #a855f7 0%, #8b5cf6 52%, #6d28d9 100%);
+  border: 1px solid rgba(109, 40, 217, 0.72);
+  box-shadow: 0 12px 26px rgba(124, 58, 237, 0.24);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] .home__heroPlayBtn:hover,  html[data-theme-preset="light"] .btn.primary.home__heroPlayBtn:hover {
+  box-shadow: 0 16px 30px rgba(124, 58, 237, 0.3);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .home__heroPlayBtn,  html[data-theme-preset="violet"] .btn.primary.home__heroPlayBtn {
+  color: #fff;
+  background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 55%, #a855f7 100%);
+  border: 1px solid rgba(109, 40, 217, 0.72);
+  box-shadow: 0 12px 26px rgba(124, 58, 237, 0.24);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="violet"] .home__heroPlayBtn:hover,  html[data-theme-preset="violet"] .btn.primary.home__heroPlayBtn:hover {
+  box-shadow: 0 16px 30px rgba(124, 58, 237, 0.3);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] .app-right .app-sticky {
+  background: radial-gradient(340px 220px at 50% 0%, rgba(140, 104, 232, 0.10), transparent 68%),
+    linear-gradient(180deg, rgba(25, 18, 44, 0.90), rgba(13, 10, 26, 0.96));
+  border-color: rgba(132, 104, 196, 0.16);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .app-right .app-sticky {
+  background: radial-gradient(340px 210px at 50% 0%, rgba(189, 156, 255, 0.15), transparent 70%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 239, 255, 0.97));
+  border-color: rgba(175, 148, 229, 0.22);
+  box-shadow: 0 18px 40px rgba(127, 100, 174, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.84);
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1281px) and (max-width: 1540px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar {
+    min-height: 62px;
+    grid-template-columns: minmax(164px, 216px) minmax(280px, 1fr) max-content;
+    gap: 12px;
+    padding-inline: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .searchbox {
+    width: min(460px, 100%);
+    max-width: 460px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    min-width: 124px;
+    padding: 0 10px 0 9px;
+    gap: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-avatar {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    flex-basis: 28px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-name {
+    max-width: 96px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1101px) and (max-width: 1280px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar {
+    min-height: 60px;
+    grid-template-columns: minmax(148px, 200px) minmax(200px, 1fr) max-content;
+    gap: 10px;
+    padding-inline: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .searchbox {
+    width: min(400px, 100%);
+    max-width: 400px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    min-width: 112px;
+    padding: 0 9px 0 8px;
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-avatar {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    flex-basis: 26px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-name {
+    max-width: 84px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1100px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar {
+    min-height: 58px;
+    grid-template-columns: minmax(132px, 176px) minmax(180px, 1fr) max-content;
+    gap: 9px;
+    padding-inline: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .searchbox {
+    width: min(340px, 100%);
+    max-width: 340px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    min-width: 104px;
+    padding: 0 8px;
+    gap: 7px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-avatar {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    flex-basis: 24px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-name {
+    max-width: 72px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar {
+    min-height: 60px;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    height: auto;
+    padding: 8px 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__left {
+    width: auto;
+    justify-content: flex-start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__center {
+    width: 100%;
+    justify-content: stretch;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__right {
+    width: auto;
+    justify-content: flex-end;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .searchbox {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset] .home .home__card .artists .artist,  html[data-theme-preset] .home .home__card .artists .artist:hover,  html[data-theme-preset] .home .home__card .artists .artist:focus,  html[data-theme-preset] .home .home__card .artists .artist:focus-visible {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] .home .home__card .artists .artist__avatar,  html[data-theme-preset] .home .home__card .artists .artist__avatar.media-thumb,  html[data-theme-preset] .home .home__card .artists .artist__avatar.media-thumb--avatar,  html[data-theme-preset] .home .home__card .artists .artist__avatar::before,  html[data-theme-preset] .home .home__card .artists .artist__avatar::after,  html[data-theme-preset] .home .home__card .artists .artist__avatar .media-thumb__img,  html[data-theme-preset] .home .home__card .artists .artist__avatar img {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  border-radius: 999px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] .home .home__card .artists .artist__avatar::before,  html[data-theme-preset] .home .home__card .artists .artist__avatar::after {
+  content: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .app-sidebar,  html[data-theme-preset="violet"] .app-sidebar > .app-sticky,  html[data-theme-preset="violet"] .app-sidebar > .app-sticky.glass {
+  border: none;
+  border-color: transparent;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] .app-sidebar > .app-sticky,  html[data-theme-preset="violet"] .app-sidebar > .app-sticky.glass {
+  background: radial-gradient(340px 220px at 50% 0%, rgba(140, 104, 232, 0.10), transparent 68%),
+    linear-gradient(180deg, rgba(25, 18, 44, 0.90), rgba(13, 10, 26, 0.96));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libRow__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libRow__meta {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.libRow__title,  .libRow__sub {
+  display: block;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libRow__actions {
+  flex: 0 0 auto;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page__title,  .artist__name,  .sp-heroCard__title,  .sp-trackRowModern__titleLink {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.libEmpty,  html[data-theme-preset="light"] .libEmpty {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.liked-cover {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: none;
+  color: #f4f1ff;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.liked-cover__icon {
+  width: 16px;
+  height: 16px;
+  filter: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .liked-cover {
+  background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(247,243,255,.98));
+  border: 1px solid rgba(126,92,198,.16);
+  color: #7c3aed;
+  box-shadow: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] .app-right :is(.rp__close.icon-btn),  html[data-theme-preset] .rightcard :is(.rp__close.icon-btn),  html[data-theme-preset] .rightcard.rp :is(.rp__close.icon-btn) {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: inherit;
+  opacity: .78;
+  transform: none;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset] .app-right :is(.rp__close.icon-btn):hover,  html[data-theme-preset] .app-right :is(.rp__close.icon-btn):focus-visible,  html[data-theme-preset] .rightcard :is(.rp__close.icon-btn):hover,  html[data-theme-preset] .rightcard :is(.rp__close.icon-btn):focus-visible,  html[data-theme-preset] .rightcard.rp :is(.rp__close.icon-btn):hover,  html[data-theme-preset] .rightcard.rp :is(.rp__close.icon-btn):focus-visible {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] .app-sidebar :is(.libraryHead__actions .iconBtn, .libToolsRow .iconBtn, .libSearch > .iconBtn, .libMoreBtn) {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: inherit;
+  opacity: .78;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset] .app-sidebar :is(.libraryHead__actions .iconBtn, .libToolsRow .iconBtn, .libSearch > .iconBtn, .libMoreBtn):hover,  html[data-theme-preset] .app-sidebar :is(.libraryHead__actions .iconBtn, .libToolsRow .iconBtn, .libSearch > .iconBtn, .libMoreBtn):focus-visible {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset] .app-sidebar .libMoreBtn {
+  transform: none;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1221px) and (max-width: 1280px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .app-main > .app-content > :is(.home, .settings-pageShell, .sp-page--profile, .sp-page--studio) {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__hero {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroCompact {
+    grid-template-columns: minmax(0, 1.08fr) minmax(244px, 0.78fr);
+    gap: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMainCard {
+    min-height: 236px;
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 16px;
+    padding: 18px 20px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMainArtFrame,  .app-shell.no-right .home__heroMainArt,  .app-shell.no-right .home__heroMainArt.media-thumb {
+    width: 156px;
+    height: 156px;
+    min-width: 156px;
+    min-height: 156px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMainTitle {
+    max-width: 560px;
+    font-size: clamp(32px, 3.5vw, 42px);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMainText {
+    max-width: 500px;
+    -webkit-line-clamp: 2;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMiniCard {
+    min-height: 114px;
+    padding: 14px 15px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .settings-card {
+    max-width: 980px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .settings-themeGrid {
+    gap: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .settings-themeCard__title {
+    font-size: 18px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .settings-themeCard__note {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1220px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-pageShell {
+    padding: 0 2px 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-grid--top {
+    gap: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-panel {
+    padding: 18px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__hero {
+    gap: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__heroMainText {
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1221px) and (max-width: 1280px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .app-main > .app-content > :is(.home, .settings-pageShell, .sp-page--profile, .sp-page--studio) {
+    max-width: 972px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .settings-themeCard {
+    grid-template-columns: minmax(0, 1fr) minmax(162px, 0.7fr);
+    gap: 13px;
+    padding: 15px;
+    min-height: 182px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .settings-themeCard__preview {
+    min-height: 142px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .settings-themeCard__previewShell {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 9px;
+    padding: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .settings-themeCard__previewThumb {
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1220px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-themeGrid {
+    gap: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-themeCard {
+    grid-template-columns: minmax(0, 1fr) minmax(152px, 0.68fr);
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    min-height: 168px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-themeCard__preview {
+    min-height: 132px;
+    padding: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-themeCard__previewShell {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 9px;
+    padding: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-themeCard__previewSidebar {
+    gap: 6px;
+    padding: 9px 7px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-themeCard__previewHero {
+    min-height: 56px;
+    border-radius: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-themeCard__previewPlayer {
+    height: 28px;
+    padding: 8px 9px;
+    border-radius: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-themeCard__previewThumb {
+    top: 10px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    border-radius: 11px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-themeCard__title {
+    font-size: 17px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-themeCard__note {
+    font-size: 11.5px;
+    line-height: 1.4;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1100px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-grid--top {
+    gap: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-panel {
+    padding: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  html[data-theme-preset] .settings-themeCard {
+    grid-template-columns: minmax(0, 1fr) 146px;
+    min-height: 160px;
+  }
+}
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--sidebar-overlay .app-body {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,279 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+.nf-card {
+  text-align: left;
+  width: 860px;
+  min-height: 640px;
+  padding: 44px 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(520px 420px at 22% 28%, rgba(124, 44, 255, 0.22) 0%, rgba(124, 44, 255, 0.10) 42%, transparent 68%),
+    radial-gradient(520px 420px at 78% 22%, rgba(35, 166, 255, 0.18) 0%, rgba(35, 166, 255, 0.08) 44%, transparent 72%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.02) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 26px;
+  align-items: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-title {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 14px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.96), rgba(205, 232, 255, 0.80));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-text {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-path {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.86);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  max-width: 320px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-hint {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-illustration {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: radial-gradient(240px 220px at 35% 30%, rgba(124, 44, 255, 0.45) 0%, rgba(124, 44, 255, 0.12) 55%, transparent 72%),
+    radial-gradient(240px 220px at 78% 25%, rgba(35, 166, 255, 0.22) 0%, rgba(35, 166, 255, 0.06) 55%, transparent 72%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.18) 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 26px 60px rgba(0, 0, 0, 0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-illustration::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04) 0px,
+    rgba(255, 255, 255, 0.04) 1px,
+    transparent 2px,
+    transparent 6px
+  );
+  opacity: 0.16;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-404 {
+  position: absolute;
+  left: 14px;
+  top: 10px;
+  font-size: 76px;
+  font-weight: 950;
+  line-height: 1;
+  letter-spacing: -2px;
+  color: rgba(255, 255, 255, 0.07);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-eq {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  display: flex;
+  gap: 6px;
+  height: 42px;
+  align-items: flex-end;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-eq span {
+  width: 6px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.65), rgba(35, 166, 255, 0.45));
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+  animation: nfBeat 1.35s ease-in-out infinite;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-eq span:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-eq span:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-eq span:nth-child(4) {
+  animation-delay: 0.36s;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-eq span:nth-child(5) {
+  animation-delay: 0.48s;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-eq span:nth-child(6) {
+  animation-delay: 0.60s;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-eq span:nth-child(7) {
+  animation-delay: 0.72s;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-eq span:nth-child(8) {
+  animation-delay: 0.84s;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-eq span:nth-child(9) {
+  animation-delay: 0.96s;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-eq span:nth-child(10) {
+  animation-delay: 1.08s;
+}
+/* Нижче описана анімація яка керує переходом між станами */
+@keyframes nfBeat {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  0%, 100% {
+    height: 10px;
+    opacity: 0.55;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  40% {
+    height: 40px;
+    opacity: 0.95;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  70% {
+    height: 18px;
+    opacity: 0.75;
+  }
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.nf-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 820px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .nf-grid {
+    grid-template-columns: 1fr;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .nf-card {
+    text-align: center;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .nf-text {
+    text-align: center;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .nf-actions {
+    justify-content: center;
+    max-width: none;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 520px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .nf-card {
+    padding: 28px 20px;
+  }
+}

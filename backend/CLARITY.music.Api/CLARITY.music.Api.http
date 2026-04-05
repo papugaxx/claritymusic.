@@ -1,0 +1,9 @@
+# Нижче наведено запит який зручно використовувати для ручної перевірки API
+
+@CLARITY.music.Api_HostAddress = http://localhost:5287
+
+# Нижче наведено запит який зручно використовувати для ручної перевірки API
+GET {{CLARITY.music.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

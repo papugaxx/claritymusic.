@@ -1,0 +1,566 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+:root {
+  --auth-card-bg: rgba(10, 13, 20, 0.72);
+  --auth-card-border: rgba(255, 255, 255, 0.12);
+  --auth-muted: rgba(255, 255, 255, 0.7);
+  --auth-muted-2: rgba(255, 255, 255, 0.55);
+  --auth-primary: #23a6ff;
+  --auth-primary-2: #1d8cff;
+  --auth-input-bg: rgba(255, 255, 255, 0.06);
+  --auth-input-border: rgba(255, 255, 255, 0.14);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-page-container {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: var(--app-bg);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-card {
+  width: 600px;
+  max-width: calc(100vw - 40px);
+  padding: 34px;
+  border: 1px solid var(--auth-card-border);
+  border-radius: 18px;
+  background: var(--auth-card-bg);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(26px);
+  -webkit-backdrop-filter: blur(26px);
+  color: #fff;
+  text-align: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-card--register-email {
+  min-height: 550px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-card--register-password {
+  min-height: 660px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-card--register-profile {
+  min-height: 665px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--auth-muted);
+  font-size: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.auth-back:hover {
+  color: #fff;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.auth-brand,  .brand-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-brand {
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.auth-brand--registerStep,  .brand-block--register {
+  gap: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.brand-block--login {
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.brand-block--compact {
+  margin-bottom: 18px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.brand-subtitle,  .auth-subtitle {
+  margin: 0;
+  max-width: 100%;
+  line-height: 1.2;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-subtitle {
+  font-size: 13px;
+  color: var(--auth-muted-2);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.brand-subtitle {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(205, 191, 245, 0.72);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-form-group {
+  margin-top: 14px;
+  text-align: left;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-form-group--compact {
+  margin-top: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--auth-muted);
+  font-size: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-label--spaced {
+  margin-bottom: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 44px 12px 14px;
+  border: 1px solid var(--auth-input-border);
+  border-radius: 10px;
+  background: var(--auth-input-bg);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Стан фокуса підкреслює активний елемент і покращує навігацію з клавіатури */
+.auth-input:focus {
+  border-color: rgba(35, 166, 255, 0.9);
+  box-shadow: 0 0 0 4px rgba(35, 166, 255, 0.12);
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-input-icon-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: var(--auth-muted);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.auth-input-icon-btn:hover {
+  color: #fff;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.auth-primary-btn,  .auth-secondary-btn,  .auth-social-btn {
+  width: 100%;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-primary-btn {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border: none;
+  background: linear-gradient(180deg, var(--auth-primary) 0%, var(--auth-primary-2) 100%);
+  color: #06131f;
+  font-weight: 800;
+  box-shadow: 0 14px 28px rgba(35, 166, 255, 0.2);
+  transition: filter 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.auth-primary-btn:hover {
+  filter: brightness(1.02);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.auth-primary-btn:disabled,  .auth-secondary-btn:disabled,  .auth-social-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.auth-secondary-btn,  .auth-social-btn {
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.auth-social-btn:hover:not(:disabled) {
+  border-color: rgba(35, 166, 255, 0.32);
+  background: rgba(35, 166, 255, 0.08);
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.auth-divider::before,  .auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-inline-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-link {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.auth-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 12px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.auth-error,  .auth-error-box,  .auth-info-box {
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  text-align: left;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.auth-error,  .auth-error-box {
+  color: #ffb4b4;
+  background: rgba(255, 74, 74, 0.12);
+  border: 1px solid rgba(255, 74, 74, 0.18);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-info-box {
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(35, 166, 255, 0.1);
+  border: 1px solid rgba(35, 166, 255, 0.18);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-stepbar {
+  width: 100%;
+  height: 3px;
+  margin: 10px 0 18px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.auth-stepbar > div,  .auth-stepbar__fill {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--auth-primary) 0%, #7c3aed 100%);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-stepbar__fill--half {
+  width: 50%;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-radio-group {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-card--status {
+  min-height: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-subtitle--wide {
+  max-width: 460px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-info-box--muted {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-infoList {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  text-align: left;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-infoList ul {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-actionsStack {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.auth-primary-btn--link,  .auth-secondary-btn--link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-link--centered {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.auth-error,  .auth-error-box,  .auth-info-box,  .auth-infoList {
+  line-height: 1.5;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.auth-error-box,  .auth-info-box {
+  border-radius: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.auth-infoList li + li {
+  margin-top: 6px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.auth-input:disabled,  .auth-primary-btn:disabled,  .auth-secondary-btn:disabled,  .auth-social-btn:disabled {
+  filter: saturate(0.92);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-error,  html[data-theme-preset="light"] body[data-static-page="auth"] .auth-error-box {
+  color: #8d2f46;
+  background: rgba(255, 109, 136, 0.12);
+  border-color: rgba(223, 93, 122, 0.26);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-info-box {
+  color: #4f3e74;
+  background: rgba(125, 90, 208, 0.10);
+  border-color: rgba(125, 90, 208, 0.18);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-info-box--muted {
+  color: #5b497f;
+  background: rgba(255, 255, 255, 0.62);
+  border-color: rgba(179, 157, 224, 0.34);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-infoList {
+  background: rgba(255, 255, 255, 0.56);
+  border-color: rgba(186, 165, 228, 0.36);
+  color: #4b3b6a;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-infoList ul,  html[data-theme-preset="light"] body[data-static-page="auth"] .auth-radio-group,  html[data-theme-preset="light"] body[data-static-page="auth"] .auth-radio span {
+  color: #564576;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-stepbar {
+  background: rgba(137, 109, 196, 0.14);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-back:hover,  html[data-theme-preset="light"] body[data-static-page="auth"] .auth-link:hover {
+  color: #6f4dc4;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-primary-btn:disabled,  html[data-theme-preset="light"] body[data-static-page="auth"] .auth-secondary-btn:disabled,  html[data-theme-preset="light"] body[data-static-page="auth"] .auth-social-btn:disabled {
+  opacity: 0.72;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 767px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .auth-page-container {
+    position: fixed;
+    inset: 0;
+    box-sizing: border-box;
+    min-height: 100dvh;
+    height: 100dvh;
+    padding: max(18px, env(safe-area-inset-top)) 16px max(20px, env(safe-area-inset-bottom));
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+    -webkit-overflow-scrolling: touch;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .auth-card {
+    width: min(100%, 430px);
+    max-width: 430px;
+    margin: auto;
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .auth-card--register-email,  .auth-card--register-password,  .auth-card--register-profile {
+    min-height: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .auth-brand,  .brand-block {
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .brand-block--login {
+    margin-bottom: 12px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 430px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .auth-page-container {
+    padding-inline: 12px;
+    padding-block: max(14px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-bottom));
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .auth-card {
+    width: 100%;
+    padding: 18px 14px;
+    border-radius: 16px;
+  }
+}

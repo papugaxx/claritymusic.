@@ -1,0 +1,166 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+.track-item {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.track-item:hover {
+  background: rgba(255,255,255,.03);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-cover {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-info {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+  align-self: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-title {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  font: inherit;
+  font-weight: 900;
+  line-height: 1.24;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.track-title:hover,  .track-title:focus-visible {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-meta {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.28;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  align-self: center;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.track-item__play,  .track-item__like,  .track-item__remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-item__like {
+  width: 42px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-item__remove {
+  width: 38px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-item__glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transform: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-item__glyph--play {
+  font-size: 13px;
+  transform: translateX(1px);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-item__glyph--like {
+  font-size: 15px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-item__glyph--remove {
+  font-size: 13px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-right {
+  min-width: 80px;
+  color: var(--muted-2);
+  font-size: 12px;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-self: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-right:empty {
+  min-width: 0;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 760px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .track-item {
+    grid-template-columns: 44px minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .track-right {
+    grid-column: 2 / -1;
+    min-width: 0;
+    justify-content: flex-start;
+    text-align: left;
+  }
+}

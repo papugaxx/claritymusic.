@@ -1,0 +1,3485 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+:root {
+  --responsive-shell-frame: 10px;
+  --responsive-shell-gap: 10px;
+  --responsive-sidebar-w: clamp(252px, 16vw, 280px);
+  --responsive-right-w: clamp(296px, 21vw, 360px);
+  --player-h: 68px;
+}
+
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-shell {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: var(--responsive-shell-gap);
+  width: 100%;
+  min-height: 100dvh;
+  height: 100dvh;
+  padding: var(--responsive-shell-frame);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.app-topstrip,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-player {
+  position: relative;
+  inset: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  top: auto;
+  width: 100%;
+  padding: 0;
+  pointer-events: auto;
+}
+
+.app-topstrip__inner,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-player > * {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-topstrip__inner {
+  height: var(--topbar-h);
+  min-height: var(--topbar-h);
+  overflow: visible;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-body {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  min-height: 0;
+  height: auto;
+  display: grid;
+  grid-template-columns: var(--responsive-sidebar-w) minmax(0, 1fr) var(--responsive-right-w);
+  gap: var(--responsive-shell-gap);
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-body.no-right {
+  grid-template-columns: var(--responsive-sidebar-w) minmax(0, 1fr);
+}
+
+.app-sidebar,
+.app-main,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-right {
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-sticky {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-sticky__scroll {
+  min-height: 0;
+  flex: 1 1 auto;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-main {
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-content {
+  flex: 1 0 auto;
+  min-height: 0;
+}
+
+.app-shell__drawerHead,
+.app-shell__backdrop,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbar__navToggle {
+  display: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-shell__drawerHead {
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-shell__drawerClose {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-shell__backdrop {
+  border: 0;
+  padding: 0;
+  appearance: none;
+  background: rgba(6, 7, 12, 0.52);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.app-sidebar .app-sticky,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-right .app-sticky {
+  height: 100%;
+}
+
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbar {
+  height: 100%;
+  min-height: var(--topbar-h);
+  display: grid;
+  grid-template-columns: minmax(180px, 248px) minmax(0, 1fr) minmax(176px, 280px);
+  align-items: center;
+  gap: 12px;
+  padding: 0 14px;
+}
+
+.topbar__left,
+.topbar__center,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbar__right {
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  height: 100%;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbar__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbar__center {
+  justify-content: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbar__right {
+  justify-content: flex-end;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.searchbox {
+  width: min(100%, 540px);
+  max-width: 540px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbar__search {
+  width: 100%;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbar__clearBtn {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  margin-left: 0;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbar__navToggle {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbar__navGlyph {
+  display: inline-grid;
+  gap: 4px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbar__navGlyph span {
+  display: block;
+  width: 15px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar {
+  min-height: var(--player-h);
+  grid-template-columns: minmax(210px, 280px) minmax(300px, 1fr) minmax(208px, 300px);
+  gap: 16px;
+  padding: 10px 14px;
+  border-radius: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__left {
+  max-width: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__progress {
+  width: min(560px, 100%);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__volume {
+  min-width: 160px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__menu {
+  right: 0;
+  bottom: calc(100% + 10px);
+}
+
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 1280px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell {
+    --responsive-shell-frame: 8px;
+    --responsive-shell-gap: 8px;
+    --responsive-sidebar-w: 240px;
+    --responsive-right-w: 300px;
+  }
+
+  .app-topstrip__inner,
+  .app-sticky,
+  .home__hero,
+  .home__card,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    border-radius: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar {
+    grid-template-columns: minmax(160px, 220px) minmax(0, 1fr) minmax(168px, 236px);
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .searchbox {
+    max-width: 480px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__search {
+    min-height: 44px;
+    padding-left: 14px;
+    padding-right: 44px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    grid-template-columns: minmax(200px, 252px) minmax(260px, 1fr) minmax(188px, 260px);
+    gap: 14px;
+    padding: 10px 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__cover {
+    width: 50px;
+    height: 50px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playBtn {
+    width: 44px;
+    height: 44px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__controls {
+    gap: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    min-width: 148px;
+  }
+
+  .home,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__content {
+    gap: 14px;
+  }
+
+  .home__hero,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__card {
+    padding: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroCompact {
+    gap: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    min-height: 0;
+    padding: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainArtFrame {
+    width: 148px;
+    height: 148px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainArt {
+    width: 148px;
+    height: 148px;
+  }
+
+  .tile,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-tile {
+    width: clamp(172px, 17vw, 202px);
+    flex: 0 0 clamp(172px, 17vw, 202px);
+    padding: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .artist__avatar {
+    width: 84px;
+    height: 84px;
+  }
+
+  .playlist-page,
+  .liked-page,
+  .track-page,
+  .sp-page,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-page {
+    padding: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-profileLayout {
+    grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.85fr);
+    gap: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__content {
+    gap: 18px;
+    padding: 24px;
+  }
+
+  .settings-panel,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard {
+    padding: 18px;
+  }
+}
+
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell {
+    --responsive-shell-frame: 8px;
+    --responsive-shell-gap: 8px;
+    --player-h: 72px;
+  }
+
+  .app-body,
+  .app-body.no-right,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-body.has-right {
+    grid-template-columns: 1fr;
+  }
+
+  .app-shell__drawerHead,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__navToggle {
+    display: flex;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-sidebar {
+    position: fixed;
+    top: calc(var(--responsive-shell-frame) + var(--topbar-h) + var(--responsive-shell-gap));
+    left: var(--responsive-shell-frame);
+    bottom: calc(var(--responsive-shell-frame) + var(--player-h) + var(--responsive-shell-gap));
+    width: min(340px, calc(100vw - (var(--responsive-shell-frame) * 2) - 72px));
+    z-index: 90;
+    transform: translateX(calc(-100% - 18px));
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 180ms ease, opacity 180ms ease, visibility 180ms ease;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--sidebar-open .app-sidebar {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right {
+    position: fixed;
+    top: calc(var(--responsive-shell-frame) + var(--topbar-h) + var(--responsive-shell-gap));
+    right: var(--responsive-shell-frame);
+    bottom: calc(var(--responsive-shell-frame) + var(--player-h) + var(--responsive-shell-gap));
+    width: min(380px, calc(100vw - (var(--responsive-shell-frame) * 2) - 48px));
+    z-index: 91;
+    transform: translateX(calc(100% + 18px));
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 180ms ease, opacity 180ms ease, visibility 180ms ease;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--right-open .app-right {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .app-sidebar .app-sticky,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .app-sticky {
+    height: 100%;
+    border-radius: 22px;
+    box-shadow: 0 24px 72px rgba(0, 0, 0, 0.42);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell__backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell__backdrop--sidebar {
+    z-index: 84;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell__backdrop--right {
+    z-index: 85;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+  .topbar__left,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__right {
+    width: auto;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__center {
+    justify-content: stretch;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .searchbox {
+    width: 100%;
+    max-width: none;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__search {
+    min-height: 44px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    min-width: 0;
+    padding-inline: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .playerbar__left,
+  .playerbar__center,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    justify-content: center;
+    width: 100%;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    flex-wrap: wrap;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    width: 100%;
+    max-width: none;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__menu {
+    right: 50%;
+    left: auto;
+    transform: translateX(50%);
+    width: min(320px, calc(100vw - 32px));
+  }
+
+  .home,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__content {
+    gap: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__hero {
+    gap: 14px;
+    padding: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroTop {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroCompact {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroSideCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    grid-template-columns: minmax(120px, 180px) minmax(0, 1fr);
+    gap: 16px;
+    min-height: 0;
+    padding: 16px;
+  }
+
+  .home__heroMainVisual,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainContent {
+    min-width: 0;
+  }
+
+  .home__heroMainArtFrame,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainArt {
+    width: 132px;
+    height: 132px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__genres {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .playlist-page__head,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .page-head {
+    align-items: flex-start;
+  }
+
+  .playlist-page__controls,
+  .playlist-page__sort,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-actionsRow {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .playlist-page .track-item,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .liked-page .track-item {
+    grid-template-columns: 52px minmax(0, 1fr) auto;
+    gap: 12px;
+  }
+
+  .playlist-page .track-right,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .liked-page .track-right {
+    grid-column: 2 / -1;
+    min-width: 0;
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .track-hero {
+    grid-template-columns: 132px minmax(0, 1fr);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-page {
+    padding: 18px;
+  }
+
+  .settings-grid,
+  .settings-grid--account,
+  .settings-themeGrid,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-formGrid {
+    grid-template-columns: 1fr;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__meta {
+    justify-items: flex-start;
+    text-align: left;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__note {
+    text-align: left;
+  }
+
+  .settings-themeCard__swatches,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__eyebrowRow {
+    justify-content: flex-start;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-page {
+    padding: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-profileLayout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-sideCard {
+    position: static;
+    top: auto;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__content {
+    grid-template-columns: 1fr;
+    align-items: start;
+    min-height: 0;
+    padding: 22px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__side {
+    justify-items: start;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__actions {
+    justify-content: flex-start;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-metricGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 760px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell {
+    --responsive-shell-frame: 8px;
+    --responsive-shell-gap: 8px;
+    --player-h: 84px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-topstrip__inner {
+    height: auto;
+    min-height: 0;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar {
+    min-height: 0;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      "left left right"
+      "center center center";
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px 12px;
+  }
+
+  .topbar__left { grid-area: left; }
+  .topbar__center { grid-area: center; }
+  .topbar__right { grid-area: right; }
+
+  .topbar__left,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__right {
+    height: auto;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__center {
+    width: 100%;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .searchbox {
+    width: 100%;
+    max-width: none;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__search {
+    min-height: 42px;
+    font-size: 13px;
+    border-radius: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    min-width: 44px;
+    padding-inline: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-sidebar {
+    width: min(360px, calc(100vw - 16px));
+    left: 8px;
+    bottom: calc(var(--responsive-shell-frame) + var(--player-h) + var(--responsive-shell-gap));
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right {
+    left: 8px;
+    right: 8px;
+    top: auto;
+    bottom: calc(var(--responsive-shell-frame) + var(--player-h) + var(--responsive-shell-gap));
+    width: auto;
+    max-height: min(72dvh, 560px);
+    transform: translateY(calc(100% + 18px));
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--right-open .app-right {
+    transform: translateY(0);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .app-sticky {
+    border-radius: 24px 24px 20px 20px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    gap: 10px;
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__left {
+    justify-content: flex-start;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__center {
+    gap: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__controls {
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    grid-template-columns: 40px minmax(0, 1fr) 40px;
+    gap: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    width: 100%;
+    min-width: 0;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__menu {
+    left: 0;
+    right: 0;
+    transform: none;
+    width: auto;
+    bottom: calc(100% + 10px);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__hero {
+    padding: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroTop {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .home__heroChips,
+  .home__genresScroll,
+  .row,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .artists {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroChips {
+    padding-bottom: 2px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .home__heroMainVisual,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainArtFrame {
+    width: 100%;
+  }
+
+  .home__heroMainArtFrame,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainArt {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainTitle {
+    font-size: clamp(28px, 9vw, 42px);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMetaRow {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroPlayBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroSideCards {
+    grid-template-columns: 1fr;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__card {
+    padding: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(160px, 66vw);
+    gap: 12px;
+    padding-bottom: 4px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .artists {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(132px, 44vw);
+    gap: 12px;
+    justify-content: start;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .artist {
+    min-width: 0;
+  }
+
+  .playlist-page,
+  .liked-page,
+  .track-page,
+  .page-wrap,
+  .sp-page,
+  .settings-page,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .album-page {
+    padding: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playlist-page__head {
+    padding: 14px;
+  }
+
+  .playlist-page__identity,
+  .track-hero,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__main {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .track-hero__cover {
+    width: 132px;
+    height: 132px;
+  }
+
+  .playlist-page .track-item,
+  .liked-page .track-item,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .track-item {
+    grid-template-columns: 48px minmax(0, 1fr) auto;
+    gap: 10px;
+    padding: 10px 12px;
+  }
+
+  .playlist-page .track-cover,
+  .liked-page .track-cover,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .track-cover {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+
+  .playlist-page .track-actions,
+  .liked-page .track-actions,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .track-actions {
+    gap: 8px;
+  }
+
+  .settings-panel,
+  .settings-themeCard,
+  .settings-card,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-section {
+    padding: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard {
+    min-height: 0;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__content {
+    padding: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__main {
+    gap: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__avatar {
+    width: 112px;
+    height: 112px;
+    flex-basis: 112px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__title {
+    font-size: clamp(30px, 11vw, 44px);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-metricGrid {
+    grid-template-columns: 1fr;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-pillStat {
+    min-width: min(100%, 140px);
+  }
+
+  .topbarSearchMenu,
+  .ui-dd,
+  .ui-selectMenu,
+  .playlistMenu,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .adminPortalMenu {
+    max-width: calc(100vw - 16px);
+  }
+}
+
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 560px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-name {
+    display: none;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    min-width: 42px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__cover {
+    width: 46px;
+    height: 46px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playBtn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .playerbar__control,
+  .playerbar__action,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playlistAction {
+    min-height: 38px;
+  }
+
+  .home__hero,
+  .home__card,
+  .playlist-page__head,
+  .settings-panel,
+  .settings-themeCard,
+  .settings-card,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-section {
+    border-radius: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainTitle {
+    font-size: clamp(26px, 10vw, 38px);
+  }
+
+  .home__heroMetaPill,
+  .sp-pillStat,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-chipBtn {
+    width: auto;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .row {
+    grid-auto-columns: minmax(154px, 72vw);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .artists {
+    grid-auto-columns: minmax(124px, 52vw);
+  }
+
+  .playlist-page,
+  .liked-page,
+  .track-page,
+  .page-wrap,
+  .sp-page,
+  .settings-page,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .album-page {
+    padding: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .modalOverlay {
+    padding: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .modal {
+    width: min(100vw - 20px, 100%);
+  }
+}
+
+
+.topbar__brand,
+.topbar__brand:hover,
+.topbar__brand:focus-visible,
+.topbar__brand:active,
+html[data-theme-preset="violet"] .topbar__brand,
+html[data-theme-preset="violet"] .topbar__brand:hover,
+html[data-theme-preset="violet"] .topbar__brand:focus-visible,
+html[data-theme-preset="violet"] .topbar__brand:active,
+html[data-theme-preset="light"] .topbar__brand,
+html[data-theme-preset="light"] .topbar__brand:hover,
+html[data-theme-preset="light"] .topbar__brand:focus-visible,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .topbar__brand:active {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+.topbar__brand .clarity-logo,
+.topbar__brandText .clarity-logo,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.clarity-logo--topbar {
+  display: inline-flex;
+  align-items: center;
+}
+
+.topbar__brand .clarity-logo svg,
+.topbar__brandText .clarity-logo svg,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.clarity-logo--topbar svg {
+  display: block;
+  width: auto;
+  height: 34px;
+}
+
+.topbar__left,
+.topbar__center,
+.topbar__right,
+.searchbox,
+.profile-btn,
+.playlist-page,
+.liked-page,
+.track-page,
+.page-wrap,
+.settings-pageShell,
+.settings-page,
+.home,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__content {
+  min-width: 0;
+}
+
+.home__card,
+.panel,
+.settings-card,
+.settings-panel,
+.sitefooter__inner,
+.playerbar,
+.app-sticky,
+.app-topstrip__inner,
+.track-page > .panel,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlist-page__head {
+  box-sizing: border-box;
+}
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) {
+  .app-main,
+  .app-content,
+  .sp-page,
+  .sp-page--profile,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-page--studio {
+    min-width: 0;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    grid-template-columns: minmax(196px, 252px) minmax(280px, 1fr) minmax(192px, 248px);
+    gap: 12px;
+    padding: 10px 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__cover {
+    width: 48px;
+    height: 48px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__left {
+    gap: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__controls {
+    gap: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    width: min(520px, 100%);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    min-width: 148px;
+  }
+}
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell {
+    --topbar-h: 60px;
+    --player-h: 64px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right {
+    width: min(348px, calc(100vw - 28px));
+  }
+
+  .app-sidebar .app-sticky,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .app-sticky {
+    border-radius: 20px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar {
+    gap: 8px;
+    padding: 0 10px;
+  }
+
+  .topbar__brand .clarity-logo svg,
+  .topbar__brandText .clarity-logo svg,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .clarity-logo--topbar svg {
+    height: 30px;
+  }
+
+  .topbar__navToggle,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    padding-inline: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__search {
+    min-height: 42px;
+    border-radius: 16px;
+    padding-left: 14px;
+    padding-right: 40px;
+    font-size: 13px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__left {
+    justify-content: flex-start;
+  }
+
+  .playerbar__left,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    gap: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__cover {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playBtn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .playerbar__control,
+  .playerbar__action,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playlistAction {
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    max-width: 420px;
+    grid-template-columns: 38px minmax(0, 1fr) 38px;
+    gap: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    min-width: 0;
+    width: min(220px, 100%);
+    gap: 8px;
+  }
+
+  .home__hero,
+  .home__card,
+  .settings-card,
+  .settings-panel,
+  .settings-themeCard,
+  .sp-card,
+  .sp-section,
+  .panel,
+  .playlist-page__head,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .track-page > .panel {
+    border-radius: 20px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__hero {
+    padding: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroCompact {
+    gap: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    padding: 14px;
+    gap: 14px;
+  }
+
+  .home__heroMainArtFrame,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainArt {
+    width: 116px;
+    height: 116px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainTitle {
+    font-size: clamp(26px, 4vw, 38px);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainMeta {
+    font-size: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainText {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .home__heroMetaPill,
+  .home__heroPlayBtn,
+  .chip,
+  .mood__btn,
+  .libPill,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-chipBtn {
+    min-height: 36px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroPlayBtn {
+    min-width: 104px;
+    min-height: 42px;
+    padding: 0 18px;
+    font-size: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniCard {
+    min-height: 0;
+    padding: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniTitle {
+    font-size: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniSub {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .row {
+    gap: 10px;
+  }
+
+  .tile,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-tile {
+    width: clamp(156px, 22vw, 182px);
+    flex-basis: clamp(156px, 22vw, 182px);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .artists {
+    gap: 18px 20px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .artist__avatar {
+    width: 72px;
+    height: 72px;
+  }
+
+  .settings-pageShell,
+  .settings-page,
+  .playlist-page,
+  .liked-page,
+  .track-page,
+  .sp-page,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home {
+    padding: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-card {
+    gap: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-panel {
+    padding: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__meta {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .settings-themeCard__note,
+  .settings-themeCard__swatches,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__eyebrowRow {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__inner {
+    border-radius: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-profileModal {
+    width: min(560px, calc(100vw - 28px));
+  }
+}
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 760px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell {
+    --topbar-h: auto;
+    --responsive-shell-frame: 6px;
+    --responsive-shell-gap: 6px;
+    --player-h: 62px;
+    padding-bottom: 6px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-topstrip__inner {
+    border-radius: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar {
+    gap: 8px;
+    padding: 8px 10px 10px;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      "left left right"
+      "center center center";
+  }
+
+  .topbar__left,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__right {
+    align-items: center;
+    gap: 8px;
+  }
+
+  .topbar__brand .clarity-logo svg,
+  .topbar__brandText .clarity-logo svg,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .clarity-logo--topbar svg {
+    height: 26px;
+  }
+
+  .topbar__navToggle,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    padding-inline: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__search {
+    min-height: 38px;
+    height: 38px;
+    border-radius: 14px;
+    padding-left: 12px;
+    padding-right: 36px;
+    font-size: 13px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__clearBtn {
+    right: 4px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-sidebar {
+    top: calc(var(--responsive-shell-frame) + 74px);
+    left: 6px;
+    bottom: calc(var(--responsive-shell-frame) + var(--player-h) + var(--responsive-shell-gap));
+    width: min(320px, calc(100vw - 12px));
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right {
+    left: 6px;
+    right: 6px;
+    bottom: calc(var(--responsive-shell-frame) + var(--player-h) + var(--responsive-shell-gap));
+    width: auto;
+    max-height: min(68dvh, 520px);
+  }
+
+  .app-sidebar .app-sticky,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .app-sticky {
+    border-radius: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__left {
+    gap: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__cover {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__track {
+    font-size: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__artist {
+    margin-top: 2px;
+    font-size: 11px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__center {
+    gap: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__controls {
+    gap: 6px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playBtn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .playerbar__control,
+  .playerbar__action,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playlistAction {
+    min-width: 34px;
+    min-height: 34px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    width: 100%;
+    grid-template-columns: 34px minmax(0, 1fr) 34px;
+    gap: 6px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__time {
+    font-size: 11px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    gap: 8px;
+    align-items: center;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    flex: 1 1 auto;
+    width: auto;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volumeIcon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .home,
+  .home__content,
+  .playlist-page,
+  .liked-page,
+  .track-page,
+  .sp-page,
+  .sp-page--profile,
+  .sp-page--studio,
+  .settings-page,
+  .settings-pageShell,
+  .page-wrap,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .album-page {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .home__hero,
+  .home__card,
+  .settings-card,
+  .settings-panel,
+  .settings-themeCard,
+  .sp-card,
+  .sp-section,
+  .panel,
+  .playlist-page__head,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .track-page > .panel {
+    border-radius: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__hero {
+    padding: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroTop {
+    gap: 8px;
+  }
+
+  .home__heroFilterLabel,
+  .home__genresLabel,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__title {
+    font-size: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    padding: 12px;
+    gap: 12px;
+    grid-template-columns: 1fr;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainVisual {
+    justify-content: flex-start;
+  }
+
+  .home__heroMainArtFrame,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainArt {
+    width: 112px;
+    height: 112px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainTitle {
+    font-size: clamp(24px, 8vw, 34px);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainMeta {
+    font-size: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainText {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMetaRow {
+    gap: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMetaPill {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroPlayBtn {
+    width: 100%;
+    min-height: 40px;
+    font-size: 15px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniCard {
+    padding: 12px;
+    gap: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniHead {
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .home__heroMiniThumb,
+  .home__heroMiniAvatar,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniAvatar.media-thumb--avatar {
+    width: 42px;
+    height: 42px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniTitle {
+    font-size: 17px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniSub {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__genres {
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(146px, 56vw);
+    gap: 10px;
+    padding-bottom: 2px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .artists {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(112px, 36vw);
+    gap: 12px;
+    justify-content: start;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .artist__avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-card {
+    gap: 16px;
+  }
+
+  .settings-panel,
+  .settings-themeCard,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-card {
+    padding: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__preview {
+    min-height: 128px;
+    padding: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__previewShell {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 8px;
+    padding: 8px;
+    border-radius: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__previewSidebar {
+    padding: 8px 6px;
+    border-radius: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__previewHero {
+    min-height: 54px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__previewPlayer {
+    height: 28px;
+    padding: 7px 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__previewThumb {
+    width: 32px;
+    height: 32px;
+    border-radius: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__title {
+    font-size: 17px;
+  }
+
+  .settings-subtitle,
+  .settings-panel__head p,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__note {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-profileModal {
+    width: min(calc(100vw - 16px), 100%);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .modalOverlay {
+    padding: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .modal {
+    width: min(calc(100vw - 20px), 100%);
+    border-radius: 20px 20px 18px 18px;
+  }
+
+  .topbarSearchMenu,
+  .topbarProfileMenu,
+  .ui-dd,
+  .ui-selectMenu,
+  .playlistMenu,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .adminPortalMenu {
+    max-width: calc(100vw - 12px);
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 560px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell {
+    --player-h: 58px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar {
+    padding: 7px 8px 8px;
+  }
+
+  .topbar__brand .clarity-logo svg,
+  .topbar__brandText .clarity-logo svg,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .clarity-logo--topbar svg {
+    height: 24px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__search {
+    min-height: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    padding: 7px 8px;
+    gap: 7px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__cover {
+    width: 38px;
+    height: 38px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__track {
+    font-size: 13px;
+  }
+
+  .playerbar__artist,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__time {
+    font-size: 10px;
+  }
+
+  .playerbar__control,
+  .playerbar__action,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playlistAction {
+    min-width: 32px;
+    min-height: 32px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playBtn {
+    width: 38px;
+    height: 38px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .row {
+    grid-auto-columns: minmax(138px, 62vw);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .artists {
+    grid-auto-columns: minmax(104px, 42vw);
+  }
+
+  .home,
+  .home__content,
+  .playlist-page,
+  .liked-page,
+  .track-page,
+  .sp-page,
+  .sp-page--profile,
+  .sp-page--studio,
+  .settings-page,
+  .settings-pageShell,
+  .page-wrap,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .album-page {
+    padding: 10px;
+  }
+}
+
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 1080px) and (min-width: 981px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell {
+    --topbar-h: 60px;
+    --player-h: 62px;
+    --responsive-shell-frame: 8px;
+    --responsive-shell-gap: 8px;
+  }
+
+  .app-body,
+  .app-body.no-right,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-body.has-right {
+    grid-template-columns: 1fr;
+  }
+
+  .app-shell__drawerHead,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__navToggle {
+    display: flex;
+  }
+
+  .app-sidebar,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right {
+    position: fixed;
+    top: calc(var(--responsive-shell-frame) + var(--topbar-h) + var(--responsive-shell-gap));
+    bottom: calc(var(--responsive-shell-frame) + var(--player-h) + var(--responsive-shell-gap));
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 180ms ease, opacity 180ms ease, visibility 180ms ease;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-sidebar {
+    left: var(--responsive-shell-frame);
+    width: min(304px, calc(100vw - 96px));
+    transform: translateX(calc(-100% - 18px));
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right {
+    right: var(--responsive-shell-frame);
+    width: min(344px, calc(100vw - 52px));
+    transform: translateX(calc(100% + 18px));
+    z-index: 91;
+    grid-column: auto;
+  }
+
+  .app-shell--sidebar-open .app-sidebar,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell--right-open .app-right {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell__backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell__backdrop--sidebar {
+    z-index: 84;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell__backdrop--right {
+    z-index: 85;
+  }
+
+  .app-sidebar .app-sticky,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .app-sticky {
+    height: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 24px 72px rgba(0, 0, 0, 0.42);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sidecard__section {
+    margin-top: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .libraryHead {
+    margin: 4px 0 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .libraryHead__title {
+    font-size: 15px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sidecard .libRow__link {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 8px;
+    padding: 7px 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sidecard .libRow__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sidecard .libRow__title {
+    font-size: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sidecard .libRow__sub {
+    font-size: 11px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+  .topbar__brand .clarity-logo svg,
+  .topbar__brandText .clarity-logo svg,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .clarity-logo--topbar svg {
+    height: 30px;
+  }
+
+  .topbar__navToggle,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__search {
+    min-height: 42px;
+    border-radius: 16px;
+    padding-left: 14px;
+    padding-right: 40px;
+    font-size: 13px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "left right"
+      "center center";
+    gap: 8px 12px;
+    padding: 10px 12px;
+    border-radius: 18px;
+  }
+
+  .playerbar__left,
+  .playerbar__right,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__center {
+    width: 100%;
+    max-width: none;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__left {
+    grid-area: left;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__center {
+    grid-area: center;
+    gap: 6px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    grid-area: right;
+    width: auto;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__cover {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playBtn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .playerbar__control,
+  .playerbar__action,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playlistAction {
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    width: min(420px, 100%);
+    grid-template-columns: 40px minmax(0, 1fr) 40px;
+    gap: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    min-width: 0;
+    width: min(210px, 100%);
+    gap: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter {
+    margin-top: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__inner {
+    padding: 10px 12px;
+    border-radius: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__brand {
+    display: none;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__brandRow {
+    align-items: center;
+    gap: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__linksCompact {
+    flex: 1 1 auto;
+    justify-content: flex-start;
+    gap: 6px;
+  }
+
+  .sitefooter__linksCompact a,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__metaCompact {
+    min-height: 28px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__metaCompact {
+    margin-left: auto;
+  }
+
+  .home,
+  .home__content,
+  .settings-pageShell,
+  .settings-page,
+  .playlist-page,
+  .liked-page,
+  .track-page,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-page {
+    padding: 14px;
+    gap: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__hero {
+    gap: 14px;
+    padding: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroCompact {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroSideCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    grid-template-columns: 126px minmax(0, 1fr);
+    gap: 14px;
+    min-height: 0;
+    padding: 14px;
+  }
+
+  .home__heroMainArtFrame,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainArt {
+    width: 122px;
+    height: 122px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainTitle {
+    font-size: clamp(28px, 4vw, 40px);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainMeta {
+    font-size: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainText {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniCard {
+    min-height: 0;
+    padding: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniTitle {
+    font-size: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniSub {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .settings-grid,
+  .settings-grid--account,
+  .settings-formGrid,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-profileLayout {
+    grid-template-columns: 1fr;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .settings-panel,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-card {
+    padding: 16px;
+    gap: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard {
+    min-height: 0;
+    padding: 14px;
+    grid-template-columns: minmax(0, 1fr) minmax(164px, 0.86fr);
+    gap: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__preview {
+    min-height: 154px;
+    padding: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__previewShell {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 12px;
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__previewThumb {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__title {
+    font-size: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-sideCard {
+    position: static;
+    top: auto;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard {
+    min-height: 0;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .sp-heroCard__side,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__actions {
+    justify-items: start;
+    justify-content: flex-start;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__avatar {
+    width: 112px;
+    height: 112px;
+    flex-basis: 112px;
+    border-radius: 24px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__title {
+    font-size: clamp(30px, 4.2vw, 44px);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__description {
+    max-width: none;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__stats {
+    gap: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-pillStat {
+    min-width: 96px;
+    padding: 10px 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-pillStat__value {
+    font-size: 19px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-metricGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) and (min-width: 900px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell {
+    --topbar-h: 58px;
+    --player-h: 60px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-sidebar {
+    width: min(292px, calc(100vw - 84px));
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right {
+    width: min(324px, calc(100vw - 34px));
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar {
+    gap: 8px;
+    padding: 0 10px;
+  }
+
+  .topbar__navToggle,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar__search {
+    min-height: 40px;
+    border-radius: 15px;
+    padding-left: 13px;
+    padding-right: 38px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    gap: 8px 10px;
+    padding: 9px 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__cover {
+    width: 42px;
+    height: 42px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playBtn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .playerbar__control,
+  .playerbar__action,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playlistAction {
+    min-width: 34px;
+    min-height: 34px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    width: min(380px, 100%);
+    grid-template-columns: 36px minmax(0, 1fr) 36px;
+    gap: 7px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    width: min(188px, 100%);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__hero {
+    padding: 13px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    grid-template-columns: 118px minmax(0, 1fr);
+    gap: 13px;
+    padding: 13px;
+  }
+
+  .home__heroMainArtFrame,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainArt {
+    width: 114px;
+    height: 114px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainTitle {
+    font-size: clamp(26px, 3.8vw, 36px);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 13px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__preview {
+    min-height: 148px;
+  }
+
+  .sp-page,
+  .settings-page,
+  .home,
+  .playlist-page,
+  .liked-page,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .track-page {
+    padding: 13px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__content {
+    padding: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__avatar {
+    width: 104px;
+    height: 104px;
+    flex-basis: 104px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__inner {
+    padding: 9px 10px;
+  }
+
+  .sitefooter__linksCompact a,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__metaCompact {
+    min-height: 27px;
+    padding: 0 9px;
+    font-size: 10.5px;
+  }
+}
+
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 1080px) and (min-width: 981px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell {
+    --tablet-content-max: 948px;
+    --topbar-h: 58px;
+    --player-h: 56px;
+    --responsive-shell-gap: 7px;
+  }
+
+  .app-player,
+  .app-main > .sitefooter,
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-main > .app-content > :is(.home, .settings-pageShell, .playlist-page, .liked-page, .track-page, .sp-page) {
+    width: min(100%, var(--tablet-content-max));
+    margin-inline: auto;
+  }
+
+  .app-shell__backdrop--right,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right {
+    transition: transform 220ms ease, opacity 220ms ease, visibility 220ms ease;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell__backdrop--right {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell__backdrop--right.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right {
+    right: var(--responsive-shell-frame);
+    width: min(320px, calc(100vw - 44px));
+    transform: translateX(calc(100% + 16px));
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right.is-open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right.is-closing {
+    transform: translateX(calc(100% + 16px));
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .app-sticky {
+    padding: 8px;
+    border-radius: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp {
+    gap: 8px;
+    padding: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__cover {
+    border-radius: 16px;
+  }
+
+  .rp__section,
+  .rp__artistCard,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rpq__item {
+    border-radius: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__section {
+    padding: 11px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__track {
+    font-size: 15px;
+  }
+
+  .rp__sub,
+  .rp__muted,
+  .rp__creditLabel,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__creditValue {
+    font-size: 12px;
+  }
+
+  .home,
+  .settings-pageShell,
+  .settings-page,
+  .playlist-page,
+  .liked-page,
+  .track-page,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-page {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .home__hero,
+  .settings-card,
+  .settings-panel,
+  .track-hero,
+  .sp-heroCard,
+  .sp-section,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-card {
+    border-radius: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__hero {
+    gap: 12px;
+    padding: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroCompact {
+    grid-template-columns: minmax(0, 1fr) 248px;
+    gap: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 170px;
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .home__heroMainArtFrame,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainArt {
+    width: 108px;
+    height: 108px;
+    border-radius: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainTitle {
+    font-size: clamp(24px, 3.2vw, 32px);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainMeta {
+    font-size: 15px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainText {
+    max-width: 430px;
+    font-size: 13px;
+    line-height: 1.42;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroActions {
+    gap: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroSideCards {
+    gap: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniCard {
+    min-height: 78px;
+    padding: 12px;
+    gap: 5px;
+    border-radius: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniTitle {
+    font-size: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniSub {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .settings-pageShell,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-page {
+    max-width: 920px;
+  }
+
+  .settings-grid,
+  .settings-grid--account,
+  .settings-formGrid,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-profileLayout {
+    gap: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeGrid {
+    gap: 10px;
+  }
+
+  .settings-card,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-panel {
+    padding: 14px;
+    gap: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard {
+    padding: 12px;
+    gap: 12px;
+    grid-template-columns: minmax(0, 1fr) 154px;
+    border-radius: 20px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__preview {
+    min-height: 136px;
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__previewShell {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 10px;
+    padding: 10px;
+    border-radius: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__previewThumb {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__title {
+    font-size: 17px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__note {
+    font-size: 12px;
+    line-height: 1.42;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-page {
+    max-width: 940px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__content {
+    grid-template-columns: minmax(0, 1fr) minmax(210px, 248px);
+    align-items: center;
+    gap: 14px;
+    min-height: 230px;
+    padding: 16px 18px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__main {
+    align-items: center;
+    gap: 14px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__avatar {
+    width: 94px;
+    height: 94px;
+    flex-basis: 94px;
+    border-radius: 22px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__title {
+    margin-top: 8px;
+    font-size: clamp(28px, 3.5vw, 36px);
+  }
+
+  .sp-heroCard__subtitle,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__description {
+    margin-top: 8px;
+    font-size: 13px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__stats {
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-pillStat {
+    min-width: 88px;
+    padding: 8px 10px;
+    border-radius: 14px;
+    gap: 2px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-pillStat__value {
+    font-size: 17px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-pillStat__label {
+    font-size: 11px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__side {
+    gap: 10px;
+    align-self: center;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__actions {
+    gap: 8px;
+  }
+
+  .sp-sideCard,
+  .sp-metaCard,
+  .sp-metricCard,
+  .sp-trackRowModern,
+  .sp-card,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-section {
+    border-radius: 16px;
+  }
+
+  .sp-sideCard,
+  .sp-metaCard,
+  .sp-metricCard,
+  .sp-card,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-section {
+    padding: 14px;
+  }
+
+  .sp-metricGrid,
+  .sp-stackList,
+  .sp-trackListModern,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-compactList {
+    gap: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    min-height: 0;
+    grid-template-columns: minmax(160px, 220px) minmax(0, 1fr) minmax(184px, 250px);
+    gap: 8px 12px;
+    padding: 8px 10px;
+    border-radius: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__left {
+    max-width: 220px;
+    gap: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__center {
+    gap: 4px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    width: auto;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__cover {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__track {
+    font-size: 14px;
+  }
+
+  .playerbar__artist,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__time {
+    font-size: 11px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playBtn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .playerbar__control,
+  .playerbar__action,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playlistAction {
+    min-width: 32px;
+    min-height: 32px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    width: min(280px, 100%);
+    grid-template-columns: 32px minmax(0, 1fr) 32px;
+    gap: 6px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    width: min(164px, 100%);
+    gap: 6px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volumeIcon {
+    width: 16px;
+    height: 16px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__menu {
+    bottom: calc(100% + 8px);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter {
+    margin-top: 10px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__inner {
+    padding: 8px 10px;
+    border-radius: 15px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__brandRow {
+    gap: 6px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__linksCompact {
+    gap: 5px;
+  }
+
+  .sitefooter__linksCompact a,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__metaCompact {
+    min-height: 26px;
+    padding: 0 9px;
+    font-size: 10.5px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) and (min-width: 900px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell {
+    --tablet-content-max: 920px;
+    --topbar-h: 57px;
+    --player-h: 54px;
+  }
+
+  .app-player,
+  .app-main > .sitefooter,
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-main > .app-content > :is(.home, .settings-pageShell, .playlist-page, .liked-page, .track-page, .sp-page) {
+    width: min(100%, var(--tablet-content-max));
+    margin-inline: auto;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right {
+    width: min(308px, calc(100vw - 40px));
+  }
+
+  .home,
+  .settings-pageShell,
+  .settings-page,
+  .playlist-page,
+  .liked-page,
+  .track-page,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-page {
+    padding: 11px;
+    gap: 11px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__hero {
+    padding: 11px;
+    gap: 11px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroCompact {
+    grid-template-columns: minmax(0, 1fr) 228px;
+    gap: 9px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    grid-template-columns: 104px minmax(0, 1fr);
+    padding: 11px;
+    gap: 11px;
+    min-height: 160px;
+  }
+
+  .home__heroMainArtFrame,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainArt {
+    width: 100px;
+    height: 100px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniCard {
+    min-height: 72px;
+    padding: 11px;
+  }
+
+  .settings-card,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-panel {
+    padding: 13px;
+    gap: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard {
+    padding: 11px;
+    gap: 11px;
+    grid-template-columns: minmax(0, 1fr) 146px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-themeCard__preview {
+    min-height: 128px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__content {
+    grid-template-columns: minmax(0, 1fr) minmax(198px, 232px);
+    min-height: 214px;
+    padding: 15px 16px;
+    gap: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__avatar {
+    width: 88px;
+    height: 88px;
+    flex-basis: 88px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__title {
+    font-size: clamp(26px, 3.2vw, 34px);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-pillStat {
+    min-width: 84px;
+    padding: 7px 9px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    grid-template-columns: minmax(150px, 206px) minmax(0, 1fr) minmax(172px, 228px);
+    gap: 8px 10px;
+    padding: 7px 9px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__left {
+    gap: 7px;
+    max-width: 206px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__cover {
+    width: 36px;
+    height: 36px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playBtn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .playerbar__control,
+  .playerbar__action,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playlistAction {
+    min-width: 30px;
+    min-height: 30px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    width: min(248px, 100%);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    width: min(150px, 100%);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__inner {
+    padding: 8px 9px;
+  }
+}
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+  .app-main,
+  .app-content,
+  .page-wrap,
+  .pageStack,
+  .pageStack > *,
+  .surface,
+  .panel,
+  .homeHero,
+  .homeHero__layout,
+  .featuredCard,
+  .featuredCard__body,
+  .homeHero__aside,
+  .homeSideCard,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .homeRailSurface {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .homeHero__layout,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .featuredCard__body {
+    gap: 12px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .homeHero__aside {
+    min-width: min(280px, 100%);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    min-width: 120px;
+    max-width: min(228px, 34vw);
+    padding: 0 10px 0 9px;
+    gap: 8px;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-name {
+    display: inline-block;
+    max-width: min(112px, 18vw);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 860px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .homeHero__layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .homeHero__aside {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    max-width: min(216px, 36vw);
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 768px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .homeHero__aside {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    min-width: 110px;
+    max-width: min(196px, 42vw);
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-name {
+    max-width: min(88px, 20vw);
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 640px) {
+  .topbar .profile-name,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-caret {
+    display: none;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .topbar .profile-btn {
+    min-width: 44px;
+    max-width: none;
+    padding-right: 8px;
+  }
+}

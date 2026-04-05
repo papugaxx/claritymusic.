@@ -1,0 +1,74 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+.media-thumb {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  isolation: isolate;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.media-thumb--cover {
+  border-radius: 16px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.media-thumb--avatar {
+  border-radius: 999px;
+  background: transparent;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.media-thumb__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.media-thumb__icon {
+  position: absolute;
+  inset: auto 10px 10px auto;
+  font-size: 14px;
+  line-height: 1;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.tile__media,
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-hero__cover {
+  overflow: hidden;
+}
+.tile__media img,
+.track-hero__cover img,
+.track-cover img,
+.rp__artistMedia img,
+.rp__nextCover img,
+.libRow__img img,
+.home__heroMainArt img,
+.home__heroMainArtFrame img,
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.profile-avatar__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}

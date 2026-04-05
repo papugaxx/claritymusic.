@@ -1,0 +1,41 @@
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+
+@layer tokens, base, utilities, components, pages, themes;
+@import "./foundation/tokens.css" layer(tokens);
+@import "./foundation/base.css" layer(base);
+@import "./utilities/utility-helpers.css" layer(utilities);
+@import "./utilities/left-sidebar-overlay.css" layer(utilities);
+@import "./components/primitives.css" layer(components);
+@import "./components/surfaces.css" layer(components);
+@import "./components/controls.css" layer(components);
+@import "./components/forms.css" layer(components);
+@import "./components/media.css" layer(components);
+@import "./components/app-shell.css" layer(components);
+@import "./components/site-footer.css" layer(components);
+@import "./components/dropdowns.css" layer(components);
+@import "./components/sidebar-playlist-menu.css" layer(components);
+@import "./components/player-bar.css" layer(components);
+@import "./components/modal.css" layer(components);
+@import "./components/right-panel.css" layer(components);
+@import "./components/profile-modal.css" layer(components);
+@import "./components/brand.css" layer(components);
+@import "./pages/home.css" layer(pages);
+@import "./pages/track.css" layer(pages);
+@import "./pages/playlists.css" layer(pages);
+@import "./pages/auth.css" layer(pages);
+@import "./pages/admin.css" layer(pages);
+@import "./pages/artist-pages.css" layer(pages);
+@import "./pages/landing.css" layer(pages);
+@import "./pages/profile.css" layer(pages);
+@import "./pages/notfound.css" layer(pages);
+@import "./pages/system.css" layer(pages);
+@import "./themes/presets.css" layer(themes);
+@import "./themes/ui.css" layer(themes);
+@import "./themes/shell.css" layer(themes);
+@import "./themes/routes.css" layer(themes);
+@import "./themes/home.css" layer(themes);
+@import "./themes/track.css" layer(themes);
+@import "./themes/profile.css" layer(themes);
+@import "./themes/phone.css" layer(themes);

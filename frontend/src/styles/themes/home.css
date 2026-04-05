@@ -1,0 +1,187 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+html[data-theme-preset="light"] .home__heroFilterLabel {
+  color: #5b4d79;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset]:not([data-theme-preset="light"]) .home__heroFilterLabel {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 236px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainVisual {
+  flex: 0 0 188px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 188px;
+  min-height: 100%;
+  padding-top: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainArtFrame {
+  width: 188px;
+  height: 188px;
+  min-width: 188px;
+  min-height: 188px;
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMainArt, .home__heroMainArtFrame .home__heroMainArt {
+  width: 188px;
+  height: 188px;
+  min-width: 188px;
+  min-height: 188px;
+  margin-top: 0;
+  aspect-ratio: 1 / 1;
+  flex: 0 0 188px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainContent {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-left: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroBadge {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  z-index: 2;
+  justify-self: auto;
+  align-self: auto;
+  margin: 0;
+  min-height: 26px;
+  padding: 0 10px;
+  font-size: 11px;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    gap: 12px;
+    min-height: 220px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainVisual {
+    flex-basis: 168px;
+    min-width: 168px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMainArtFrame, .home__heroMainArt, .home__heroMainArtFrame .home__heroMainArt {
+    width: 168px;
+    height: 168px;
+    min-width: 168px;
+    min-height: 168px;
+    flex-basis: 168px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroBadge {
+    top: 14px;
+    left: 16px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 760px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainVisual {
+    flex: none;
+    min-width: 0;
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMainArtFrame, .home__heroMainArt, .home__heroMainArtFrame .home__heroMainArt {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    flex-basis: auto;
+    aspect-ratio: 1 / 1;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroBadge {
+    position: static;
+    z-index: auto;
+    justify-self: start;
+    align-self: start;
+    margin-bottom: 6px;
+  }
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile--trackInteractive .tile__playButton {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: linear-gradient(180deg, rgba(139,92,246,.98), rgba(109,40,217,.98));
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(17,12,32,.38);
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+  transition: filter .16s ease, background .16s ease, box-shadow .16s ease;
+  z-index: 3;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.tile--trackInteractive .tile__playButton:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 14px 30px rgba(17,12,32,.40);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile--trackInteractive .tile__playButton.is-playing {
+  background: linear-gradient(180deg, rgba(111,76,197,.98), rgba(84,39,173,.98));
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMainContent {
+    justify-content: start;
+    justify-items: start;
+  }
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMainCard {
+    gap: 12px;
+  }
+}

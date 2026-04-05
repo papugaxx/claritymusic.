@@ -1,0 +1,250 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+.admin-state-card {
+  padding: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-state-title {
+  margin: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-state-text {
+  margin-top: 6px;
+  opacity: 0.8;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-state-actions {
+  margin-top: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-hero__meta {
+  min-width: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-hero__title {
+  margin-bottom: 6px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-hero__sub--flush {
+  margin-top: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-hero__sub--meta {
+  margin-top: 10px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.track-hero__actions, .track-playlist__actions {
+  margin-top: 12px;
+  gap: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-playlist {
+  margin-top: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-playlist__label {
+  margin-bottom: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-playlist__message {
+  margin-left: 6px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-login-hint {
+  margin-top: 14px;
+  opacity: 0.75;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-accountList {
+  display: grid;
+  gap: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-accountRow {
+  display: grid;
+  gap: 8px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.settings-accountRow__label, .settings-field__label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-accountRow__valueWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-accountRow__value {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-statusBadge.is-confirmed {
+  border-color: rgba(74, 222, 128, 0.28);
+  background: rgba(74, 222, 128, 0.12);
+  color: rgba(220, 252, 231, 0.95);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-statusBadge.is-pending {
+  border-color: rgba(250, 204, 21, 0.28);
+  background: rgba(250, 204, 21, 0.12);
+  color: rgba(254, 249, 195, 0.95);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-accountPanel {
+  margin-top: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-field {
+  display: grid;
+  gap: 8px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.settings-field--full, .settings-formActions, .settings-formHint, .settings-formMessage {
+  grid-column: 1 / -1;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-formActions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-formHint {
+  margin-top: -2px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-formMessage {
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-size: 13px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-formMessage--error {
+  border: 1px solid rgba(255, 74, 74, 0.2);
+  background: rgba(255, 74, 74, 0.12);
+  color: #ffb4b4;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.settings-formMessage--success {
+  border: 1px solid rgba(74, 222, 128, 0.22);
+  background: rgba(74, 222, 128, 0.12);
+  color: rgba(220, 252, 231, 0.96);
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 860px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .settings-formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .settings-accountRow__label, html[data-theme-preset="light"] .settings-field__label {
+  color: rgba(78, 60, 114, 0.72);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-accountRow__value {
+  color: #332652;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-statusBadge {
+  border-color: rgba(128, 103, 183, 0.18);
+  background: rgba(122, 96, 174, 0.08);
+  color: #58457d;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-statusBadge.is-confirmed {
+  border-color: rgba(52, 185, 113, 0.22);
+  background: rgba(52, 185, 113, 0.12);
+  color: #20794a;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-statusBadge.is-pending {
+  border-color: rgba(227, 176, 49, 0.24);
+  background: rgba(243, 187, 47, 0.14);
+  color: #8a6410;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-formHint {
+  color: rgba(87, 67, 126, 0.74);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-formMessage--error {
+  border-color: rgba(221, 92, 121, 0.24);
+  background: rgba(255, 109, 136, 0.10);
+  color: #8d2f46;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .settings-formMessage--success {
+  border-color: rgba(52, 185, 113, 0.20);
+  background: rgba(52, 185, 113, 0.10);
+  color: #1f7a4a;
+}

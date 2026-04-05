@@ -1,0 +1,1812 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+.sp-page {
+  padding: 22px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-card {
+  background: rgba(18, 16, 30, 0.72);
+  border: 1px solid rgba(168, 85, 247, 0.18);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+  border-radius: 22px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-section {
+  padding: 20px;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-h {
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-section__sub {
+  margin-top: 4px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-section__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-section__head--compact {
+  margin-bottom: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-head-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-bannerError,  .sp-loadingLine {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-loadingLine {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-bannerError {
+  color: rgba(255, 220, 220, 0.96);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-empty {
+  padding: 12px 2px 2px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-profileLayout {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(300px, 0.9fr);
+  gap: 18px;
+  align-items: start;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-profileMain,  .sp-profileSide {
+  display: grid;
+  gap: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-sideCard {
+  position: sticky;
+  top: 18px;
+  overflow: hidden;
+}
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+ .sp-compactList,  .sp-miniTrackList,  .sp-infoList {
+  display: grid;
+  gap: 12px;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  padding: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__cover {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__coverImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.34;
+  filter: saturate(1.08);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 7, 12, 0.18), rgba(7, 7, 12, 0.74)),
+    radial-gradient(1200px 520px at 10% 18%, rgba(124, 58, 237, 0.26), transparent 58%),
+    radial-gradient(980px 520px at 86% 0%, rgba(168, 85, 247, 0.18), transparent 52%);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
+  gap: 22px;
+  align-items: stretch;
+  min-height: 300px;
+  padding: 28px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__main {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__avatar {
+  width: 132px;
+  height: 132px;
+  flex: 0 0 132px;
+  border-radius: 28px;
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__copy {
+  min-width: 0;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__title {
+  margin: 12px 0 0;
+  font-size: clamp(34px, 6vw, 58px);
+  line-height: 0.96;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__subtitle {
+  margin-top: 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__side {
+  display: grid;
+  gap: 14px;
+  align-self: stretch;
+  justify-items: end;
+  align-content: start;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+}
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+ .sp-metaStack {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-metaCard {
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-metaCard__label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.62);
+  margin-bottom: 6px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-metaCard__value {
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.96);
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-metricGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-metricCard {
+  min-height: 148px;
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-metricCard__label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-metricCard__value {
+  margin-top: 12px;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1;
+  font-weight: 900;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-metricCard__sub {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-cards--compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackListModern {
+  display: grid;
+  gap: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackRowModern {
+  display: grid;
+  grid-template-columns: 32px 56px minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.03);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.14s ease, border-color 0.14s ease, background 0.14s ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.sp-trackRowModern:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(168, 85, 247, 0.18);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackRowModern__index {
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackRowModern__cover {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackRowModern__main {
+  min-width: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackRowModern__title {
+  font-size: 14px;
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackRowModern__titleLink {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-trackRowModern__meta,  .sp-trackRowModern__side {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackRowModern__side {
+  padding-left: 16px;
+  white-space: nowrap;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackRowModern__side--studio {
+  padding-left: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-statusPill {
+  height: 30px;
+  background: rgba(255,255,255,.05);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-inlineActions {
+  justify-content: flex-end;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-infoRow {
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-infoRow__label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-infoRow__value {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-personCard,  .sp-miniTrack {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.03);
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.sp-personCard:hover,  .sp-miniTrack:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(168, 85, 247, 0.16);
+  transform: translateY(-1px);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-personCard__avatar,  .sp-miniTrack__cover {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-personCard__title,  .sp-miniTrack__title {
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-personCard__meta,  .sp-miniTrack__meta {
+  margin-top: 4px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-modalFooterSplit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-studioTrackForm {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr);
+  gap: 18px;
+  align-items: start;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-checkRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.03);
+  color: rgba(255,255,255,.84);
+}
+
+/* Нижче описана анімація яка керує переходом між станами */
+@keyframes spPop {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  from {
+    transform: translateY(6px) scale(0.99);
+    opacity: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-label {
+  font-size: 12px;
+  opacity: 0.78;
+  font-weight: 900;
+}
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1181px) and (max-width: 1280px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-page {
+    padding: 18px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-profileLayout {
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.88fr);
+    gap: 16px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .sp-profileMain,  .sp-profileSide {
+    gap: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__content {
+    grid-template-columns: minmax(0, 1fr) minmax(248px, 300px);
+    gap: 18px;
+    padding: 24px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__main {
+    gap: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__avatar {
+    width: 116px;
+    height: 116px;
+    flex-basis: 116px;
+    border-radius: 24px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__title {
+    font-size: clamp(30px, 4.2vw, 48px);
+  }
+  
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1180px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-profileLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .sp-metricGrid,  .sp-cards,  .sp-cards--compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+   .sp-studioTrackForm {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 860px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .sp-trackRowModern__side--studio,  .sp-inlineActions {
+    grid-column: 2 / -1;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-inlineActions {
+    justify-content: flex-start;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 720px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-page {
+    padding: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-section {
+    padding: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard {
+    min-height: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__content {
+    padding: 18px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__avatar {
+    width: 104px;
+    height: 104px;
+    flex-basis: 104px;
+    border-radius: 24px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__title {
+    font-size: clamp(30px, 10vw, 42px);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-trackRowModern {
+    grid-template-columns: 24px 48px minmax(0, 1fr);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-trackRowModern__side {
+    grid-column: 2 / -1;
+    padding-left: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-modalFooterSplit {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 560px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .sp-metricGrid,  .sp-cards,  .sp-cards--compact {
+    grid-template-columns: 1fr;
+  }
+  
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-relative {
+  position: relative;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-accessDeniedTitle {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-accessDeniedText {
+  opacity: .78;
+  margin-top: 6px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-accessDeniedActions {
+  margin-top: 12px;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-dialogText {
+  color: rgba(255,255,255,.82);
+  line-height: 1.6;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-infoRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: start;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-sideCard--static {
+  position: relative;
+  top: auto;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackModal {
+  width: min(980px, calc(100vw - 40px));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackModal__body {
+  padding: 16px 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackModal__footer {
+  padding: 14px 18px 16px;
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-trackModal .sp-btn,  .sp-trackModal .sp-btn--ghost,  .sp-trackModal .sp-btn--primary,  .sp-profileModal .sp-btn,  .sp-profileModal .sp-btn--ghost,  .sp-profileModal .sp-btn--primary,  .sp-profileEditUploadBtn {
+  border-radius: var(--r-md);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--profile .sp-btn,  .sp-page--profile .sp-btn--ghost,  .sp-page--profile .sp-btn--primary,  .sp-page--studio .sp-btn,  .sp-page--studio .sp-btn--ghost,  .sp-page--studio .sp-btn--primary {
+  border-radius: var(--r-md);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-heroCard__title,  .sp-metaCard__value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__title {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-metaCard__value {
+  white-space: nowrap;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-field--full {
+  grid-column: 1 / -1;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-checkRow {
+  margin-top: 4px;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-modal--unified {
+  width: min(760px, calc(100vw - 32px));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackModal .modalBody {
+  overflow: visible;
+}
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+ .admin-form-grid {
+  align-items: start;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-field,  .admin-field {
+  min-width: 0;
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-trackModal .ui-select,  .admin-trackModal .ui-select {
+  width: 100%;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-trackModal .ui-select__text,  .admin-trackModal .ui-select__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width:760px) {
+  
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-studioTrackForm--stacked,  .admin-form-grid {
+  display: grid;
+  gap: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackModal__row--double{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  min-width: 0;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackModal__publishToggle {
+  margin-top: 2px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-trackModal .sp-input,  .sp-trackModal .ui-select,  .admin-trackModal .admin-input,  .admin-trackModal .ui-select {
+  width: 100%;
+}
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 760px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-trackModal__row--double{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackModal__row--uploadsSimple {
+  align-items: start;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackModal__uploadBtn {
+  width: 100%;
+  justify-content: center;
+  min-height: 44px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackModal__uploadMeta {
+  margin-top: 8px;
+  min-height: 18px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-page--profile {
+  width: 100%;
+  display: grid;
+  gap: 16px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--profile,  .sp-page--profile .sp-profileLayout,  .sp-page--profile .sp-profileMain,  .sp-page--profile .sp-profileSide,  .sp-page--profile .sp-card,  .sp-page--profile .sp-section,  .sp-page--profile .sp-bannerError,  .sp-page--profile .sp-loadingLine {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin-left: 0;
+  box-sizing: border-box;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.app-main .sp-page--profile,  .app-main .sp-page--profile > * {
+  width: 100%;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-page--profile .sp-profileLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.72fr);
+  gap: 16px;
+  align-items: start;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--profile .sp-profileMain,  .sp-page--profile .sp-profileSide {
+  min-width: 0;
+  display: grid;
+  gap: 16px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-page--profile .sp-section {
+  padding: 16px;
+  border-radius: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-page--profile .sp-sideCard {
+  position: relative;
+  top: auto;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-page--profile .sp-metricGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--profile .sp-head-actions,  .sp-page--studio .sp-head-actions,  .sp-heroCard__stats--profile,  .sp-heroCard__actions--profile {
+  gap: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard--profile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  min-height: 150px;
+  margin-left: 0;
+  width: 100%;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__content--profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(250px, 0.64fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__copy--profile {
+  min-width: 0;
+  display: grid;
+  gap: 10px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--profile .sp-heroCard__badge--corner,  .sp-page--studio .sp-heroCard__badge--corner {
+  align-self: start;
+  justify-self: start;
+  min-height: 24px;
+  padding: 0 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: inherit;
+  box-shadow: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__main--profile {
+  display: grid;
+  grid-template-columns: 142px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  min-width: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__avatarWrap--profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-heroCard__avatar--profile,  .sp-heroCard__avatar--profile img,  .sp-heroCard__avatar--profile .artistAvatar {
+  border-radius: 999px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__body--profile {
+  min-width: 0;
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding-top: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__title--profile {
+  margin: 0;
+  font-size: clamp(30px, 2.8vw, 42px);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--profile .sp-statPill,  .sp-page--studio .sp-statPill {
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.07);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--profile .sp-statPill__value,  .sp-page--profile .sp-statPill__label,  .sp-page--studio .sp-statPill__value,  .sp-page--studio .sp-statPill__label {
+  color: inherit;
+  line-height: 1;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--profile .sp-statPill__value,  .sp-page--studio .sp-statPill__value {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--profile .sp-statPill__label,  .sp-page--studio .sp-statPill__label {
+  font-size: 12px;
+  opacity: 0.84;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__side--profile {
+  display: grid;
+  align-content: center;
+  padding-top: 8px;
+  min-width: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-metaStack--profile {
+  display: grid;
+  gap: 10px;
+  align-content: center;
+  min-height: 100%;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-metaStack--profile .sp-metaCard {
+  min-height: 74px;
+  display: grid;
+  align-content: center;
+  width: 100%;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 760px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .sp-page--profile .sp-metricGrid,  .sp-heroCard__main--profile {
+    grid-template-columns: 1fr;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard__avatarWrap--profile {
+    justify-content: flex-start;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .sp-heroCard__avatar--profile,  .sp-heroCard__avatar--profile img,  .sp-heroCard__avatar--profile .artistAvatar {
+    width: 108px;
+    height: 108px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-heroCard--profile {
+    min-height: auto;
+  }
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-page--profile {
+  margin-top: -20px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--profile,  .app-main .sp-page--profile {
+  padding-left: 0;
+  margin-left: 12px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--profile .sp-profileLayout,  .sp-page--profile .sp-card,  .sp-page--profile .sp-section,  .sp-page--profile .sp-bannerError,  .sp-page--profile .sp-loadingLine {
+  width: calc(100% + 6px);
+  margin-left: -6px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-page--profile > .sp-heroCard--profile {
+  margin-left: -12px;
+  width: calc(100% + 10px);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-page--studio {
+  width: 100%;
+  display: grid;
+  gap: 16px;
+  margin-top: -20px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--studio,  .sp-page--studio .sp-profileLayout,  .sp-page--studio .sp-profileMain,  .sp-page--studio .sp-profileSide,  .sp-page--studio .sp-card,  .sp-page--studio .sp-section,  .sp-page--studio .sp-bannerError,  .sp-page--studio .sp-loadingLine {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.app-main .sp-page--studio,  .app-main .sp-page--studio > * {
+  width: 100%;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--studio,  .app-main .sp-page--studio {
+  padding-left: 0;
+  margin-left: 12px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--studio .sp-profileLayout,  .sp-page--studio .sp-card,  .sp-page--studio .sp-section,  .sp-page--studio .sp-bannerError,  .sp-page--studio .sp-loadingLine {
+  width: calc(100% + 6px);
+  margin-left: -6px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-page--studio .sp-profileLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.72fr);
+  gap: 16px;
+  align-items: start;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--studio .sp-profileMain,  .sp-page--studio .sp-profileSide {
+  min-width: 0;
+  display: grid;
+  gap: 16px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-page--studio .sp-sideCard {
+  position: relative;
+  top: auto;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-page--studio > .sp-heroCard,  .sp-page--studio > .sp-heroCard--profile {
+  margin-left: -12px;
+  width: calc(100% + 10px);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-page--studio .sp-heroCard {
+  min-height: 196px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-trackRowModern--studio .sp-trackRowModern__cover,  .sp-miniTrack__cover {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex: 0 0 56px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-trackRowModern--studio .sp-trackRowModern__cover img,  .sp-miniTrack__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackRowModern--studio {
+  grid-template-columns: 32px 56px minmax(0, 1fr) auto auto;
+  gap: 14px;
+  align-items: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-trackRowModern__titleLink {
+  color: rgba(255,255,255,0.96);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.sp-trackRowModern__titleLink:hover {
+  opacity: 0.9;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-statusPill {
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-statusPill.is-active {
+  background: rgba(86, 214, 138, 0.12);
+  border-color: rgba(86, 214, 138, 0.24);
+  color: rgba(193, 255, 213, 0.95);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-statusPill.is-muted {
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.70);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-inlineActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .sp-page--profile,  .app-main .sp-page--profile {
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .sp-page--profile .sp-profileLayout,  .sp-page--profile .sp-card,  .sp-page--profile .sp-section,  .sp-page--profile .sp-bannerError,  .sp-page--profile .sp-loadingLine {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 760px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-trackRowModern--studio {
+    grid-template-columns: 24px 48px minmax(0, 1fr);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .sp-trackRowModern__side--studio,  .sp-inlineActions {
+    grid-column: 1 / -1;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .sp-trackRowModern--studio .sp-trackRowModern__cover,  .sp-miniTrack__cover {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1220px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio),  .app-main :is(.sp-page--profile, .sp-page--studio) {
+    margin-top: 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) > :is(.sp-heroCard, .sp-heroCard--profile, .sp-bannerError, .sp-loadingLine) {
+    width: 100%;
+    margin-left: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard--profile {
+    --pfh-pad: clamp(18px, 1.85vw, 22px);
+    --pfh-avatar-track: clamp(94px, 9.3vw, 116px);
+    --pfh-meta-cols: 2;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__avatarWrap--profile {
+    inline-size: var(--pfh-avatar-track);
+    min-inline-size: var(--pfh-avatar-track);
+  }
+  :is(.sp-page--profile, .sp-page--studio) :is(
+    .sp-heroCard__avatar--profile,
+    .sp-heroCard__avatar--profile img,
+    .sp-heroCard__avatar--profile .artistAvatar
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  ) {
+    width: var(--pfh-avatar-size);
+    height: var(--pfh-avatar-size);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__title--profile {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    text-wrap: balance;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__subtitle {
+    word-break: break-word;
+    white-space: normal;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-statPill {
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__side--profile {
+    align-self: stretch;
+    justify-self: stretch;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) :is(.sp-metaStack, .sp-metaStack--profile) {
+    justify-self: stretch;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) :is(.sp-metaStack, .sp-metaStack--profile) > :only-child,  :is(.sp-page--profile, .sp-page--studio) :is(.sp-metaStack, .sp-metaStack--profile) > :nth-child(odd):last-child {
+    grid-column: 1 / -1;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.has-right :is(.sp-page--profile, .sp-page--studio) .sp-heroCard--profile {
+    --pfh-pad: clamp(18px, 1.65vw, 20px);
+    --pfh-action-min: clamp(146px, 16.5vw, 194px);
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1101px) and (max-width: 1220px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard--profile {
+    --pfh-pad: 22px;
+    --pfh-avatar-track: 116px;
+    --pfh-meta-cols: 2;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1025px) and (max-width: 1100px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard--profile {
+    --pfh-pad: 20px;
+    --pfh-avatar-track: 104px;
+    --pfh-meta-cols: 2;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1024px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard--profile {
+    --pfh-pad: 18px;
+    --pfh-avatar-track: 92px;
+    --pfh-meta-cols: 1;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1220px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) > * {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  :is(.sp-page--profile, .sp-page--studio) :is(
+    .sp-profileLayout,
+    .sp-profileMain,
+    .sp-profileSide,
+    .sp-card,
+    .sp-section,
+    .sp-bannerError,
+    .sp-loadingLine,
+    .sp-heroCard,
+    .sp-heroCard--profile
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  ) {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+  :is(.sp-page--profile, .sp-page--studio) :is(
+    .sp-profileLayout,
+    .sp-profileMain,
+    .sp-profileSide,
+    .sp-heroCard__content--profile,
+    .sp-heroCard__copy--profile,
+    .sp-heroCard__main--profile,
+    .sp-heroCard__body--profile,
+    .sp-heroCard__side--profile,
+    .sp-metaStack,
+    .sp-metaStack--profile,
+    .sp-metricGrid,
+    .sp-cards,
+    .sp-cards--compact,
+    .sp-trackListModern,
+    .sp-trackRowModern
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 961px) and (max-width: 1220px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio),  .app-main :is(.sp-page--profile, .sp-page--studio) {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 0 16px;
+    box-sizing: border-box;
+    gap: 16px;
+  }
+  :is(.sp-page--profile, .sp-page--studio) > *,  :is(.sp-page--profile, .sp-page--studio) :is(
+    .sp-profileLayout,
+    .sp-profileMain,
+    .sp-profileSide,
+    .sp-card,
+    .sp-section,
+    .sp-bannerError,
+    .sp-loadingLine,
+    .sp-heroCard,
+    .sp-heroCard--profile
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  ) {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) > :is(.sp-heroCard, .sp-heroCard--profile) {
+    margin-left: 0;
+    width: 100%;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard--profile {
+    --pfh-pad-y: 18px;
+    --pfh-pad-x: 20px;
+    --pfh-zone-gap: 14px;
+    --pfh-main-gap: 14px;
+    --pfh-row-gap: 8px;
+    --pfh-avatar-size: 96px;
+    --pfh-title-size: 30px;
+    --pfh-side-col: 238px;
+    --pfh-action-min: 156px;
+    min-height: auto;
+    overflow: hidden;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__content--profile {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(var(--pfh-side-col), 0.92fr);
+    grid-template-areas: "copy side";
+    gap: var(--pfh-zone-gap);
+    align-items: center;
+    min-height: 0;
+    padding: var(--pfh-pad-y) var(--pfh-pad-x);
+  }
+  :is(.sp-page--profile, .sp-page--studio) :is(
+    .sp-heroCard__copy--profile,
+    .sp-heroCard__main--profile,
+    .sp-heroCard__body--profile,
+    .sp-heroCard__identity,
+    .sp-heroCard__side--profile,
+    .sp-metaStack,
+    .sp-metaStack--profile
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  ) {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__copy--profile {
+    grid-area: copy;
+    display: grid;
+    align-content: center;
+    gap: var(--pfh-zone-gap);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__main--profile {
+    display: grid;
+    grid-template-columns: var(--pfh-avatar-size) minmax(0, 1fr);
+    gap: var(--pfh-main-gap);
+    align-items: center;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__avatarWrap--profile {
+    width: var(--pfh-avatar-size);
+    min-width: var(--pfh-avatar-size);
+    flex: 0 0 var(--pfh-avatar-size);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    transform: none;
+  }
+  :is(.sp-page--profile, .sp-page--studio) :is(
+    .sp-heroCard__avatar--profile,
+    .sp-heroCard__avatar--profile img,
+    .sp-heroCard__avatar--profile .artistAvatar,
+    .sp-heroCard__avatar--profile .media-thumb__img
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  ) {
+    width: var(--pfh-avatar-size);
+    height: var(--pfh-avatar-size);
+    min-width: var(--pfh-avatar-size);
+    min-height: var(--pfh-avatar-size);
+    border-radius: 999px;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__body--profile {
+    display: grid;
+    align-content: center;
+    gap: var(--pfh-row-gap);
+    padding: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__identity {
+    display: grid;
+    gap: 6px;
+    align-content: center;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__title--profile {
+    margin: 0;
+    max-width: 100%;
+    font-size: var(--pfh-title-size);
+    line-height: 0.96;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__subtitle {
+    margin: 0;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__stats--profile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-statPill {
+    min-height: 28px;
+    max-width: 100%;
+    padding: 0 10px;
+    gap: 5px;
+    align-items: center;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) :is(.sp-statPill__value, .sp-statPill__label) {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-statPill__value {
+    font-size: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-statPill__label {
+    font-size: 11px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__actions--profile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__actions--profile > * {
+    flex: 0 1 auto;
+    max-width: 100%;
+    min-width: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__actions--profile > :is(.sp-btn, .sp-btn--ghost, .sp-btn--primary) {
+    width: auto;
+    min-width: var(--pfh-action-min);
+    max-width: 100%;
+    min-height: 36px;
+    padding-inline: 14px;
+    justify-content: center;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__side--profile {
+    grid-area: side;
+    display: grid;
+    align-content: center;
+    justify-items: stretch;
+    gap: 10px;
+    padding-top: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) :is(.sp-metaStack, .sp-metaStack--profile) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: stretch;
+    justify-items: stretch;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-metaCard {
+    width: 100%;
+    min-width: 0;
+    min-height: 74px;
+    padding: 12px 14px;
+    border-radius: 18px;
+    display: grid;
+    align-content: center;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-metaCard__label {
+    margin-bottom: 6px;
+    font-size: 11px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-metaCard__value {
+    margin-top: 0;
+    font-size: clamp(13px, 1.45vw, 17px);
+    line-height: 1.2;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-profileLayout {
+    gap: 16px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1101px) and (max-width: 1220px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard--profile {
+    --pfh-pad-y: 20px;
+    --pfh-pad-x: 22px;
+    --pfh-zone-gap: 16px;
+    --pfh-main-gap: 16px;
+    --pfh-avatar-size: 108px;
+    --pfh-title-size: 34px;
+    --pfh-side-col: 266px;
+    --pfh-action-min: 168px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__content--profile {
+    grid-template-columns: minmax(0, 1.16fr) minmax(var(--pfh-side-col), 0.84fr);
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1025px) and (max-width: 1100px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard--profile {
+    --pfh-pad-y: 18px;
+    --pfh-pad-x: 18px;
+    --pfh-zone-gap: 14px;
+    --pfh-main-gap: 14px;
+    --pfh-avatar-size: 94px;
+    --pfh-title-size: 30px;
+    --pfh-side-col: 228px;
+    --pfh-action-min: 152px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__content--profile {
+    grid-template-columns: minmax(0, 1.08fr) minmax(var(--pfh-side-col), 0.92fr);
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 961px) and (max-width: 1024px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard--profile {
+    --pfh-pad-y: 16px;
+    --pfh-pad-x: 16px;
+    --pfh-zone-gap: 12px;
+    --pfh-main-gap: 12px;
+    --pfh-row-gap: 7px;
+    --pfh-avatar-size: 84px;
+    --pfh-title-size: 27px;
+    --pfh-side-col: 206px;
+    --pfh-action-min: 144px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__content--profile {
+    grid-template-columns: minmax(0, 1.02fr) minmax(var(--pfh-side-col), 0.98fr);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-heroCard__subtitle {
+    font-size: 13px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-metaCard {
+    min-height: 70px;
+    padding: 11px 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  :is(.sp-page--profile, .sp-page--studio) .sp-metaCard__value {
+    font-size: 14px;
+  }
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__content--profile.sp-heroCard__content--profile-noSide {
+  grid-template-columns: minmax(0, 1fr) ;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-heroCard__content--profile.sp-heroCard__content--profile-noSide .sp-heroCard__copy--profile {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 900px) and (max-width: 1080px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-trackRowModern--studio {
+    grid-template-columns: 28px 56px minmax(0, 1fr) auto;
+    grid-template-areas:
+      "index cover main status"
+      "index cover actions actions";
+    row-gap: 10px;
+    align-items: center;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-trackRowModern--studio .sp-trackRowModern__index {
+    grid-area: index;
+    align-self: stretch;
+    place-items: start center;
+    padding-top: 18px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-trackRowModern--studio .sp-trackRowModern__cover {
+    grid-area: cover;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-trackRowModern--studio .sp-trackRowModern__main {
+    grid-area: main;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-trackRowModern--studio .sp-trackRowModern__side--studio {
+    grid-area: status;
+    justify-self: end;
+    align-self: start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sp-trackRowModern--studio .sp-inlineActions {
+    grid-area: actions;
+    justify-content: flex-start;
+    min-width: 0;
+  }
+}

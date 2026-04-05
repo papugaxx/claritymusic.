@@ -1,0 +1,63 @@
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+
+:where(.input, .admin-input, .sp-input, .sp-select) {
+  width: 100%;
+  border-radius: var(--shared-field-radius, 12px);
+  border: 1px solid var(--shared-field-border, var(--field-border));
+  background: var(--shared-field-bg, var(--field-bg));
+  color: var(--shared-field-text, var(--field-text));
+  outline: none;
+  transition: border-color .16s ease, box-shadow .16s ease, background .16s ease;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.input, .admin-input, .sp-input, .sp-select {
+  min-height: var(--shared-field-height, 40px);
+  padding: 0 var(--shared-field-pad-x, 12px);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.input {
+  --shared-field-height: 40px;
+  --shared-field-pad-x: 12px;
+  --shared-field-border: var(--field-border);
+  --shared-field-bg: var(--field-bg);
+  --shared-field-text: var(--field-text);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-input {
+  --shared-field-height: 36px;
+  --shared-field-pad-x: 12px;
+  --shared-field-border: rgba(255,255,255,.10);
+  --shared-field-bg: rgba(255,255,255,.03);
+  --shared-field-text: rgba(255,255,255,.92);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-input, .sp-select {
+  --shared-field-height: 38px;
+  --shared-field-pad-x: 12px;
+  --shared-field-border: rgba(255, 255, 255, 0.10);
+  --shared-field-bg: rgba(255, 255, 255, 0.03);
+  --shared-field-text: rgba(255, 255, 255, 0.92);
+}
+
+/* Ці стилі роблять текст підказки читабельним усередині поля */
+.input::placeholder, .admin-input::placeholder, .sp-input::placeholder {
+  color: var(--shared-field-placeholder, var(--field-placeholder));
+}
+
+/* Стан фокуса підкреслює активний елемент і покращує навігацію з клавіатури */
+.input:focus, .admin-input:focus, .sp-input:focus, .sp-select:focus, .input:focus-visible, .admin-input:focus-visible, .sp-input:focus-visible, .sp-select:focus-visible {
+  border-color: var(--shared-field-focus-border, var(--field-focus-border));
+  box-shadow: var(--shared-field-focus-ring, var(--field-focus-ring));
+  background: var(--shared-field-focus-bg, var(--field-bg-focus));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.admin-input, .admin-btn, .admin-iconbtn, .admin-pill {
+  transition: background .15s ease, border-color .15s ease, filter .15s ease, transform .08s ease, box-shadow .15s ease;
+}

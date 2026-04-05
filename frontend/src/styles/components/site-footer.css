@@ -1,0 +1,267 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+.sitefooter {
+  width: 100%;
+  margin-top: 18px;
+  padding: 0;
+  flex: 0 0 auto;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sitefooter__inner {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  width: 100%;
+  margin: 0;
+  padding: 18px 20px;
+  border-radius: 20px;
+  border: 1px solid var(--footer-surface-border, var(--menu-border));
+  background: var(--footer-surface-bg, var(--surface-card));
+  box-shadow: var(--footer-surface-shadow, var(--shadow-2));
+  background-clip: padding-box;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sitefooter__inner::before {
+  content: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sitefooter__brandRow {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sitefooter__brand {
+  min-width: 0;
+  max-width: var(--footer-brand-max, 220px);
+  display: grid;
+  gap: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sitefooter__brand .clarity-logo--footer svg {
+  height: var(--footer-logo-height);
+  width: auto;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sitefooter__description {
+  margin: 0;
+  max-width: 280px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--footer-description-color);
+  word-break: break-word;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sitefooter__linksCompact {
+  min-width: 0;
+  flex: 1 1 320px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sitefooter__linksCompact a, .sitefooter__metaCompact {
+  min-height: 33px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid var(--footer-link-border);
+  background: var(--footer-link-bg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--footer-link-color);
+  text-decoration: none;
+  transition: background 160ms ease,
+    border-color 160ms ease,
+    opacity 160ms ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.sitefooter__linksCompact a:hover {
+  background: var(--footer-link-hover-bg);
+  border-color: var(--footer-link-hover-border);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sitefooter__metaCompact {
+  align-self: center;
+  margin: 0 0 0 auto;
+  color: var(--footer-meta-color);
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1281px) and (max-width: 1540px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter {
+    margin-top: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__inner {
+    padding: 16px 18px;
+    border-radius: 18px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__brandRow {
+    gap: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__brand {
+    max-width: 190px;
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__description {
+    max-width: 220px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__linksCompact {
+    gap: 6px;
+    flex: 1 1 280px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .sitefooter__linksCompact a, .sitefooter__metaCompact {
+    min-height: 31px;
+    padding: 0 10px;
+    font-size: 11.5px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1181px) and (max-width: 1280px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter {
+    margin-top: 15px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__inner {
+    padding: 15px 16px;
+    border-radius: 18px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__brandRow {
+    gap: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__brand {
+    max-width: 176px;
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__description {
+    max-width: 190px;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__linksCompact {
+    gap: 6px;
+    flex: 1 1 240px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .sitefooter__linksCompact a, .sitefooter__metaCompact {
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1180px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter {
+    margin-top: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__inner {
+    padding: 13px 14px;
+    border-radius: 18px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__brandRow {
+    display: grid;
+    grid-template-columns: minmax(144px, 168px) minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__brand {
+    max-width: 168px;
+    gap: 6px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__description {
+    max-width: 150px;
+    font-size: 11.5px;
+    line-height: 1.35;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__linksCompact {
+    flex-basis: auto;
+    justify-content: flex-start;
+    gap: 6px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .sitefooter__linksCompact a, .sitefooter__metaCompact {
+    min-height: 29px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__metaCompact {
+    margin-left: 0;
+    justify-self: end;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 767px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__inner {
+    padding: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__brandRow {
+    display: grid;
+    gap: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__brand {
+    max-width: none;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__linksCompact {
+    justify-content: flex-start;
+    gap: 6px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .sitefooter__linksCompact a, .sitefooter__metaCompact {
+    min-height: 34px;
+    padding: 0 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .sitefooter__metaCompact {
+    margin-left: 0;
+    justify-self: start;
+  }
+}

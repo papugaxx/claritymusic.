@@ -1,0 +1,27 @@
+{
+  "_comment": "Цей файл описує профілі локального запуску застосунку під час розробки",
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "http": {
+      "_comment": "Цей файл описує профілі локального запуску застосунку під час розробки",
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5287",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "https": {
+      "_comment": "Цей файл описує профілі локального запуску застосунку під час розробки",
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "https://localhost:7116;http://localhost:5287",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  },
+  "_comment_profiles": "У цьому блоці описані профілі запуску для різних локальних сценаріїв"
+}

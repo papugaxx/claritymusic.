@@ -1,0 +1,396 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+body[data-static-page="landing"] {
+  background: #0c0d14;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] body[data-static-page="landing"],  html[data-theme-preset] body[data-static-page="landing"] .landing,  body[data-static-page="landing"] .landing {
+  color: #fff;
+  background: radial-gradient(900px 700px at 12% 18%, rgba(124, 44, 255, 0.85) 0%, rgba(124, 44, 255, 0.15) 55%, transparent 72%),
+    radial-gradient(900px 700px at 78% 28%, rgba(160, 90, 255, 0.45) 0%, rgba(160, 90, 255, 0.12) 52%, transparent 70%),
+    radial-gradient(1000px 800px at 50% 105%, rgba(40, 120, 255, 0.18) 0%, rgba(40, 120, 255, 0.06) 45%, transparent 65%),
+    linear-gradient(115deg, #6f2bff 0%, #2a0b4a 34%, #0c0d14 72%, #05060b 100%);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] body[data-static-page="landing"] .landing main,  html[data-theme-preset] body[data-static-page="landing"] .landing-hero,  html[data-theme-preset] body[data-static-page="landing"] .landing-stats,  html[data-theme-preset] body[data-static-page="landing"] .landing-sections,  html[data-theme-preset] body[data-static-page="landing"] .landing-hero__inner,  html[data-theme-preset] body[data-static-page="landing"] .landing-hero__copy,  html[data-theme-preset] body[data-static-page="landing"] .landing-stats__inner,  html[data-theme-preset] body[data-static-page="landing"] .landing-footer {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] body[data-static-page="landing"] .landing-top,  body[data-static-page="landing"] .landing-top {
+  background: rgba(5, 6, 11, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] body[data-static-page="landing"] .landing-top__inner,  html[data-theme-preset] body[data-static-page="landing"] .landing-logoart__panel,  html[data-theme-preset] body[data-static-page="landing"] .landing-stat,  html[data-theme-preset] body[data-static-page="landing"] .landing-section {
+  background: revert-layer;
+  color: #fff;
+  box-shadow: revert-layer;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] body[data-static-page="landing"] .landing-nav a,  body[data-static-page="landing"] .landing-nav a {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] body[data-static-page="landing"] .landing-title,  html[data-theme-preset] body[data-static-page="landing"] .landing-h1,  html[data-theme-preset] body[data-static-page="landing"] .landing-sub,  html[data-theme-preset] body[data-static-page="landing"] .landing-footer__primary,  html[data-theme-preset] body[data-static-page="landing"] .landing-stat__value,  html[data-theme-preset] body[data-static-page="landing"] .landing-stat__label,  html[data-theme-preset] body[data-static-page="landing"] .landing-section h2,  html[data-theme-preset] body[data-static-page="landing"] .landing-section p,  body[data-static-page="landing"] .landing-title,  body[data-static-page="landing"] .landing-h1,  body[data-static-page="landing"] .landing-sub,  body[data-static-page="landing"] .landing-footer__primary,  body[data-static-page="landing"] .landing-stat__value,  body[data-static-page="landing"] .landing-stat__label,  body[data-static-page="landing"] .landing-section h2,  body[data-static-page="landing"] .landing-section p {
+  color: #fff;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] body[data-static-page="landing"] .landing-btn,  body[data-static-page="landing"] .landing-btn {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] body[data-static-page="landing"] .landing-btn--secondary,  body[data-static-page="landing"] .landing-btn--secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] body[data-static-page="landing"] .landing-btn--primary,  body[data-static-page="landing"] .landing-btn--primary {
+  color: #06131f;
+  background: linear-gradient(180deg, #23a6ff 0%, #1d8cff 100%);
+  box-shadow: 0 14px 28px rgba(35, 166, 255, 0.2);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+body[data-static-page="auth"] {
+  background: var(--app-bg);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] body[data-static-page="auth"] .auth-page-container,  body[data-static-page="auth"] .auth-page-container {
+  background: var(--app-bg);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+body[data-static-page="auth"] .brand-block,  body[data-static-page="auth"] .brand-block--login,  body[data-static-page="auth"] .brand-block--register,  body[data-static-page="auth"] .auth-brand {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 18px;
+  text-align: center;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+body[data-static-page="auth"] .brand-block .clarity-logo,  body[data-static-page="auth"] .auth-brand .clarity-logo,  body[data-static-page="auth"] .clarity-logo--authMain,  body[data-static-page="auth"] .clarity-logo--authSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  position: static;
+  left: auto;
+  transform: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+body[data-static-page="auth"] .brand-subtitle,  body[data-static-page="auth"] .auth-subtitle {
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  transform: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="violet"] body[data-static-page="auth"],  html[data-theme-preset="violet"] body[data-static-page="auth"] .auth-page-container {
+  background: radial-gradient(980px 620px at 12% 10%, rgba(134, 76, 255, 0.30), transparent 56%),
+    radial-gradient(880px 520px at 84% 16%, rgba(96, 126, 255, 0.10), transparent 54%),
+    linear-gradient(118deg, #251547 0%, #17142e 38%, #0d1021 74%, #090b16 100%);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] body[data-static-page="auth"] .auth-card {
+  background: radial-gradient(520px 240px at 50% 0%, rgba(151, 105, 250, 0.12), transparent 72%),
+    linear-gradient(180deg, rgba(33, 24, 59, 0.92), rgba(15, 14, 28, 0.94));
+  border-color: rgba(170, 137, 246, 0.18);
+  box-shadow: 0 34px 90px rgba(5, 6, 14, 0.54);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-card {
+  color: #30224b;
+  background: radial-gradient(circle at top left, rgba(189, 165, 255, 0.22), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 244, 255, 0.97) 52%, rgba(239, 232, 255, 0.99) 100%);
+  border: 1px solid rgba(188, 164, 234, 0.34);
+  box-shadow: 0 26px 70px rgba(104, 80, 152, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.82);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-label,  html[data-theme-preset="light"] body[data-static-page="auth"] .auth-divider,  html[data-theme-preset="light"] body[data-static-page="auth"] .auth-footer span,  html[data-theme-preset="light"] body[data-static-page="auth"] .auth-subtitle {
+  color: rgba(91, 71, 135, 0.82);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] body[data-static-page="auth"] .brand-subtitle {
+  color: rgba(148, 124, 209, 0.78);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-link {
+  color: #7d5ad0;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-input,  html[data-theme-preset="light"] body[data-static-page="auth"] .auth-input:-webkit-autofill,  html[data-theme-preset="light"] body[data-static-page="auth"] .auth-input:-webkit-autofill:hover,  html[data-theme-preset="light"] body[data-static-page="auth"] .auth-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #332650;
+  caret-color: #332650;
+  background: linear-gradient(180deg, rgba(251, 249, 255, 0.98) 0%, rgba(241, 236, 255, 0.98) 100%);
+  box-shadow: inset 0 0 0 1000px rgba(245, 240, 255, 0.98),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    0 8px 18px rgba(114, 87, 170, 0.06);
+  border: 1px solid rgba(194, 174, 233, 0.52);
+}
+
+/* Ці стилі роблять текст підказки читабельним усередині поля */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-input::placeholder {
+  color: rgba(122, 101, 164, 0.52);
+}
+
+/* Стан фокуса підкреслює активний елемент і покращує навігацію з клавіатури */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-input:focus {
+  border-color: rgba(145, 113, 224, 0.78);
+  box-shadow: 0 0 0 4px rgba(145, 113, 224, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-input-icon-btn {
+  color: rgba(120, 92, 171, 0.88);
+  background: linear-gradient(180deg, rgba(247, 243, 255, 0.96), rgba(237, 230, 255, 0.96));
+  border: 1px solid rgba(198, 176, 236, 0.46);
+  border-radius: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-primary-btn {
+  color: #fff;
+  background: linear-gradient(180deg, #a783ee 0%, #8459d6 100%);
+  box-shadow: 0 16px 28px rgba(128, 89, 203, 0.22);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-social-btn {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(244, 239, 255, 0.9));
+  border: 1px solid rgba(193, 172, 229, 0.3);
+  color: #6b5a90;
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] body[data-static-page="auth"] .auth-divider::before,  html[data-theme-preset="light"] body[data-static-page="auth"] .auth-divider::after,  html[data-theme-preset="light"] body[data-static-page="auth"] .auth-footer {
+  border-color: rgba(189, 170, 230, 0.44);
+  background: transparent;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-shell {
+  height: 100dvh;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-body {
+  height: 100%;
+  min-height: 0;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.app-main,  .app-sticky__scroll {
+  min-height: 0;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-main {
+  overflow-y: auto;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.app-content,  .settings-pageShell,  .track-page,  .playlist-page,  .liked-page,  .sp-page,  .sp-page--profile,  .sp-page--studio {
+  min-height: max-content;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 680px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  body[data-static-page="auth"] .brand-subtitle,  body[data-static-page="auth"] .auth-subtitle {
+    font-size: 10px;
+    letter-spacing: 0.24em;
+  }
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-topstrip__inner {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--clarity-shell-radius, 18px);
+  background: var(--surface-card);
+  border: 1px solid var(--menu-border);
+  box-shadow: var(--shadow-2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbar.glass {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-radius: inherit;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-sidebar > .app-sticky > .app-sticky__scroll {
+  display: flex;
+  overflow: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.app-right > .app-sticky > .app-sticky__scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidecard {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidecard__section--spaced {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidecard__nav.libScroll.sidecard__nav--dense {
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  align-content: start;
+  grid-auto-rows: max-content;
+  padding-right: 0;
+  scrollbar-gutter: stable both-edges;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(124, 97, 176, 0.34) transparent;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidecard__nav.libScroll.sidecard__nav--dense::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidecard__nav.libScroll.sidecard__nav--dense::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidecard__nav.libScroll.sidecard__nav--dense::-webkit-scrollbar-thumb {
+  background: rgba(124, 97, 176, 0.30);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidecard .libRow {
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+  transition: background .14s ease, border-color .14s ease, box-shadow .14s ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.sidecard .libRow:hover,  .sidecard .libRow.is-menu-open,  .sidecard .libRow:has(.libRow__link.active) {
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.10);
+  box-shadow: none;
+  transform: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidecard .libRow__link {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  padding: 8px 10px;
+  border-radius: 14px;
+  background: transparent;
+  border-color: transparent;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.sidecard .libRow__link:hover,  .sidecard .libRow__link.active,  .sidecard .libRow__link:focus-visible {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidecard .libRow__meta {
+  min-width: 0;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sidecard .libRow__title,  .sidecard .libRow__sub {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidecard .libRow__actions {
+  opacity: 1;
+  padding-right: 4px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidecard .libMoreBtn {
+  opacity: 1;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.track-title,  .playlist-page .track-title,  .liked-page .track-title {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}

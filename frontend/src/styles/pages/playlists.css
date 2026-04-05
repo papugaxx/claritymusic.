@@ -1,0 +1,282 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+.page-title {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.page-sub {
+  margin-top: 6px;
+  font-size: 12px;
+  color: rgba(255,255,255,.65);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.panel {
+  border-radius: 18px;
+  padding: 14px;
+  border: 1px solid rgba(168,85,247,0.20);
+  background: radial-gradient(900px 420px at 12% 18%, rgba(124,58,237,0.18), rgba(0,0,0,0) 62%),
+    linear-gradient(180deg, rgba(0,0,0,0.72), rgba(0,0,0,0.55));
+  box-shadow: 0 18px 60px rgba(0,0,0,0.60);
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-page {
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-hero {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-hero__cover {
+  width: 160px;
+  height: 160px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 760px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .track-hero {
+    grid-template-columns: 120px 1fr;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .track-hero__cover {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+  }
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page,  .liked-page {
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlist-page__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 16px 18px;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlist-page__identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: min(100%,260px);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlist-page__cover {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 auto;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlist-page__meta {
+  min-width: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlist-page__title {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlist-page__count {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--muted-2);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlist-page__hint {
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: .75;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page__controls,  .playlist-page__sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlist-page__sortLabel{
+  color: var(--muted-2);
+  font-size: 14px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page__list,  .liked-page__list {
+  display: grid;
+  gap: 12px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page__state,  .liked-page__empty {
+  padding: 16px;
+  opacity: .7;
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page .track-item,  .liked-page .track-item {
+  grid-template-columns: 58px minmax(0, 1fr) auto auto;
+  gap: 14px;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.playlist-page .track-item:hover,  .liked-page .track-item:hover {
+  transform: translateY(-1px);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page .track-cover,  .liked-page .track-cover {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page .track-info,  .liked-page .track-info {
+  gap: 4px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page .track-title,  .liked-page .track-title {
+  min-width: 0;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page .track-meta,  .liked-page .track-meta {
+  margin-top: 0;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page .track-actions,  .liked-page .track-actions {
+  gap: 10px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page .track-right,  .liked-page .track-right {
+  min-width: 88px;
+  text-align: right;
+  font-weight: 700;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page .track-item__play,  .playlist-page .track-item__like,  .playlist-page .track-item__remove,  .liked-page .track-item__play,  .liked-page .track-item__like,  .liked-page .track-item__remove {
+  width: 38px;
+  height: 38px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page .track-item__like,  .liked-page .track-item__like {
+  width: 42px;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 760px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .playlist-page .track-item,  .liked-page .track-item {
+    grid-template-columns: 50px minmax(0, 1fr) auto;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .playlist-page .track-right,  .liked-page .track-right {
+    grid-column: 2 / -1;
+    min-width: 0;
+    text-align: left;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .playlist-page .track-cover,  .liked-page .track-cover {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+  }
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page .track-info,  .liked-page .track-info {
+  min-width: 0;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page .track-item,  .liked-page .track-item {
+  min-width: 0;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playlist-page .track-right,  .liked-page .track-right {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlist-page__sort {
+  min-width: 0;
+  flex: 1 1 clamp(210px, 28vw, 260px);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlist-page__sort .ui-selectRoot {
+  width: min(100%, 240px);
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlist-page__sort .ui-selectTrigger {
+  min-width: 0;
+}
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playlist-page__sort .ui-selectRoot {
+    width: 100%;
+  }
+}

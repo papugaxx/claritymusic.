@@ -1,0 +1,48 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+.clarity-logo--base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbar__brandText {
+  transform: none;
+}
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .topbar__brandText .clarity-logo,  .clarity-logo--topbar,  .sitefooter__brand .clarity-logo,  .sitefooter__brand .clarity-logo--footer {
+  transform: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-top__inner {
+  min-height: 72px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.landing-brand .clarity-logo,  .clarity-logo--landingTop {
+  transform: translateX(3px);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-logoart {
+  padding: 34px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.landing-logoart__panel {
+  width: min(460px, calc(100% - 28px));
+  min-height: 132px;
+  padding: 32px 28px 26px;
+  border-radius: 28px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.landing-logoart__panel .clarity-logo,  .clarity-logo--landingPanel {
+  transform: translateX(5px);
+}

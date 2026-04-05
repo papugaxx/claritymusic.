@@ -1,0 +1,1124 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+.playerbar {
+  width: 100%;
+  min-width: 0;
+  min-height: 78px;
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) minmax(360px, 1fr) minmax(220px, 300px);
+  align-items: center;
+  gap: 16px;
+  padding: 12px 18px;
+  border-radius: 18px;
+  background: radial-gradient(circle at top, rgba(255,255,255,.08), transparent 42%),
+    linear-gradient(180deg, rgba(18, 16, 30, .82), rgba(10, 10, 18, .62));
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 22px 80px rgba(0,0,0,0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playerbar__left,  .playerbar__center,  .playerbar__right,  .playerbar__meta,  .playerbar__progress,  .playerbar__sliderWrap {
+  min-width: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__left {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  gap: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__center {
+  display: grid;
+  align-content: center;
+  width: 100%;
+  gap: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__right {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__cover {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,.24);
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__meta {
+  min-width: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__track {
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__artist {
+  margin-top: 3px;
+  opacity: 0.72;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playerbar__control,  .playerbar__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__control {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__playBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.16);
+  background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(223,228,243,.86));
+  color: #11131d;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 16px 34px rgba(64, 36, 136, 0.30);
+  transition: transform .16s ease, box-shadow .16s ease, opacity .16s ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.playerbar__playBtn:hover:not(:disabled) {
+  transform: none;
+  box-shadow: 0 14px 32px rgba(0,0,0,.4);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__playBtn:active:not(:disabled) {
+  transform: scale(.98);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__playBtn:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__progress {
+  display: grid;
+  grid-template-columns: 48px minmax(180px, 1fr) 48px;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__time {
+  font-size: 12px;
+  opacity: 0.74;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__sliderWrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__sliderWrap::before {
+  content: "";
+  position: absolute;
+  inset: 50% 0 auto;
+  height: 4px;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+  pointer-events: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__range {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  background: transparent;
+  outline: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__range::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(217, 217, 242, .98) 0%,
+    rgba(217, 217, 242, .98) var(--player-range-progress, 0%),
+    rgba(255,255,255,.14) var(--player-range-progress, 0%),
+    rgba(255,255,255,.14) 100%
+  );
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__range::-moz-range-track {
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.14);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__range::-moz-range-progress {
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(217, 217, 242, .98);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  margin-top: -5px;
+  border-radius: 999px;
+  border: 2px solid rgba(16,18,29,.55);
+  background: #f5f7ff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+  transition: transform .16s ease, box-shadow .16s ease;
+  cursor: pointer;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__range::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  border: 2px solid rgba(16,18,29,.55);
+  background: #f5f7ff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+  transition: transform .16s ease, box-shadow .16s ease;
+  cursor: pointer;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.playerbar__range:hover::-webkit-slider-thumb,  .playerbar__range:focus-visible::-webkit-slider-thumb,  .playerbar__range:hover::-moz-range-thumb,  .playerbar__range:focus-visible::-moz-range-thumb {
+  transform: scale(1.08);
+  box-shadow: 0 8px 22px rgba(0,0,0,.42);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__range:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+/* Стан фокуса підкреслює активний елемент і покращує навігацію з клавіатури */
+.playerbar__range:focus-visible {
+  outline: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__range--volume {
+  min-width: 120px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__volume {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 132px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__volumeIcon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .78;
+  flex: 0 0 auto;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playerbar__control.is-active,  .playerbar__action.is-active {
+  border-color: rgba(186, 130, 255, 0.42);
+  background: linear-gradient(180deg, rgba(168, 85, 247, 0.34), rgba(124, 58, 237, 0.2));
+  color: rgba(222, 199, 255, 0.98);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.playerbar__control.is-active:hover:not(:disabled),  .playerbar__action.is-active:hover:not(:disabled) {
+  border-color: rgba(186, 130, 255, 0.42);
+  background: linear-gradient(180deg, rgba(168, 85, 247, 0.34), rgba(124, 58, 237, 0.2));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playerbar__control.is-active svg,  .playerbar__action.is-active svg {
+  filter: drop-shadow(0 0 8px rgba(198, 168, 255, 0.22));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__menu {
+  position: absolute;
+  right: 12px;
+  bottom: 76px;
+  z-index: 100;
+  width: 280px;
+  padding: 12px;
+  border-radius: 14px;
+  overflow: visible;
+  isolation: isolate;
+  background: radial-gradient(240px 140px at 50% 0%, rgba(128, 88, 224, 0.18), transparent 72%),
+    linear-gradient(180deg, rgba(31, 23, 58, 0.98), rgba(17, 13, 34, 0.98));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__menuTitle {
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__menuActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__menuMsg {
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1281px) and (max-width: 1540px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    min-height: 74px;
+    grid-template-columns: minmax(196px, 244px) minmax(300px, 1fr) minmax(188px, 234px);
+    gap: 12px;
+    padding: 11px 14px;
+    border-radius: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__left {
+    grid-template-columns: 42px minmax(0, 1fr);
+    max-width: 244px;
+    gap: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__cover {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__center {
+    gap: 7px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__controls {
+    gap: 6px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__control {
+    width: 32px;
+    height: 32px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__action {
+    width: 36px;
+    height: 36px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playBtn {
+    width: 42px;
+    height: 42px;
+    border-radius: 15px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    grid-template-columns: 44px minmax(140px, 1fr) 44px;
+    gap: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    gap: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    min-width: 116px;
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__range--volume {
+    min-width: 104px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__menu {
+    right: 8px;
+    bottom: 72px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1101px) and (max-width: 1280px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    min-height: 74px;
+    grid-template-columns: minmax(184px, 228px) minmax(240px, 1fr) minmax(184px, 228px);
+    gap: 10px;
+    padding: 11px 12px;
+    border-radius: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__left {
+    grid-template-columns: 40px minmax(0, 1fr);
+    max-width: 228px;
+    gap: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__cover {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__center {
+    gap: 6px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__controls {
+    gap: 5px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__control {
+    width: 30px;
+    height: 30px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__action {
+    width: 34px;
+    height: 34px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    grid-template-columns: 40px minmax(120px, 1fr) 40px;
+    gap: 8px;
+    width: 100%;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    display: grid;
+    align-items: center;
+    justify-content: end;
+    gap: 6px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    min-width: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__sliderWrap--volume {
+    min-width: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__range--volume {
+    min-width: 0;
+    width: 100%;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__menu {
+    right: 4px;
+    bottom: 70px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1100px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    min-height: 74px;
+    grid-template-columns: minmax(168px, 204px) minmax(220px, 1fr) minmax(184px, 212px);
+    gap: 8px;
+    padding: 10px 11px;
+    border-radius: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__left {
+    grid-template-columns: 38px minmax(0, 1fr);
+    max-width: 204px;
+    gap: 9px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__cover {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__track {
+    font-size: 14px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .playerbar__artist,  .playerbar__time {
+    font-size: 11px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__center {
+    gap: 6px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__controls {
+    gap: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__control {
+    width: 28px;
+    height: 28px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__action {
+    width: 30px;
+    height: 30px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playBtn {
+    width: 38px;
+    height: 38px;
+    border-radius: 13px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    grid-template-columns: 34px minmax(96px, 1fr) 34px;
+    gap: 7px;
+    width: 100%;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    display: grid;
+    align-items: center;
+    justify-content: end;
+    gap: 5px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    min-width: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__sliderWrap--volume {
+    min-width: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__range--volume {
+    min-width: 0;
+    width: 100%;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__menu {
+    right: 4px;
+    bottom: 70px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__left {
+    align-items: center;
+    justify-content: flex-start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__center {
+    justify-content: center;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__cover {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__track {
+    font-size: 13px;
+    line-height: 1.18;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .playerbar__artist,  .playerbar__time {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .playerbar__control,  .playerbar__action,  .playerbar__playlistAction {
+    width: 32px;
+    height: 32px;
+    min-height: 32px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 767px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .playerbar__left,  .playerbar__center,  .playerbar__right {
+    width: 100%;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__cover {
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .playerbar__control,  .playerbar__action,  .playerbar__playlistAction {
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__playBtn {
+    width: 38px;
+    height: 38px;
+    border-radius: 13px;
+  }
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar--root {
+  position: relative;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__cover.is-clickable {
+  cursor: pointer;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__playlistAction {
+  flex: 1;
+  min-height: 40px;
+  padding: 10px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid var(--ctl-br, rgba(255,255,255,.12));
+  background: var(--surface-field, rgba(255,255,255,.04));
+  color: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background .16s ease, border-color .16s ease, box-shadow .16s ease, opacity .16s ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.playerbar__playlistAction:hover:not(:disabled) {
+  background: var(--surface-field-hover, rgba(255,255,255,.07));
+  border-color: var(--ctl-br-2, rgba(255,255,255,.18));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__playlistAction--primary {
+  background: var(--accent-gradient, linear-gradient(180deg, rgba(141, 106, 224, 0.96), rgba(108, 75, 194, 0.96)));
+  border-color: color-mix(in srgb, var(--accent, #8d6ae0) 70%, rgba(255,255,255,.18));
+  color: rgba(251, 247, 255, 0.98);
+  box-shadow: 0 10px 24px rgba(24, 8, 56, 0.22);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playerbar__playlistAction:disabled,  .playerbar__playlistAction--primary:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__right {
+  position: relative;
+  overflow: visible;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playerbar__menu .ui-selectRoot {
+  z-index: 110;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playerbar__menu .ui-selectMenu,  .playerbar__menu .ui-selectMenu--inline {
+  z-index: 120;
+  background: radial-gradient(220px 120px at 50% 0%, rgba(123, 86, 222, 0.16), transparent 72%),
+    linear-gradient(180deg, rgba(34, 26, 64, 0.985), rgba(18, 14, 39, 0.985));
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.playerbar__menu .ui-selectMenu__item,  .playerbar__menu .profile-dd-item {
+  background: rgba(38, 29, 70, 0.94);
+  border-color: rgba(214, 189, 255, 0.10);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.playerbar__menu .ui-selectMenu__item:hover,  .playerbar__menu .profile-dd-item:hover,  .playerbar__menu .ui-selectMenu__item.is-active,  .playerbar__menu .profile-dd-item.is-active {
+  background: rgba(66, 48, 118, 0.96);
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1101px) and (max-width: 1280px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    justify-self: end;
+    width: auto;
+    max-width: 100%;
+    grid-template-columns: 34px 34px minmax(98px, 112px) 34px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    gap: 5px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volumeIcon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1100px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    justify-self: end;
+    width: auto;
+    max-width: 100%;
+    grid-template-columns: 30px 30px minmax(84px, 98px) 30px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    gap: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volumeIcon {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    min-height: 72px;
+    height: auto;
+    grid-template-columns: minmax(0, 1fr) minmax(236px, 272px) minmax(0, 1fr);
+    grid-template-areas: "left center right";
+    align-items: center;
+    gap: 8px 10px;
+    padding: 8px 10px;
+    border-radius: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__left {
+    grid-area: left;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 8px;
+    align-self: center;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__center {
+    grid-area: center;
+    justify-self: center;
+    align-self: center;
+    width: min(100%, 272px);
+    min-width: 0;
+    gap: 4px;
+    justify-items: center;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__controls {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    width: 100%;
+    max-width: none;
+    justify-self: center;
+    grid-template-columns: 30px minmax(0, 1fr) 30px;
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    grid-area: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    justify-self: end;
+    align-self: center;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    gap: 6px;
+    flex-wrap: nowrap;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    order: 1;
+    min-width: 0;
+    flex: 0 0 96px;
+    width: 96px;
+    max-width: 96px;
+    gap: 5px;
+    margin-left: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__action--like {
+    order: 2;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__action--queue {
+    order: 3;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__action--menu {
+    order: 4;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__sliderWrap--volume {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__range--volume {
+    min-width: 0;
+    width: 100%;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__meta {
+    gap: 1px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 920px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    grid-template-columns: minmax(0, 1fr) minmax(224px, 256px) minmax(0, 1fr);
+    gap: 7px 9px;
+    padding: 7px 9px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__center {
+    width: min(100%, 256px);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    gap: 7px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    flex-basis: 90px;
+    width: 90px;
+    max-width: 90px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 860px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    grid-template-columns: minmax(0, 1fr) minmax(212px, 242px) minmax(0, 1fr);
+    gap: 6px 8px;
+    padding: 7px 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__center {
+    width: min(100%, 242px);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    gap: 6px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    flex-basis: 84px;
+    width: 84px;
+    max-width: 84px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 767px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    grid-template-columns: minmax(0, 0.92fr) minmax(198px, 224px) minmax(0, 0.92fr);
+    gap: 5px 7px;
+    padding: 6px 8px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .playerbar__left,  .playerbar__center,  .playerbar__right {
+    max-width: none;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__center {
+    width: min(100%, 224px);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__progress {
+    grid-template-columns: 28px minmax(0, 1fr) 28px;
+    gap: 5px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    gap: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    flex-basis: 78px;
+    width: 78px;
+    max-width: 78px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 761px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar {
+    grid-template-columns: minmax(0, 0.88fr) minmax(190px, 214px) minmax(0, 0.88fr);
+    padding: 6px 7px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__center {
+    width: min(100%, 214px);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__right {
+    gap: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar__volume {
+    flex-basis: 72px;
+    width: 72px;
+    max-width: 72px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 767px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar--mini {
+    position: relative;
+    display: grid;
+    background: linear-gradient(180deg, rgba(22, 18, 38, 0.96), rgba(10, 10, 18, 0.94));
+    box-shadow: 0 18px 52px rgba(0, 0, 0, 0.34);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar--mini.is-empty {
+    opacity: 0.94;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__main {
+    min-width: 0;
+    display: grid;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__cover {
+    overflow: hidden;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__meta {
+    min-width: 0;
+    display: grid;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .playerbarMini__meta strong,  .playerbarMini__meta small {
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__meta small {
+    color: rgba(255, 255, 255, 0.68);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__actions {
+    align-items: center;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__progress {
+    position: absolute;
+    height: 3px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__progress span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, rgba(173, 125, 255, 0.95), rgba(113, 190, 255, 0.95));
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__main {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar--mini {
+    min-height: 76px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 10px;
+    padding: 10px 10px 14px;
+    border-radius: 20px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__main {
+    align-items: start;
+    gap: 10px;
+    padding-right: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__cover {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__meta {
+    padding-top: 1px;
+    gap: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__meta strong {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__meta small {
+    font-size: 10px;
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__actions {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 6px;
+    align-self: center;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__action {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__progress {
+    left: 10px;
+    right: 10px;
+    bottom: 7px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 390px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbar--mini {
+    min-height: 74px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__main {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__cover {
+    width: 40px;
+    height: 40px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .playerbarMini__action {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+  }
+}

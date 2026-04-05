@@ -1,0 +1,115 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+.libRow {
+  position: relative;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libRow__actions {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.14s ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.libRow:hover .libRow__actions,  .libRow.is-menu-open .libRow__actions {
+  opacity: 1;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libMoreWrap {
+  position: relative;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libMoreBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: inherit;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.16s ease, border-color 0.16s ease, transform 0.12s ease, opacity 0.12s ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.libMoreBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libMoreBtn:active {
+  transform: scale(0.97);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlistMenuPortalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  z-index: 9998;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlistMenu {
+  --ui-menu-item-min-height: 38px;
+  --ui-menu-item-font-size: 12px;
+  --ui-menu-item-padding: 10px 10px;
+  position: fixed;
+  z-index: 9999;
+  width: 196px;
+  max-width: 196px;
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+  border-radius: var(--ui-select-menu-radius, 18px);
+  overflow: clip;
+  animation: playlistMenuIn 0.14s ease;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlistMenu__header {
+  padding: 6px 8px 4px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlistMenu__title {
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlistMenu__subtitle {
+  margin-top: 2px;
+  font-size: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.playlistMenu__sep {
+  margin: 0 4px;
+}
+/* Нижче описана анімація яка керує переходом між станами */
+@keyframes playlistMenuIn {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

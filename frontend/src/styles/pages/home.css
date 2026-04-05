@@ -1,0 +1,2162 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+.home {
+  display: grid;
+  justify-content: stretch;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__card {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__hero {
+  display: grid;
+  background: radial-gradient(900px 320px at 0% 0%, rgba(168,85,247,0.10), transparent 52%),
+    linear-gradient(180deg, rgba(20, 12, 48, 0.30), rgba(20, 12, 48, 0.12));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home .chip {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(24, 16, 52, 0.42);
+  font-weight: 800;
+  font-size: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home .chip.is-active {
+  background: rgba(168,85,247,0.30);
+  border-color: rgba(168,85,247,0.48);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__title {
+  font-weight: 900;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.mood {
+  width: 110px;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home .row {
+  display: flex;
+  gap: 12px;
+  overflow: auto;
+  padding-top: 2px;
+  padding-bottom: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile {
+  min-width: 170px;
+  border-radius: 16px;
+  overflow: visible;
+  border: 1px solid rgba(168,85,247,0.18);
+  background: rgba(20, 12, 48, 0.55);
+  padding: 10px;
+  cursor: pointer;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.tile:hover {
+  transform: translateY(-2px);
+  border-color: rgba(168,85,247,0.36);
+  background: rgba(20, 12, 48, 0.62);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile__media {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: rgba(24, 16, 52, 0.52);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile__body {
+  padding: 10px 6px 4px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile__title {
+  font-weight: 900;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile__sub {
+  opacity: 0.75;
+  font-size: 12px;
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artists {
+  overflow: auto;
+  padding-bottom: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artist {
+  min-width: 160px;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artist__avatar {
+  width: 78px;
+  height: 78px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(24, 16, 52, 0.52);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artist__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0.2);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artist__name {
+  text-align: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroTop {
+  justify-content: space-between;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home .chip__icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+  font-weight: 900;
+  line-height: 1;
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMainCard,  .home__heroMiniCard {
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(18, 12, 42, 0.42);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainCard {
+  border-radius: 20px;
+  display: grid;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainArt {
+  width: 160px;
+  height: 160px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(24, 16, 52, 0.52);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.22);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroBadge {
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainTitle {
+  font-weight: 950;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainMeta {
+  font-weight: 800;
+  color: rgba(255,255,255,0.82);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainText {
+  color: rgba(255,255,255,0.74);
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniCard {
+  cursor: pointer;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.home__heroMiniCard:hover {
+  background: rgba(22, 15, 50, 0.55);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniTitle {
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniSub {
+  color: rgba(255,255,255,0.72);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__genresLabel{
+  opacity: 0.9;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__genresScroll {
+  padding: 2px 2px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__genresScroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__hero .icon-btn {
+  height: 34px;
+  width: 34px;
+  border-radius: 12px;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+  
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .mood {
+    width: 96px;
+  }
+  
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .tile {
+    min-width: 150px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroTop {
+    flex-direction: column;
+  }
+  
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 760px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroSideCards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artist.is-clickable {
+  cursor: pointer;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artist.is-disabled {
+  cursor: default;
+  opacity: .82;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__mutedState {
+  opacity: .7;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroBadge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMetaRow {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__genres {
+  display: grid;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__genresLabel{
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__genresScroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+  
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMetaRow,  .home__genres {
+    grid-template-columns: 1fr;
+  }
+  
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniCard {
+  border: 1px solid rgba(140,108,255,.16);
+  background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.018)),
+    radial-gradient(circle at top left, rgba(122,74,255,.14), transparent 52%),
+    rgba(12,10,28,.84);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04), 0 18px 44px rgba(0,0,0,.18);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.home__heroMiniCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(154,118,255,.28);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 24px 52px rgba(0,0,0,.24);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniLabel {
+  opacity: .9;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniAvatar .media-thumb__img {
+  border-radius: 999px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artists .artist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.artist__avatar img,  .artist__avatar .media-thumb__img {
+  border-radius: 999px;
+  display: block;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroCompact {
+  display: grid;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainVisual {
+  align-self: stretch;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainContent {
+  max-width: none;
+  width: 100%;
+  justify-content: start;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniCard {
+  justify-content: space-between;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniLabel {
+  text-transform: uppercase;
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMiniAvatarWrap,  .home__heroMiniAvatar,  .home__heroMiniAvatar.media-thumb--avatar,  .home__heroMiniAvatar .media-thumb__img,  .artists .artist,  .artist__avatar,  .artist__avatar.media-thumb--avatar,  .artist__avatar .media-thumb__img {
+  border-radius: 999px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMiniAvatarWrap,  .home__heroMiniAvatar,  .home__heroMiniAvatar.media-thumb--avatar,  .artist__avatar,  .artist__avatar.media-thumb--avatar {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  outline: none;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1201px) and (max-width: 1280px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMainArtFrame,  .home__heroMainArt,  .home__heroMainArt.media-thumb {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMainArt,  .home__heroMainArt.media-thumb {
+  width: 196px;
+  height: 196px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainTitle {
+  max-width: 720px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainMeta {
+  margin-top: 6px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainText {
+  margin-top: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroPlayBtn {
+  min-width: 116px;
+  min-height: 50px;
+  font-size: 18px;
+  padding: 0 22px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniThumbWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniLabel {
+  font-weight: 900;
+  letter-spacing: .09em;
+  color: rgba(229,220,255,.78);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniTitle {
+  font-size: 20px;
+  line-height: 1.06;
+  margin-bottom: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniSub {
+  font-size: 15px;
+  margin-bottom: 14px;
+  opacity: .82;
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMiniAvatarWrap,  .home__heroMiniThumbWrap {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMiniAvatar,  .home__heroMiniAvatar.media-thumb--avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 30px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artists .artist {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  padding: 0;
+  min-width: 112px;
+  gap: 12px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.artist__avatar,  .artist__avatar.media-thumb--avatar {
+  width: 98px;
+  height: 98px;
+  border-radius: 999px;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  outline: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.artist__avatar .media-thumb__img,  .artist__avatar img {
+  border-radius: 999px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artist__name {
+  font-size: 15px;
+  font-weight: 800;
+  opacity: .96;
+  line-height: 1.15;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .artists .artist,  html[data-theme-preset="light"] .artists .artist {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .artist__avatar,  html[data-theme-preset="light"] .artist__avatar.media-thumb--avatar,  html[data-theme-preset="light"] .artist__avatar,  html[data-theme-preset="light"] .artist__avatar.media-thumb--avatar {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroMiniCard,  html[data-theme-preset="light"] .home__heroMiniCard {
+  background: var(--light-surface-soft);
+  border: 1px solid rgba(116,90,173,.18);
+  box-shadow: 0 16px 36px rgba(89,66,140,.08);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroMiniLabel,  html[data-theme-preset="light"] .home__heroMiniLabel {
+  color: #7e709f;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .home__heroMiniTitle,  html[data-theme-preset="light"] .home__heroMiniSub,  html[data-theme-preset="light"] .home__heroMiniTitle,  html[data-theme-preset="light"] .home__heroMiniSub{
+  color: #2c2145;
+}
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 820px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMainArtFrame,  .home__heroMainArt,  .home__heroMainArt.media-thumb {
+    width: 172px;
+    height: 172px;
+  }
+  
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.home .artists .artist,  .home .artists .artist:hover,  .home .artists .artist:focus,  .home .artists .artist:focus-visible {
+  padding: 0;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home .artists .artist__avatar,  .home .artists .artist__avatar.media-thumb--avatar,  .home .artists .artist__avatar img,  .home .artists .artist__avatar .media-thumb__img {
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.home .artists .artist,  .home .artists .artist:hover,  .home .artists .artist:focus,  .home .artists .artist:focus-visible {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home .artists .artist__avatar,  .home .artists .artist__avatar.media-thumb,  .home .artists .artist__avatar.media-thumb--avatar,  .home .artists .artist__avatar::before,  .home .artists .artist__avatar::after,  .home .artists .artist__avatar .media-thumb__img,  .home .artists .artist__avatar img {
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home .artists .artist__avatar,  .home .artists .artist__avatar.media-thumb,  .home .artists .artist__avatar.media-thumb--avatar {
+  background: transparent;
+  border-radius: 999px;
+  padding: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset] .home .home__card .artists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 30px;
+  align-items: flex-start;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+html[data-theme-preset] .home .home__card .artists .artist,  html[data-theme-preset] .home .home__card .artists .artist:hover,  html[data-theme-preset] .home .home__card .artists .artist:focus,  html[data-theme-preset] .home .home__card .artists .artist:focus-visible {
+  min-width: 108px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  text-align: center;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] .home .home__card .artists .artist__avatar,  html[data-theme-preset] .home .home__card .artists .artist__avatar.media-thumb,  html[data-theme-preset] .home .home__card .artists .artist__avatar.media-thumb--avatar,  html[data-theme-preset] .home .home__card .artists .artist__avatar::before,  html[data-theme-preset] .home .home__card .artists .artist__avatar::after {
+  width: 96px;
+  height: 96px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  border-radius: 999px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset] .home .home__card .artists .artist__avatar .media-thumb__img,  html[data-theme-preset] .home .home__card .artists .artist__avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  border-radius: 999px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset] .home .home__card .artists .artist__name {
+  display: block;
+  margin: 0;
+  color: var(--theme-text-main, #2d2141);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+  opacity: 1;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.home .home__card .artists .artist,  .home .home__card .artists .artist:hover,  .home .home__card .artists .artist:focus,  .home .home__card .artists .artist:focus-visible {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home .home__card .artists .artist__avatar,  .home .home__card .artists .artist__avatar.media-thumb,  .home .home__card .artists .artist__avatar.media-thumb--avatar,  .home .home__card .artists .artist__avatar::before,  .home .home__card .artists .artist__avatar::after,  .home .home__card .artists .artist__avatar .media-thumb__img,  .home .home__card .artists .artist__avatar img {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  border-radius: 999px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home .home__card .artists .artist__avatar::before,  .home .home__card .artists .artist__avatar::after {
+  content: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile__body {
+  min-width: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile {
+  max-width: 220px;
+  flex: 0 0 170px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile--track {
+  min-width: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile__mediaWrap {
+  position: relative;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile__play {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, rgba(139,92,246,.96), rgba(109,40,217,.96));
+  color: #fff;
+  box-shadow: 0 14px 34px rgba(0,0,0,.36);
+  cursor: pointer;
+  transition: filter .16s ease, box-shadow .16s ease, opacity .16s ease;
+  opacity: .96;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.tile__play:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 16px 36px rgba(0,0,0,.38);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile__play:disabled {
+  opacity: .55;
+  cursor: default;
+  transform: none;
+  filter: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile__playGlyph {
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+  transform: translateX(1px);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artist__name {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width:760px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .tile__play {
+    width: 38px;
+    height: 38px;
+    right: 8px;
+    bottom: 8px;
+  }
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile--trackInteractive {
+  cursor: pointer;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile--trackInteractive .tile__mediaWrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile--trackInteractive .tile__playGlyph {
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile--trackInteractive .tile__playGlyph svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.tile__open,  .tile__bodyButton,  .artist {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  text-align: left;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile__open {
+  display: block;
+  width: 100%;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.tile__bodyButton {
+  display: block;
+  width: 100%;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artist {
+  cursor: pointer;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.artist:disabled {
+  cursor: not-allowed;
+  opacity: 0.68;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__hero {
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroTop {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroFilterLabel {
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroChips {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  overflow-x: auto;
+  padding: 2px;
+  scrollbar-width: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroCompact {
+  grid-template-columns: minmax(0, 1.42fr) minmax(280px, 0.62fr);
+  gap: 14px;
+  align-items: stretch;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainCard {
+  position: relative;
+  min-height: 194px;
+  height: 100%;
+  padding: 14px 18px;
+  grid-template-columns: 138px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainVisual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding-top: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainArtFrame {
+  width: 132px;
+  min-width: 132px;
+  height: 132px;
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 18px;
+  overflow: hidden;
+  transform: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMainArt,  .home__heroMainArtFrame .home__heroMainArt {
+  width: 132px;
+  height: 132px;
+  min-width: 132px;
+  min-height: 132px;
+  aspect-ratio: 1 / 1;
+  flex: 0 0 132px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainContent {
+  min-width: 0;
+  display: grid;
+  align-content: center;
+  gap: 7px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroBadge {
+  position: static;
+  z-index: auto;
+  justify-self: start;
+  min-height: 24px;
+  margin-bottom: 2px;
+  padding: 0 8px;
+  font-size: 10px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMainTitle,  .home__heroMainMeta,  .home__heroMainText,  .home__heroMetaRow {
+  justify-self: start;
+  text-align: left;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainTitle {
+  font-size: clamp(22px, 2.5vw, 30px);
+  line-height: 1.02;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainMeta {
+  font-size: 13px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMainText {
+  font-size: 12px;
+  line-height: 1.35;
+  max-width: none;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMetaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMetaPill {
+  min-height: 32px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.07);
+  font-size: 13px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroPlayBtn,  .btn.primary.home__heroPlayBtn {
+  min-width: 92px;
+  min-height: 38px;
+  padding: 0 16px;
+  font-size: 15px;
+  border-radius: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroSideCards {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+  height: 100%;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniCard {
+  min-height: 90px;
+  height: 100%;
+  padding: 16px 18px;
+  display: grid;
+  justify-items: start;
+  align-content: center;
+  gap: 6px;
+  text-align: left;
+  border-radius: 16px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniCard > * {
+  justify-self: start;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniHead {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMiniThumbWrap,  .home__heroMiniAvatarWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniCard--queue {
+  min-height: 86px;
+  display: grid;
+  align-content: center;
+  gap: 4px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniCard--queue .home__heroMiniHead {
+  margin-bottom: 2px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMiniCard--queue .home__heroMiniThumbWrap,  .home__heroMiniCard--queue .home__heroMiniThumb,  .home__heroMiniCard--queue .home__heroMiniThumbWrap img {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniCard--artist {
+  min-height: 78px;
+  gap: 4px;
+  align-content: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniCard--artist .home__heroMiniHead {
+  margin-bottom: 4px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMiniCard--artist .home__heroMiniAvatarWrap,  .home__heroMiniCard--artist .home__heroMiniAvatar,  .home__heroMiniCard--artist .home__heroMiniAvatarWrap img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMiniLabel,  .home__heroMiniTitle,  .home__heroMiniSub {
+  width: 100%;
+  text-align: left;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__heroMiniLabel {
+  font-size: 10px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMiniCard--queue .home__heroMiniTitle,  .home__heroMiniCard--artist .home__heroMiniTitle {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.home__heroMiniCard--queue .home__heroMiniSub,  .home__heroMiniCard--artist .home__heroMiniSub {
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__genres {
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__genresLabel {
+  min-width: 78px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__genresScroll {
+  min-width: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__sectionHead {
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__title {
+  font-size: clamp(22px, 2.1vw, 30px);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.home__card {
+  padding: 14px;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    grid-template-columns: 124px minmax(0, 1fr);
+    gap: 16px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMainArtFrame,  .home__heroMainArt,  .home__heroMainArtFrame .home__heroMainArt {
+    width: 118px;
+    height: 118px;
+    min-width: 118px;
+    min-height: 118px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 760px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroTop {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroCompact {
+    grid-template-columns: 1fr;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMainArt,  .home__heroMainArtFrame,  .home__heroMainArtFrame .home__heroMainArt {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1221px) and (max-width: 1280px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__hero {
+    max-width: 972px;
+    margin-inline: auto;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroCompact {
+    grid-template-columns: minmax(0, 1.14fr) minmax(246px, 0.76fr);
+    gap: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMainCard {
+    min-height: 228px;
+    height: auto;
+    grid-template-columns: 140px minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px 18px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMainArtFrame,  .app-shell.no-right .home__heroMainArt,  .app-shell.no-right .home__heroMainArt.media-thumb,  .app-shell.no-right .home__heroMainArtFrame .home__heroMainArt {
+    width: 136px;
+    height: 136px;
+    min-width: 136px;
+    min-height: 136px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMainTitle {
+    font-size: clamp(30px, 3.1vw, 40px);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMainText {
+    font-size: 13px;
+    line-height: 1.42;
+    -webkit-line-clamp: 2;
+    max-width: 56ch;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroSideCards {
+    grid-template-rows: repeat(2, minmax(98px, auto));
+    height: auto;
+    gap: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMiniCard {
+    min-height: 98px;
+    height: auto;
+    padding: 14px 15px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1220px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__hero {
+    gap: 14px;
+    padding: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroCompact {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    min-height: 222px;
+    height: auto;
+    grid-template-columns: 136px minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px 18px;
+    align-items: center;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMainArtFrame,  .home__heroMainArt,  .home__heroMainArt.media-thumb,  .home__heroMainArtFrame .home__heroMainArt {
+    width: 128px;
+    height: 128px;
+    min-width: 128px;
+    min-height: 128px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainTitle {
+    font-size: clamp(28px, 4vw, 42px);
+    max-width: 100%;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainMeta {
+    font-size: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainText {
+    font-size: 13px;
+    line-height: 1.42;
+    max-width: 62ch;
+    -webkit-line-clamp: 2;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMetaRow {
+    margin-top: 8px;
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMetaPill {
+    min-height: 30px;
+    padding: 6px 11px;
+    font-size: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroPlayBtn,  .btn.primary.home__heroPlayBtn {
+    min-width: 94px;
+    min-height: 40px;
+    padding: 0 16px;
+    font-size: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroSideCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+    height: auto;
+    gap: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMiniCard,  .home__heroMiniCard--queue,  .home__heroMiniCard--artist {
+    min-height: 96px;
+    height: auto;
+    padding: 14px 15px 13px;
+    align-content: center;
+    gap: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniHead {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniCard--artist .home__heroMiniHead {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMiniThumbWrap,  .home__heroMiniAvatarWrap {
+    justify-self: start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniLabel {
+    min-width: 0;
+    font-size: 11px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniTitle {
+    font-size: 14px;
+    line-height: 1.15;
+    margin-bottom: 2px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniSub {
+    font-size: 12px;
+    line-height: 1.32;
+    margin-bottom: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMiniCard--queue .home__heroMiniThumbWrap,  .home__heroMiniCard--queue .home__heroMiniThumb,  .home__heroMiniCard--queue .home__heroMiniThumbWrap img {
+    width: 42px;
+    height: 42px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMiniCard--artist .home__heroMiniAvatarWrap,  .home__heroMiniCard--artist .home__heroMiniAvatar,  .home__heroMiniCard--artist .home__heroMiniAvatarWrap img {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1100px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__hero {
+    max-width: 860px;
+    margin-inline: auto;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMainCard,  .app-shell.has-right .home__heroMainCard {
+    min-height: 208px;
+    grid-template-columns: 124px minmax(0, 1fr);
+    gap: 12px;
+    padding: 15px 16px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMainArtFrame,  .app-shell.no-right .home__heroMainArt,  .app-shell.no-right .home__heroMainArt.media-thumb,  .app-shell.no-right .home__heroMainArtFrame .home__heroMainArt,  .app-shell.has-right .home__heroMainArtFrame,  .app-shell.has-right .home__heroMainArt,  .app-shell.has-right .home__heroMainArt.media-thumb,  .app-shell.has-right .home__heroMainArtFrame .home__heroMainArt {
+    width: 118px;
+    height: 118px;
+    min-width: 118px;
+    min-height: 118px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMainTitle,  .app-shell.has-right .home__heroMainTitle {
+    font-size: clamp(26px, 3.8vw, 36px);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMainText,  .app-shell.has-right .home__heroMainText {
+    max-width: 56ch;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroSideCards,  .app-shell.has-right .home__heroSideCards {
+    gap: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard,  .app-shell.has-right .home__heroMiniCard {
+    min-height: 92px;
+    padding: 13px 14px 12px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1101px) and (max-width: 1220px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__hero {
+    gap: 14px;
+    padding: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroCompact {
+    grid-template-columns: minmax(0, 1.14fr) minmax(290px, 0.86fr);
+    gap: 12px;
+    align-items: stretch;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    min-height: 214px;
+    height: auto;
+    grid-template-columns: 138px minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px 18px;
+    align-items: center;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainContent {
+    align-content: start;
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroBadge {
+    position: static;
+    margin: 0 0 2px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMainArtFrame,  .home__heroMainArt,  .home__heroMainArt.media-thumb,  .home__heroMainArtFrame .home__heroMainArt {
+    width: 132px;
+    height: 132px;
+    min-width: 132px;
+    min-height: 132px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainTitle {
+    font-size: clamp(28px, 3.6vw, 38px);
+    max-width: 12ch;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainText {
+    max-width: 52ch;
+    font-size: 13px;
+    line-height: 1.42;
+    -webkit-line-clamp: 2;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMetaRow {
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMetaPill {
+    min-height: 30px;
+    padding: 6px 11px;
+    font-size: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroPlayBtn,  .btn.primary.home__heroPlayBtn {
+    min-width: 96px;
+    min-height: 42px;
+    padding: 0 16px;
+    font-size: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroSideCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+    height: auto;
+    gap: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMiniCard,  .home__heroMiniCard--queue,  .home__heroMiniCard--artist {
+    min-height: 102px;
+    height: auto;
+    padding: 14px 15px 13px;
+    align-content: start;
+    gap: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniHead {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniCard--artist .home__heroMiniHead {
+    grid-template-columns: 46px minmax(0, 1fr);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMiniThumbWrap,  .home__heroMiniAvatarWrap {
+    justify-self: start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniLabel {
+    min-width: 0;
+    font-size: 11px;
+    line-height: 1.16;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMiniCard--queue .home__heroMiniThumbWrap,  .home__heroMiniCard--queue .home__heroMiniThumb,  .home__heroMiniCard--queue .home__heroMiniThumbWrap img {
+    width: 42px;
+    height: 42px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMiniCard--artist .home__heroMiniAvatarWrap,  .home__heroMiniCard--artist .home__heroMiniAvatar,  .home__heroMiniCard--artist .home__heroMiniAvatarWrap img {
+    width: 44px;
+    height: 44px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMiniCard--queue .home__heroMiniTitle,  .home__heroMiniCard--queue .home__heroMiniSub {
+    padding-left: 54px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMiniCard--artist .home__heroMiniTitle,  .home__heroMiniCard--artist .home__heroMiniSub {
+    padding-left: 56px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniTitle {
+    font-size: 14px;
+    line-height: 1.18;
+    margin-bottom: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniSub {
+    font-size: 12px;
+    line-height: 1.28;
+    margin-bottom: 0;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1201px) and (max-width: 1220px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__hero {
+    max-width: 960px;
+    margin-inline: auto;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroCompact {
+    grid-template-columns: minmax(0, 1.02fr) minmax(274px, 0.9fr);
+    gap: 12px;
+    align-items: stretch;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMainCard {
+    min-height: 208px;
+    grid-template-columns: 132px minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px 18px;
+    align-items: center;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMainArtFrame,  .app-shell.no-right .home__heroMainArt,  .app-shell.no-right .home__heroMainArt.media-thumb,  .app-shell.no-right .home__heroMainArtFrame .home__heroMainArt {
+    width: 128px;
+    height: 128px;
+    min-width: 128px;
+    min-height: 128px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMainTitle {
+    font-size: clamp(28px, 3.4vw, 38px);
+    max-width: 10ch;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMainText {
+    max-width: 46ch;
+    font-size: 13px;
+    line-height: 1.4;
+    -webkit-line-clamp: 2;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMetaRow {
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroSideCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    align-content: start;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard,  .app-shell.no-right .home__heroMiniCard--queue,  .app-shell.no-right .home__heroMiniCard--artist {
+    min-height: 104px;
+    padding: 14px 14px 13px;
+    gap: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMiniHead {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniHead {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniThumbWrap,  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniThumb,  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniThumbWrap img {
+    width: 38px;
+    height: 38px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniAvatarWrap,  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniAvatar,  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniAvatarWrap img {
+    width: 40px;
+    height: 40px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMiniLabel {
+    font-size: 10px;
+    line-height: 1.12;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMiniTitle {
+    font-size: 13.5px;
+    line-height: 1.16;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.no-right .home__heroMiniSub {
+    font-size: 11.5px;
+    line-height: 1.24;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniTitle,  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniSub {
+    padding-left: 48px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniTitle,  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniSub {
+    padding-left: 50px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__hero {
+    gap: 12px;
+    padding: 15px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__heroCompact {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__heroMainCard {
+    min-height: 198px;
+    grid-template-columns: 116px minmax(0, 1fr);
+    gap: 12px;
+    padding: 15px 16px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.has-right .home__heroMainArtFrame,  .app-shell.has-right .home__heroMainArt,  .app-shell.has-right .home__heroMainArt.media-thumb,  .app-shell.has-right .home__heroMainArtFrame .home__heroMainArt {
+    width: 112px;
+    height: 112px;
+    min-width: 112px;
+    min-height: 112px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__heroBadge {
+    position: static;
+    margin: 0 0 2px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__heroMainTitle {
+    font-size: clamp(24px, 3.3vw, 32px);
+    max-width: 10ch;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__heroMainText {
+    max-width: 38ch;
+    font-size: 12.5px;
+    line-height: 1.38;
+    -webkit-line-clamp: 2;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__heroMetaRow {
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__heroMetaPill {
+    min-height: 29px;
+    padding: 6px 10px;
+    font-size: 11.5px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.has-right .home__heroPlayBtn,  .app-shell.has-right .btn.primary.home__heroPlayBtn {
+    min-width: 92px;
+    min-height: 40px;
+    padding: 0 16px;
+    font-size: 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__heroSideCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.has-right .home__heroMiniCard,  .app-shell.has-right .home__heroMiniCard--queue,  .app-shell.has-right .home__heroMiniCard--artist {
+    min-height: 92px;
+    padding: 13px 13px 12px;
+    gap: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__heroMiniHead {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniHead {
+    grid-template-columns: 40px minmax(0, 1fr);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniThumbWrap,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniThumb,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniThumbWrap img {
+    width: 36px;
+    height: 36px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniAvatarWrap,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniAvatar,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniAvatarWrap img {
+    width: 38px;
+    height: 38px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__heroMiniLabel {
+    font-size: 10px;
+    line-height: 1.12;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__heroMiniTitle {
+    font-size: 13px;
+    line-height: 1.14;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-shell.has-right .home__heroMiniSub {
+    font-size: 11px;
+    line-height: 1.22;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniTitle,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniSub {
+    padding-left: 46px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniTitle,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniSub {
+    padding-left: 48px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1100px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__hero {
+    gap: 12px;
+    padding: 15px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroCompact {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainCard {
+    min-height: 206px;
+    height: auto;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 12px;
+    padding: 15px 16px 16px;
+    align-items: center;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainContent {
+    align-content: start;
+    gap: 7px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroBadge {
+    position: static;
+    margin: 0 0 2px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMainArtFrame,  .home__heroMainArt,  .home__heroMainArt.media-thumb,  .home__heroMainArtFrame .home__heroMainArt {
+    width: 116px;
+    height: 116px;
+    min-width: 116px;
+    min-height: 116px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainTitle {
+    font-size: clamp(25px, 4vw, 34px);
+    max-width: 12ch;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainMeta {
+    font-size: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMainText {
+    max-width: 48ch;
+    font-size: 13px;
+    line-height: 1.38;
+    -webkit-line-clamp: 2;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMetaRow {
+    gap: 8px;
+    margin-top: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMetaPill {
+    min-height: 29px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroPlayBtn,  .btn.primary.home__heroPlayBtn {
+    min-width: 94px;
+    min-height: 40px;
+    font-size: 16px;
+    padding: 0 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroSideCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    height: auto;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMiniCard,  .home__heroMiniCard--queue,  .home__heroMiniCard--artist {
+    min-height: 94px;
+    height: auto;
+    padding: 13px 14px 12px;
+    align-content: start;
+    gap: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniHead {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniCard--artist .home__heroMiniHead {
+    grid-template-columns: 44px minmax(0, 1fr);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMiniCard--queue .home__heroMiniThumbWrap,  .home__heroMiniCard--queue .home__heroMiniThumb,  .home__heroMiniCard--queue .home__heroMiniThumbWrap img {
+    width: 40px;
+    height: 40px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMiniCard--artist .home__heroMiniAvatarWrap,  .home__heroMiniCard--artist .home__heroMiniAvatar,  .home__heroMiniCard--artist .home__heroMiniAvatarWrap img {
+    width: 42px;
+    height: 42px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMiniCard--queue .home__heroMiniTitle,  .home__heroMiniCard--queue .home__heroMiniSub {
+    padding-left: 51px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .home__heroMiniCard--artist .home__heroMiniTitle,  .home__heroMiniCard--artist .home__heroMiniSub {
+    padding-left: 53px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniLabel {
+    min-width: 0;
+    font-size: 10px;
+    line-height: 1.14;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniTitle {
+    font-size: 14px;
+    line-height: 1.16;
+    margin-bottom: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .home__heroMiniSub {
+    font-size: 12px;
+    line-height: 1.24;
+    margin-bottom: 0;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1201px) and (max-width: 1220px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__hero,  .app-shell.has-right .home__hero {
+    gap: 12px;
+    padding: 16px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroCompact,  .app-shell.has-right .home__heroCompact {
+    gap: 12px;
+    align-items: stretch;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMainCard,  .app-shell.has-right .home__heroMainCard {
+    min-height: 216px;
+    grid-template-columns: 164px minmax(0, 1fr);
+    gap: 16px;
+    padding: 18px 20px;
+    align-items: center;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroBadge,  .app-shell.has-right .home__heroBadge {
+    position: static;
+    margin: 0 0 2px;
+    align-self: flex-start;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMainArtFrame,  .app-shell.no-right .home__heroMainArt,  .app-shell.no-right .home__heroMainArt.media-thumb,  .app-shell.no-right .home__heroMainArtFrame .home__heroMainArt,  .app-shell.has-right .home__heroMainArtFrame,  .app-shell.has-right .home__heroMainArt,  .app-shell.has-right .home__heroMainArt.media-thumb,  .app-shell.has-right .home__heroMainArtFrame .home__heroMainArt {
+    width: 160px;
+    height: 160px;
+    min-width: 160px;
+    min-height: 160px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMainContent,  .app-shell.has-right .home__heroMainContent {
+    gap: 8px;
+    align-content: start;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMainTitle,  .app-shell.has-right .home__heroMainTitle {
+    font-size: clamp(28px, 3.35vw, 36px);
+    line-height: 0.98;
+    max-width: 11ch;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMainMeta,  .app-shell.has-right .home__heroMainMeta {
+    font-size: 14px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMainText,  .app-shell.has-right .home__heroMainText {
+    max-width: 33ch;
+    font-size: 12.5px;
+    line-height: 1.38;
+    -webkit-line-clamp: 2;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMetaRow,  .app-shell.has-right .home__heroMetaRow {
+    gap: 8px;
+    margin-top: 8px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMetaPill,  .app-shell.has-right .home__heroMetaPill {
+    min-height: 30px;
+    padding: 6px 11px;
+    font-size: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroPlayBtn,  .app-shell.no-right .btn.primary.home__heroPlayBtn,  .app-shell.has-right .home__heroPlayBtn,  .app-shell.has-right .btn.primary.home__heroPlayBtn {
+    min-width: 100px;
+    min-height: 42px;
+    padding: 0 18px;
+    font-size: 16px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroSideCards,  .app-shell.has-right .home__heroSideCards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-content: start;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard,  .app-shell.no-right .home__heroMiniCard--queue,  .app-shell.no-right .home__heroMiniCard--artist,  .app-shell.has-right .home__heroMiniCard,  .app-shell.has-right .home__heroMiniCard--queue,  .app-shell.has-right .home__heroMiniCard--artist {
+    min-height: 98px;
+    padding: 14px 14px 13px;
+    gap: 4px;
+    align-content: start;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniHead,  .app-shell.has-right .home__heroMiniHead {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 9px;
+    margin-bottom: 4px;
+    align-items: center;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniHead,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniHead {
+    grid-template-columns: 44px minmax(0, 1fr);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniThumbWrap,  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniThumb,  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniThumbWrap img,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniThumbWrap,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniThumb,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniThumbWrap img {
+    width: 42px;
+    height: 42px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniAvatarWrap,  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniAvatar,  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniAvatarWrap img,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniAvatarWrap,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniAvatar,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniAvatarWrap img {
+    width: 42px;
+    height: 42px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniLabel,  .app-shell.has-right .home__heroMiniLabel {
+    font-size: 10px;
+    line-height: 1.12;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniTitle,  .app-shell.has-right .home__heroMiniTitle {
+    font-size: 14px;
+    line-height: 1.16;
+    margin-bottom: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniSub,  .app-shell.has-right .home__heroMiniSub {
+    font-size: 12px;
+    line-height: 1.26;
+    margin-bottom: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniTitle,  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniSub,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniTitle,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniSub {
+    padding-left: 52px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniTitle,  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniSub,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniTitle,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniSub {
+    padding-left: 52px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroCompact,  .app-shell.has-right .home__heroCompact {
+    grid-template-columns: minmax(0, 1.02fr) minmax(264px, 0.84fr);
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroSideCards,  .app-shell.has-right .home__heroSideCards {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    align-self: stretch;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard--queue,  .app-shell.no-right .home__heroMiniCard--artist,  .app-shell.has-right .home__heroMiniCard--queue,  .app-shell.has-right .home__heroMiniCard--artist {
+    min-height: 0;
+    grid-template-columns: 44px minmax(0, 1fr);
+    column-gap: 11px;
+    row-gap: 3px;
+    padding: 15px 18px 15px;
+    align-items: center;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniHead,  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniHead,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniHead,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniHead {
+    display: contents;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniThumbWrap,  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniThumb,  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniThumbWrap img,  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniAvatarWrap,  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniAvatar,  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniAvatarWrap img,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniThumbWrap,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniThumb,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniThumbWrap img,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniAvatarWrap,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniAvatar,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniAvatarWrap img {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    width: 42px;
+    height: 42px;
+    transform: none;
+    align-self: center;
+    justify-self: start;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniLabel,  .app-shell.has-right .home__heroMiniLabel {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniTitle,  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniSub,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniTitle,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniSub,  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniTitle,  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniSub,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniTitle,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniSub {
+    grid-column: 2;
+    padding-left: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniTitle,  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniTitle,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniTitle,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniTitle {
+    grid-row: 2;
+    margin-top: 1px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-shell.no-right .home__heroMiniCard--queue .home__heroMiniSub,  .app-shell.no-right .home__heroMiniCard--artist .home__heroMiniSub,  .app-shell.has-right .home__heroMiniCard--queue .home__heroMiniSub,  .app-shell.has-right .home__heroMiniCard--artist .home__heroMiniSub {
+    grid-row: 3;
+  }
+}

@@ -1,0 +1,374 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+:root {
+  --ui-select-radius: 16px;
+  --ui-select-menu-radius: 18px;
+  --ui-select-item-radius: 12px;
+}
+/* Нижче описана анімація яка керує переходом між станами */
+@keyframes uiMenuIn {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(.98);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+select option {
+  background: color-mix(in srgb, var(--menu-bg) 100%, #000 0%);
+  color: var(--menu-item-text);
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-selectRoot {
+  position: relative;
+  z-index: 10;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-selectTrigger {
+  min-width: var(--ui-select-width, 180px);
+  border-radius: var(--ui-select-radius);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  gap: 12px;
+  font-weight: 800;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-selectTrigger__label {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.ui-selectMenu,  .ui-dd,  .playlistMenu {
+  padding: 8px;
+  border-radius: var(--ui-select-menu-radius);
+  max-height: min(320px, calc(100vh - 24px));
+  overflow: auto;
+  border: 1px solid var(--menu-border, rgba(255,255,255,0.14));
+  background: radial-gradient(220px 120px at 50% 0%, rgba(var(--accent-rgb, 139, 92, 246), 0.18), transparent 72%), var(--menu-bg);
+  box-shadow: var(--menu2-shadow, 0 28px 80px rgba(0,0,0,.42));
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  overscroll-behavior: contain;
+  isolation: isolate;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-selectMenu {
+  max-width: min(var(--ui-select-menu-max-width, 320px), calc(100vw - 24px));
+  overflow: auto;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 10040;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-selectMenu--inline {
+  top: calc(100% + 8px);
+  left: 0;
+  right: auto;
+  z-index: 10030;
+  overflow: auto;
+}
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-selectRoot[data-ui-select-root] .ui-selectMenu--inline {
+  min-width: min(100%, calc(100vw - 24px));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.ui-selectMenu__item,  .ui-dd__item,  .ui-dd__row,  .profile-dd-item,  .playlistMenu__item{
+  min-height: var(--ui-menu-item-min-height, 42px);
+  border-radius: var(--ui-select-item-radius);
+  color: var(--menu-item-text);
+  transition: background .12s ease,
+    transform .12s ease,
+    border-color .12s ease,
+    color .12s ease;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.ui-selectMenu__item,  .ui-dd__item,  .playlistMenu__item,  .profile-dd-item {
+  width: 100%;
+  padding: var(--ui-menu-item-padding, 11px 14px);
+  cursor: pointer;
+  font-size: var(--ui-menu-item-font-size, 14px);
+  font-weight: 800;
+  background: linear-gradient(180deg, rgba(var(--surface-top-rgb, 96, 118, 247), 0.18), rgba(var(--surface-bottom-rgb, 14, 18, 36), 0.86));
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.ui-dd__item,  .ui-dd__row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 11px 12px;
+  background: linear-gradient(180deg, rgba(var(--surface-top-rgb, 96, 118, 247), 0.18), rgba(var(--surface-bottom-rgb, 14, 18, 36), 0.86));
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-dd__row {
+  min-height: 46px;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.ui-selectMenu__item:hover,  .ui-dd__item:hover,  .ui-dd__row:hover,  .profile-dd-item:hover,  .playlistMenu__item:hover{
+  background: var(--menu-item-hover);
+  border-color: var(--menu-border);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.ui-selectMenu__item:active,  .ui-dd__item:active,  .profile-dd-item:active,  .playlistMenu__item:active {
+  transform: translateY(1px);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.ui-selectMenu__item.is-active,  .ui-dd__item.is-active,  .profile-dd-item.is-active,  .profile-dd-item[aria-current="page"],  .playlistMenu__item.is-active {
+  color: var(--menu-item-active-text);
+  background: var(--menu-item-active);
+  border-color: color-mix(in srgb, var(--menu-border) 80%, var(--accent) 20%);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.ui-dd__item.is-danger,  .profile-dd-item.danger,  .playlistMenu__item--danger {
+  color: var(--menu-danger);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.ui-dd__item.is-danger:hover,  .profile-dd-item.danger:hover,  .playlistMenu__item--danger:hover {
+  background: var(--menu-danger-hover);
+  border-color: transparent;
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.ui-dd__hint,  .playlistMenu__subtitle,  .ui-dd__sub,  .ui-dd__title {
+  color: var(--menu-item-muted);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-dd__title {
+  padding: 8px 10px 6px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-dd__hint {
+  padding: 10px 12px;
+  font-size: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-dd__section {
+  padding: 4px 2px 2px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-dd__list {
+  display: grid;
+  gap: 4px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-dd__meta {
+  min-width: 0;
+  display: grid;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-dd__name {
+  color: var(--menu-item-text);
+  font-weight: 800;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-dd__sub {
+  font-size: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-dd__img {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-dd--floating {
+  position: fixed;
+  margin: 0;
+  z-index: 10060;
+  overflow: auto;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.topbarSearchMenu,  .topbarProfileMenu {
+  overscroll-behavior: contain;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbarSearchMenu {
+  padding: 8px;
+  border-radius: 22px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbarSearchMenu .ui-dd__section {
+  padding-inline: 2px;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbarProfileMenu {
+  padding: 6px;
+  border-radius: 20px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.topbarProfileMenu .ui-dd__item,  .adminPortalMenu .ui-dd__item {
+  min-height: 38px;
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbarProfileMenu .ui-dd__item {
+  justify-content: flex-start;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.topbarProfileMenu .ui-dd__sep,  .adminPortalMenu .ui-dd__sep {
+  margin: 6px 4px;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.topbar__menuAnchor,  .searchbox {
+  position: relative;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.topbar .profile-btn,  .admin-top .profile-btn {
+  align-self: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.adminPortalMenu {
+  max-height: min(320px, calc(100vh - 24px));
+  overflow: auto;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.topbarSearchMenu {
+  max-width: min(520px, calc(100vw - 24px));
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.searchbox {
+  position: relative;
+  width: min(500px, 100%);
+  display: flex;
+  align-items: center;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.profile-menu {
+  position: relative;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.profile-btn {
+  height: 40px;
+  min-width: 136px;
+  padding: 0 12px 0 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  background: var(--control-bg);
+  border: 1px solid var(--control-border);
+  color: var(--control-text);
+  cursor: pointer;
+  transition: background .16s ease, border-color .16s ease, box-shadow .16s ease, opacity .16s ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.profile-btn:hover {
+  background: var(--control-bg-hover);
+  border-color: var(--control-border-hover);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.profile-avatar {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  flex: 0 0 30px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  background: rgba(168,85,247,0.22);
+  border: 1px solid rgba(168,85,247,0.35);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.profile-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 800;
+  font-size: 13px;
+  opacity: 0.92;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.profile-caret {
+  opacity: 0.7;
+  font-size: 12px;
+}

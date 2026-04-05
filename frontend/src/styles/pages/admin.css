@@ -1,0 +1,1210 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+.admin-shell {
+  --admin-text: rgba(255,255,255,.92);
+  --admin-text-muted: rgba(255,255,255,.72);
+  --admin-text-soft: rgba(255,255,255,.58);
+  --admin-border: rgba(255,255,255,.08);
+  --admin-border-soft: rgba(255,255,255,.08);
+  --admin-border-strong: rgba(255,255,255,.10);
+  --admin-sidebar-bg: linear-gradient(180deg, rgba(18, 16, 30,.75), rgba(10, 10, 18,.55));
+  --admin-top-bg: linear-gradient(180deg, rgba(18, 16, 30,.55), rgba(12, 12, 20,.25));
+  --admin-card-bg: linear-gradient(180deg, rgba(24, 18, 44, 0.90), rgba(10, 10, 18, 0.94));
+  --admin-card-head-bg: linear-gradient(180deg, rgba(70, 49, 126, 0.18), rgba(18, 13, 34, 0));
+  --admin-table-wrap-bg: linear-gradient(180deg, rgba(24, 18, 44, 0.72), rgba(11, 9, 23, 0.92));
+  --admin-table-head-bg: linear-gradient(180deg, rgba(42, 30, 74, 0.96), rgba(31, 23, 56, 0.96));
+  --admin-control-bg: linear-gradient(180deg, rgba(60, 44, 107, 0.34), rgba(24, 18, 45, 0.72));
+  --admin-control-bg-hover: linear-gradient(180deg, rgba(74, 55, 130, 0.40), rgba(30, 22, 57, 0.80));
+  --admin-placeholder: rgba(196, 184, 224, 0.54);
+  --admin-surface-subtle: rgba(255,255,255,.03);
+  --admin-surface-soft: rgba(255,255,255,.04);
+  --admin-surface-hover: rgba(255,255,255,.06);
+  --admin-row-hover: rgba(255,255,255,.02);
+  --admin-accent-soft: rgba(160, 90, 255, .18);
+  --admin-accent-border: rgba(160, 90, 255, .35);
+  --admin-text-main: var(--admin-text);
+  --admin-shadow: 0 20px 60px rgba(0,0,0,.45);
+  min-height: 100vh;
+  display: flex;
+  background: transparent;
+  color: var(--admin-text);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .admin-shell {
+  --admin-text: var(--theme-text-main, #2d2141);
+  --admin-text-muted: var(--theme-text-muted, #6d5a86);
+  --admin-text-soft: var(--theme-text-soft, #8a76a9);
+  --admin-border: rgba(120, 94, 170, 0.14);
+  --admin-border-soft: rgba(120, 94, 170, 0.14);
+  --admin-border-strong: rgba(134, 106, 188, 0.18);
+  --admin-sidebar-bg: linear-gradient(180deg, rgba(255,255,255,.96), rgba(242,234,255,.96));
+  --admin-top-bg: linear-gradient(180deg, rgba(255,255,255,.94), rgba(245,239,255,.94));
+  --admin-card-bg: linear-gradient(180deg, rgba(255,255,255,.98), rgba(244,237,255,.98));
+  --admin-card-head-bg: linear-gradient(180deg, rgba(248, 242, 255, 0.94), rgba(244, 237, 255, 0));
+  --admin-table-wrap-bg: linear-gradient(180deg, rgba(255,255,255,.82), rgba(244,237,255,.92));
+  --admin-table-head-bg: linear-gradient(180deg, rgba(248,243,255,.98), rgba(239,232,252,.98));
+  --admin-control-bg: linear-gradient(180deg, rgba(255,255,255,.98), rgba(236,226,255,.96));
+  --admin-control-bg-hover: linear-gradient(180deg, rgba(250,246,255,1), rgba(232,219,255,.98));
+  --admin-placeholder: rgba(102, 82, 136, 0.52);
+  --admin-surface-subtle: rgba(255,255,255,.74);
+  --admin-surface-soft: rgba(255,255,255,.82);
+  --admin-surface-hover: rgba(236,227,255,.66);
+  --admin-row-hover: rgba(236,227,255,.52);
+  --admin-accent-soft: linear-gradient(180deg, rgba(231, 220, 255, 0.96), rgba(220, 206, 252, 0.94));
+  --admin-accent-border: rgba(148, 122, 212, 0.28);
+  --admin-text-main: var(--admin-text);
+  --admin-shadow: 0 22px 56px rgba(104, 79, 156, 0.14);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-sidebar {
+  width: 260px;
+  padding: 18px 14px;
+  border-right: 1px solid var(--admin-border);
+  backdrop-filter: blur(10px);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 10px 14px;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-brand__title {
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-brand__sub {
+  opacity: .75;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-nav {
+  margin-top: 14px;
+  display: grid;
+  gap: 6px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-nav__label {
+  font-size: 12px;
+  opacity: .7;
+  padding: 8px 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: var(--admin-text);
+  text-decoration: none;
+  border: 1px solid var(--admin-border);
+  background: var(--admin-surface-subtle);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.admin-nav-item:hover {
+  background: var(--admin-surface-hover);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-nav-item.is-active {
+  background: var(--admin-accent-soft);
+  border-color: var(--admin-accent-border);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-nav-item.is-disabled {
+  opacity: .35;
+  pointer-events: none;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--admin-border);
+  backdrop-filter: blur(10px);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-pill {
+  border: 1px solid var(--admin-border-strong);
+  background: var(--admin-surface-soft);
+  color: var(--admin-text);
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.admin-pill:hover {
+  background: var(--admin-surface-hover);
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-outlet {
+  padding: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-card {
+  border-radius: 18px;
+  border: 1px solid var(--admin-border);
+  overflow: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-card__head {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-title {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-subtitle {
+  font-size: 12px;
+  opacity: .72;
+  margin-top: 3px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table-wrap {
+  overflow: auto;
+  border-radius: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.admin-table th,  .admin-table td {
+  padding: 12px 12px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table thead th {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-size: 12px;
+  opacity: .80;
+  text-align: left;
+  border-bottom: 1px solid var(--admin-border-strong);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table td {
+  color: var(--admin-text);
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table td a {
+  opacity: .95;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-iconbtn {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  border: 1px solid var(--admin-border-strong);
+  background: var(--admin-surface-soft);
+  color: var(--admin-text);
+  cursor: pointer;
+  transition: background .16s ease, border-color .16s ease, box-shadow .16s ease, opacity .16s ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.admin-iconbtn:hover {
+  background: var(--admin-surface-hover);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-iconbtn:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-check input {
+  display: none;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-field {
+  display: grid;
+  gap: 6px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-label {
+  font-size: 12px;
+  opacity: .75;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-file__input {
+  display: none;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-toast {
+  position: fixed;
+  right: 16px;
+  bottom: 18px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(10, 10, 18, .92);
+  box-shadow: 0 20px 60px rgba(0,0,0,.55);
+  z-index: 1200;
+  font-size: 13px;
+  max-width: 360px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-shell {
+  --sb-size: 10px;
+  --sb-thumb: rgba(139, 92, 246, .28);
+  --sb-thumb-hover: rgba(139, 92, 246, .45);
+  --sb-track: rgba(255,255,255,.05);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-shell * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sb-thumb) transparent;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-shell *::-webkit-scrollbar {
+  width: var(--sb-size);
+  height: var(--sb-size);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-shell *::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-shell *::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.admin-shell *::-webkit-scrollbar-thumb:hover {
+  background: var(--sb-thumb-hover);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Нижче описана анімація яка керує переходом між станами */
+@keyframes adminPop {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  from {
+    transform: translateY(6px) scale(.99);
+    opacity: .0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  to {
+    transform: translateY(0)   scale(1);
+    opacity: 1;
+  }
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+ .admin-iconbtn:hover,  .admin-pill:hover {
+  filter: brightness(1.08);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-select-wrap {
+  position: relative;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-pageState {
+  padding: 20px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-pageState--denied {
+  display: grid;
+  gap: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-pageState__title {
+  margin-top: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-toolbar__search {
+  min-width: 360px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-toolbar__toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  opacity: .9;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.admin-table__check,  .admin-table__checkCell {
+  width: 36px;
+  text-align: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table__id {
+  width: 70px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table__duration {
+  width: 110px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table__statusCol {
+  width: 120px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table__actionsCol {
+  width: 120px;
+  text-align: right;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table__muted {
+  opacity: .85;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table__titleCell {
+  font-weight: 800;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table__subline {
+  opacity: .65;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table__empty {
+  padding: 14px;
+  opacity: .75;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-field--full {
+  grid-column: 1 / -1;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-check--spaced {
+  margin-top: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-dialogText {
+  color: rgba(255,255,255,.82);
+  line-height: 1.6;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-select {
+  height: 38px;
+  min-width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: #18181c;
+  color: rgba(255,255,255,.92);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all .2s;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.ui-select:hover {
+  background: #222228;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-select__text {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.ui-select__caret {
+  opacity: .7;
+  font-size: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table__idWide {
+  width: 110px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table__nameStrong {
+  font-weight: 700;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-form-grid--single {
+  grid-template-columns: 1fr;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-trackModal .modalTitle {
+  font-size: 16px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-trackModal .modalBody {
+  padding-top: 20px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-trackModal .admin-form-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 760px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-trackModal .admin-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-modal--unified .modalTitle {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-modal--unified .modalBody {
+  padding-top: 18px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-modal--unified .admin-form-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.track-modal--unified .admin-field--full {
+  grid-column: 1 / -1;
+}
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width:760px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .track-modal--unified .admin-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-trackModal__uploads {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-trackModal__uploadCell {
+  min-width: 0;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-trackModal__uploadBtn {
+  width: 100%;
+  justify-content: center;
+  min-height: 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-trackModal__uploadMeta {
+  margin-top: 8px;
+  min-height: 18px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--admin-text-soft, rgba(255,255,255,.68));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 760px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-trackModal__uploads {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-toolbar {
+  flex-wrap: wrap;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-toolbar .admin-btn {
+  height: 36px;
+  padding: 0 12px;
+  font-size: 12px;
+  border-radius: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-toolbar .admin-btn--ghost {
+  font-weight: 800;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-form-grid > * {
+  min-width: 0;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="violet"] .admin-shell {
+  --admin-surface-base: linear-gradient(180deg, rgba(16, 11, 31, 0.96), rgba(8, 7, 19, 0.98));
+  --admin-surface-raised: linear-gradient(180deg, rgba(34, 24, 64, 0.94), rgba(16, 12, 32, 0.98));
+  --admin-surface-soft: linear-gradient(180deg, rgba(44, 31, 82, 0.88), rgba(22, 16, 40, 0.92));
+  --admin-surface-hover: rgba(123, 87, 204, 0.10);
+  --admin-border-soft: rgba(132, 100, 201, 0.18);
+  --admin-border-strong: rgba(151, 118, 224, 0.26);
+  --admin-text-main: rgba(247, 243, 255, 0.96);
+  --admin-text-muted: rgba(204, 193, 230, 0.74);
+  --admin-shadow: 0 24px 64px rgba(4, 4, 14, 0.48);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-sidebar {
+  border-right-color: var(--admin-border-soft);
+  background: var(--admin-sidebar-bg, var(--admin-surface-base));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-top {
+  border-bottom-color: var(--admin-border-soft);
+  background: var(--admin-top-bg);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-card {
+  border-color: var(--admin-border-strong);
+  background: var(--admin-card-bg, var(--admin-surface-raised));
+  box-shadow: var(--admin-shadow);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-card__head {
+  border-bottom-color: var(--admin-border-soft);
+  background: var(--admin-card-head-bg);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.admin-subtitle,  .admin-brand__sub,  .admin-nav__label,  .admin-label,  .admin-table__subline,  .admin-toolbar__toggle {
+  color: var(--admin-text-muted);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table-wrap {
+  background: var(--admin-table-wrap-bg);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-table thead th {
+  background: var(--admin-table-head-bg);
+  border-bottom-color: var(--admin-border-strong);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.admin-table th,  .admin-table td {
+  border-bottom-color: var(--admin-border-soft);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.admin-table tbody tr:hover td {
+  background: var(--admin-surface-hover);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.admin-table td,  .admin-title,  .admin-table__titleCell,  .admin-brand__title {
+  color: var(--admin-text-main);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.admin-input,  .ui-select,  .admin-btn,  .admin-pill,  .admin-iconbtn{
+  border-color: var(--admin-border-soft);
+  background: var(--admin-control-bg);
+  color: var(--admin-text-main);
+  box-shadow: none;
+}
+
+/* Ці стилі роблять текст підказки читабельним усередині поля */
+.admin-input::placeholder {
+  color: var(--admin-placeholder);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.admin-input:hover,  .ui-select:hover,  .admin-btn:hover,  .admin-pill:hover,  .admin-iconbtn:hover{
+  border-color: var(--admin-border-strong);
+  background: var(--admin-control-bg-hover);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-btn--ghost {
+  background: var(--admin-control-bg);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-status.is-active {
+  border-color: rgba(97, 196, 137, 0.30);
+  background: rgba(66, 150, 102, 0.18);
+  color: rgba(213, 255, 227, 0.96);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-status.is-inactive {
+  border-color: rgba(172, 146, 233, 0.24);
+  background: rgba(88, 68, 140, 0.22);
+  color: rgba(235, 227, 255, 0.92);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-top .admin-profileMenu {
+  display: flex;
+  align-items: center;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-top .admin-profileMenu .profile-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-top .admin-profileMenu .profile-name {
+  max-width: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.admin-top .admin-profileMenu .profile-avatar,  .admin-top .admin-profileMenu .profile-avatar.media-thumb,  .admin-top .admin-profileMenu .profile-avatar.media-thumb--avatar {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 999px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  line-height: 0;
+  aspect-ratio: 1 / 1;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.admin-top .admin-profileMenu .profile-avatar__img,  .admin-top .admin-profileMenu .profile-avatar .media-thumb__img,  .admin-top .admin-profileMenu .profile-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  flex: 0 0 auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .admin-top,  html[data-theme-preset="light"] .admin-sidebar,  html[data-theme-preset="light"] .admin-card,  html[data-theme-preset="light"] .admin-table thead th,  html[data-theme-preset="light"] .admin-table-wrap {
+  color: var(--admin-text);
+}
+html[data-theme-preset="light"] .admin-shell :is(
+  .admin-brand__title,
+  .admin-nav-item,
+  .admin-pill,
+  .admin-iconbtn,
+  .admin-table th,
+  .admin-table td,
+  .admin-pageState,
+  .admin-toolbar__toggle
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+) {
+  color: var(--admin-text);
+}
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 981px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-sidebar {
+    width: 220px;
+    padding: 16px 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-top {
+    gap: 10px;
+    padding: 12px 14px;
+    flex-wrap: wrap;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-outlet {
+    padding: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-card__head {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-toolbar {
+    width: 100%;
+    justify-content: flex-start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-table-wrap {
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-table {
+    min-width: 760px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-table__titleCell {
+    min-width: 180px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-actions {
+    white-space: nowrap;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 860px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-sidebar {
+    width: 198px;
+    padding-inline: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-outlet {
+    padding: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-top .admin-profileMenu .profile-btn {
+    max-width: 220px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-top .admin-profileMenu .profile-name {
+    max-width: 108px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 768px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-shell {
+    flex-direction: column;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-sidebar {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid var(--admin-border-soft);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-nav {
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-nav__label{
+    display: none;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-top {
+    padding: 10px 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-top .u-flex-1 {
+    display: none;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-top .admin-profileMenu {
+    margin-left: auto;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .admin-shell,  .admin-main,  .admin-outlet,  .admin-card,  .admin-card__head,  .admin-toolbar,  .admin-table-wrap {
+    min-width: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-card {
+    overflow: hidden;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-toolbar {
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-toolbar > * {
+    min-width: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-table-wrap {
+    overflow-x: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-table {
+    min-width: 920px;
+    table-layout: auto;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .admin-table th,  .admin-table td {
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .admin-table__titleCell,  .admin-table td[data-cell="title"],  .admin-table td:nth-child(3) {
+    min-width: 190px;
+    max-width: 280px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-actions {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 860px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-top {
+    align-items: flex-start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-toolbar {
+    width: 100%;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .admin-toolbar .admin-input,  .admin-toolbar .admin-btn {
+    max-width: 100%;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 768px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-card__head {
+    padding: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-toolbar {
+    justify-content: stretch;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-toolbar > * {
+    flex: 1 1 180px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-table {
+    min-width: 880px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 767px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-shell {
+    display: block;
+    min-height: 100dvh;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-sidebar {
+    width: 100%;
+    padding: 12px 10px;
+    border-right: 0;
+    border-bottom: 1px solid var(--admin-border);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-brand {
+    padding: 6px 6px 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-nav {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-main {
+    min-width: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-top {
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 12px 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-top .u-flex-1 {
+    display: none;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-top .profile-btn {
+    min-width: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-profileMenu {
+    width: 100%;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-outlet {
+    padding: 12px 10px 16px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-card {
+    border-radius: 16px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .admin-card__head,  .admin-toolbar,  .admin-actions {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-table-wrap {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .admin-card__head,  .admin-toolbar,  .admin-actions,  .admin-form-grid,  .admin-form-grid--single{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .admin-toolbar > *,  .admin-actions > *,  .admin-form-grid > *{
+    min-width: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .admin-input,  .admin-toolbar .admin-input,  .admin-field,  .admin-field input,  .admin-field select,  .admin-field textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .admin-toolbar .admin-btn,  .admin-actions .admin-btn,  .admin-actions .admin-iconbtn,  .admin-card__head .admin-btn,  .admin-card__head .admin-pill {
+    flex: 0 0 auto;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-table-wrap {
+    border-radius: 14px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-table {
+    min-width: 640px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 520px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .admin-top,  .admin-outlet,  .admin-sidebar {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-card {
+    border-radius: 14px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .admin-card__head,  .admin-toolbar,  .admin-actions {
+    gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-toolbar > * {
+    flex: 1 1 100%;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .admin-toolbar .admin-btn,  .admin-card__head .admin-btn,  .admin-actions .admin-btn,  .admin-actions .admin-iconbtn {
+    width: 100%;
+    justify-content: center;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-table {
+    min-width: 560px;
+    font-size: 12px;
+  }
+  
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 430px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-top .profile-btn {
+    padding: 8px 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-nav {
+    gap: 6px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .admin-nav a,  .admin-nav button,  .admin-pill {
+    min-height: 40px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 390px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .admin-table {
+    min-width: 520px;
+  }
+}

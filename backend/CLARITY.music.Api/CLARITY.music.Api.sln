@@ -1,0 +1,28 @@
+# Файл рішення зберігає склад проєктів і службові параметри Visual Studio
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+
+VisualStudioVersion = 18.3.11505.172 d18.3
+MinimumVisualStudioVersion = 10.0.40219.1
+# Нижче підключається окремий проєкт який входить до цього рішення
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLARITY.music.Api", "CLARITY.music.Api.csproj", "{71A369EE-A19F-1554-1C2B-856CDC5DF129}"
+EndProject
+# Далі описані глобальні параметри і конфігурації збірки рішення
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71A369EE-A19F-1554-1C2B-856CDC5DF129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71A369EE-A19F-1554-1C2B-856CDC5DF129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71A369EE-A19F-1554-1C2B-856CDC5DF129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71A369EE-A19F-1554-1C2B-856CDC5DF129}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B205EAA-E47B-4D88-A7F6-6BFEF2EB7A73}
+	EndGlobalSection
+EndGlobal

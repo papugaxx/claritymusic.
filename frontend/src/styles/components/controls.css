@@ -1,0 +1,129 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.btn,  .sp-btn,  .admin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: var(--shared-btn-height, 38px);
+  padding: 0 var(--shared-btn-pad-x, 14px);
+  border-radius: var(--shared-btn-radius, 12px);
+  border: 1px solid var(--shared-btn-border, var(--control-border));
+  background: var(--shared-btn-bg, var(--control-bg));
+  color: var(--shared-btn-text, var(--control-text));
+  cursor: pointer;
+  font-weight: var(--shared-btn-weight, 800);
+  line-height: 1;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: transform .12s ease, background .16s ease, border-color .16s ease, opacity .16s ease, box-shadow .16s ease;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.btn {
+  --shared-btn-height: 38px;
+  --shared-btn-pad-x: 14px;
+  --shared-btn-radius: 12px;
+  --shared-btn-border: var(--control-border);
+  --shared-btn-bg: var(--control-bg);
+  --shared-btn-text: var(--control-text);
+  --shared-btn-weight: 800;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sp-btn {
+  --shared-btn-height: 38px;
+  --shared-btn-pad-x: 16px;
+  --shared-btn-radius: var(--r-md);
+  --shared-btn-border: rgba(168, 85, 247, 0.22);
+  --shared-btn-bg: rgba(255, 255, 255, 0.06);
+  --shared-btn-text: rgba(240, 255, 255, 0.92);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.admin-btn {
+  --shared-btn-height: 36px;
+  --shared-btn-pad-x: 12px;
+  --shared-btn-radius: 12px;
+  --shared-btn-border: rgba(255,255,255,.12);
+  --shared-btn-bg: rgba(255,255,255,.06);
+  --shared-btn-text: rgba(255,255,255,.92);
+  --shared-btn-weight: 700;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.btn:hover,  .sp-btn:hover,  .admin-btn:hover {
+  background: var(--shared-btn-bg-hover, var(--control-bg-hover));
+  border-color: var(--shared-btn-border-hover, var(--control-border-hover));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.btn:active,  .sp-btn:active,  .admin-btn:active {
+  transform: translateY(1px);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.btn:disabled,  .sp-btn:disabled,  .admin-btn:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.btn.primary,  .sp-btn--primary {
+  background: var(--shared-btn-primary-bg, var(--control-primary-bg));
+  border-color: var(--shared-btn-primary-border, var(--control-primary-border));
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.btn.primary:hover,  .sp-btn--primary:hover {
+  background: var(--shared-btn-primary-bg-hover, var(--control-primary-bg-hover));
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.sp-btn--ghost,  .admin-btn--ghost {
+  background: transparent;
+}
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--control-border);
+  background: var(--control-bg);
+  color: var(--control-text);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.iconBtn {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  border: 1px solid var(--control-border);
+  background: var(--control-bg);
+  color: var(--control-text);
+  cursor: pointer;
+  transition: background .16s ease, border-color .16s ease, box-shadow .16s ease, opacity .16s ease;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.iconBtn:hover {
+  background: var(--control-bg-hover);
+}

@@ -1,0 +1,823 @@
+
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+
+@media (min-width: 1281px) and (max-width: 1540px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .rp__artistCard,  .rp__next{
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 10px;
+    padding: 9px;
+    border-radius: 15px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .rp__artistMedia,  .rp__nextCover{
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .rp__sub,  .rp__artistHint,  .rp__nextSub,  .rp__creditLabel,  .rp__creditValue {
+    font-size: 11.5px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+   .rp__credits {
+    gap: 8px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 1221px) and (max-width: 1280px) {
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .rp__artistCard,  .rp__next{
+    gap: 10px;
+    padding: 9px;
+    border-radius: 15px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .rp__sub,  .rp__artistHint,  .rp__nextSub,  .rp__creditLabel,  .rp__creditValue {
+    font-size: 11.5px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1220px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__header {
+    grid-column: 1 / -1;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__cover {
+    justify-self: start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__section:nth-of-type(1) {
+    align-self: start;
+  }
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.rp__sub.is-clickable,  .rp__artistCard.is-clickable {
+  cursor: pointer;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rightcard {
+  height: auto;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  min-height: max-content;
+  overflow: visible;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__headerTitle {
+  font-weight: 900;
+  letter-spacing: .2px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__close {
+  width: 34px;
+  height: 34px;
+  opacity: .85;
+  border-radius: 999px;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: inherit;
+  transform: none;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.rp__close:hover,  .rp__close:focus-visible {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__meta {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  width: 100%;
+  justify-items: start;
+  align-items: start;
+  text-align: left;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+button.rp__track,  button.rp__sub {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  align-self: stretch;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__track {
+  font-weight: 950;
+  font-size: 16px;
+  line-height: 1.24;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__sub {
+  font-size: 13px;
+  line-height: 1.28;
+  color: var(--right-panel-muted-color);
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.rp__track:hover,  .rp__track:focus-visible,  .rp__sub:hover,  .rp__sub:focus-visible {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__sub:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.rp__track,  .rp__sub {
+  box-shadow: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+html[data-theme-preset="light"] .rp__track,  html[data-theme-preset="light"] .rp__sub,  html[data-theme-preset="light"] .rp__sectionTitle,  html[data-theme-preset="light"] .rp__artistName,  html[data-theme-preset="light"] .rp__nextTitle {
+  background: transparent;
+  color: var(--theme-text-main);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+html[data-theme-preset="light"] .rp__section {
+  background: linear-gradient(180deg, rgba(255,255,255,0.84), rgba(242,234,255,0.90));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__section {
+  padding: 10px 12px;
+  border-radius: 18px;
+  border: 1px solid var(--right-panel-section-border);
+  background: var(--right-panel-section-bg);
+  box-shadow: var(--right-panel-section-shadow);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__sectionTitle {
+  font-weight: 900;
+  font-size: 13px;
+  opacity: .92;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.rp__artistCard,  .rp__next {
+  width: 100%;
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid var(--right-panel-section-border);
+  background: rgba(255,255,255,0.03);
+  box-shadow: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.rp__artistCard:hover,  .rp__next:hover {
+  background: var(--right-panel-section-bg-hover);
+  border-color: var(--right-panel-section-border-hover);
+  box-shadow: none;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.rp__artistMedia,  .rp__nextCover {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--right-panel-cover-border);
+  background: var(--right-panel-cover-bg);
+  flex: 0 0 auto;
+  box-shadow: var(--right-panel-cover-shadow);
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.rp__artistBody,  .rp__nextMeta {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  text-align: left;
+  align-items: flex-start;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.rp__artistName,  .rp__nextTitle {
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.24;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.rp__artistHint,  .rp__nextSub {
+  font-size: 12px;
+  line-height: 1.28;
+  color: var(--right-panel-muted-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__credits {
+  margin-top: 8px;
+  display: grid;
+  gap: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__creditRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__creditLabel {
+  font-size: 12px;
+  color: var(--right-panel-muted-color);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__creditValue {
+  font-size: 12px;
+  font-weight: 800;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60%;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.rp__creditLabel,  .rp__creditValue {
+  background: transparent;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__muted {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--right-panel-muted-color);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__cover {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--right-panel-cover-border);
+  background: var(--right-panel-cover-bg);
+  box-shadow: var(--right-panel-cover-shadow);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.rp__cover img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.rp__cover > .media-thumb,  .rp__artistMedia > .media-thumb,  .rp__nextCover > .media-thumb,  .rp__coverMedia,  .rp__artistAvatar,  .rp__nextCoverMedia {
+  width: 100%;
+  height: 100%;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.rp__cover > .media-thumb,  .rp__coverMedia {
+  position: absolute;
+  inset: 0;
+}
+
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+.rightcard.rp .rp__meta > button.rp__track:not(.icon-btn),  .rightcard.rp .rp__meta > button.rp__sub:not(.icon-btn) {
+  display: block;
+  width: 100%;
+  margin-inline: 0;
+  text-align: left;
+  justify-self: stretch;
+  align-self: stretch;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+button.rp__close.icon-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (min-width: 981px) and (max-width: 1220px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__headerTitle {
+    font-size: 13px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__close {
+    width: 30px;
+    height: 30px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__section {
+    padding: 8px 9px;
+    border-radius: 13px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__section:nth-of-type(1) {
+    grid-column: 3;
+    grid-row: 2;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__section:nth-of-type(2) .rp__credits {
+    margin-top: 6px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__section:nth-of-type(2) .rp__creditLabel {
+    font-size: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__sectionTitle {
+    font-size: 11px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .rp__artistName,  .rp__nextTitle {
+    font-size: 12.5px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .rp__artistHint,  .rp__nextSub,  .rp__muted {
+    font-size: 10.5px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp {
+    grid-template-columns: minmax(88px, 98px) minmax(0, 1fr) minmax(172px, 0.78fr);
+    column-gap: 10px;
+    row-gap: 7px;
+    align-items: start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__header {
+    gap: 8px;
+    margin-bottom: 1px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__cover {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    max-width: 98px;
+    border-radius: 13px;
+    align-self: start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__meta {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    gap: 3px;
+    padding-top: 2px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__track {
+    font-size: 14px;
+    line-height: 1.18;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__sub {
+    font-size: 11px;
+    line-height: 1.24;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__section:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__section:nth-of-type(3) {
+    grid-column: 3;
+    grid-row: 3;
+    align-self: start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__section:nth-of-type(2) .rp__creditRow {
+    display: grid;
+    gap: 3px;
+    align-content: start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__section:nth-of-type(2) .rp__creditValue {
+    max-width: none;
+    font-size: 11px;
+    text-align: left;
+    white-space: normal;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .rp__artistCard,  .rp__next {
+    margin-top: 6px;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 8px;
+    padding: 7px 8px;
+    border-radius: 12px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .rp__artistMedia,  .rp__nextCover {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .rp__artistHint,  .rp__nextSub {
+    font-size: 11px;
+    line-height: 1.24;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__muted {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp {
+    grid-template-columns: minmax(92px, 104px) minmax(0, 1fr) minmax(210px, 0.82fr);
+    align-items: start;
+    column-gap: 12px;
+    row-gap: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__header {
+    grid-column: 1 / -1;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__cover {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+    justify-self: start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__meta {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__section:nth-of-type(1) {
+    grid-column: 3;
+    grid-row: 2;
+    align-self: start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__section:nth-of-type(2) {
+    grid-column: 2 / -1;
+    grid-row: 3;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__section:nth-of-type(3) {
+    grid-column: 2 / -1;
+    grid-row: 4;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__credits {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__creditRow {
+    align-content: start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp {
+    overflow: visible;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__cover {
+    align-self: stretch;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__meta {
+    padding-top: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-right .rp__creditLabel,  .app-right .rp__creditValue {
+    font-size: 11px;
+    line-height: 1.24;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__header {
+    margin-bottom: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__cover {
+    max-width: none;
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-right .rp__artistMedia,  .app-right .rp__nextCover {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-right .rp__artistHint,  .app-right .rp__nextSub,  .app-right .rp__muted,  .app-right .rp__creditLabel,  .app-right .rp__creditValue {
+    font-size: 11px;
+    line-height: 1.26;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp {
+    gap: 9px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__header {
+    align-items: center;
+    gap: 8px;
+    padding-inline: 1px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__headerTitle {
+    font-size: 13.5px;
+    font-weight: 950;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__close {
+    width: 30px;
+    height: 30px;
+    opacity: 0.9;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__cover {
+    width: 100%;
+    border-radius: 15px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__meta {
+    gap: 2px;
+    padding-inline: 1px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__track {
+    font-size: 15.5px;
+    font-weight: 950;
+    line-height: 1.14;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__sub {
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.22;
+    opacity: 0.86;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-right .rp__section,  .app-right .rp__muted {
+    width: 100%;
+    box-sizing: border-box;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__section {
+    padding: 10px 11px;
+    border-radius: 15px;
+    display: grid;
+    gap: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__sectionTitle {
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    opacity: 0.94;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-right .rp__artistCard,  .app-right .rp__next {
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px 9px;
+    gap: 8px;
+    grid-template-columns: 40px minmax(0, 1fr);
+    border-radius: 13px;
+    box-sizing: border-box;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-right .rp__artistBody,  .app-right .rp__nextMeta {
+    gap: 2px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-right .rp__artistName,  .app-right .rp__nextTitle {
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1.16;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .app-right .rp__artistHint,  .app-right .rp__nextSub,  .app-right .rp__muted {
+    font-size: 11.5px;
+    line-height: 1.24;
+    opacity: 0.84;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__credits {
+    width: 100%;
+    gap: 7px;
+    margin-top: 7px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__creditRow {
+    gap: 8px;
+    align-items: flex-start;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__creditLabel {
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.18;
+    opacity: 0.82;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__creditValue {
+    font-size: 11.5px;
+    font-weight: 900;
+    line-height: 1.18;
+    max-width: 58%;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 980px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right {
+    width: min(100%, 360px);
+    max-width: 360px;
+    justify-self: center;
+    min-width: 0;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .app-sticky {
+    max-height: min(56dvh, 430px);
+    padding: 10px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .app-sticky__scroll {
+    overflow: auto;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp {
+    gap: 8px;
+    padding: 8px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__cover {
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    align-self: stretch;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__section {
+    padding: 9px 10px;
+    border-radius: 16px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .rp__artistCard,  .rp__next{
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 9px;
+    padding: 8px;
+    border-radius: 14px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .rp__artistMedia,  .rp__nextCover{
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 860px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right {
+    width: min(100%, 332px);
+    max-width: 332px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .app-sticky {
+    max-height: min(52dvh, 392px);
+    padding: 9px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp {
+    gap: 7px;
+    padding: 7px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__cover {
+    max-width: none;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp__track {
+    font-size: 15px;
+  }
+/* Спільні стилі узгоджують вигляд кількох споріднених елементів */
+  .rp__sub,  .rp__creditValue{
+    font-size: 11.5px;
+  }
+}
+
+/* Адаптивний блок підлаштовує інтерфейс під меншу ширину екрана */
+@media (max-width: 767px) {
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right {
+    width: min(100%, 320px);
+    max-width: 320px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .app-sticky {
+    max-height: min(50dvh, 360px);
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .rp {
+    gap: 6px;
+    padding: 6px;
+  }
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+  .app-right .rp__cover {
+    max-width: none;
+  }
+  
+}

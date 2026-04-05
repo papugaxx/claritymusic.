@@ -1,0 +1,282 @@
+
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+
+.sidebar {
+  height: 100%;
+  padding: 12px 10px 12px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidebarHeader {
+  display: grid;
+  gap: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryHead__title {
+  font-size: 1.1rem;
+  font-weight: 950;
+  letter-spacing: -0.05em;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryHead__actions {
+  display: flex;
+  align-items: center;
+}
+
+.sidebarHeader__plus,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidebarToolbar__search {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  box-shadow: none;
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidebarHeader__plus {
+  width: 32px;
+  height: 32px;
+  border-radius: 11px;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidebarToolbar {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 30px;
+  padding-inline: 1px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidebarToolbar__search {
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.sidebarToolbar__search.is-active,
+.sidebarHeader__plus:hover,
+/* Стан наведення підсилює візуальний відгук елемента */
+.sidebarToolbar__search:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.055);
+  color: var(--text);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidebarToolbar__sort {
+  appearance: none;
+  margin-left: auto;
+  padding: 0 0 0 2px;
+  min-height: 28px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.sidebarToolbar__sort:hover {
+  color: var(--text);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidebarToolbar__sortLabel {
+  line-height: 1;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidebarToolbar__sortGlyph {
+  font-size: 0.72rem;
+  opacity: 0.7;
+  transform: translateY(-1px);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidebarSearchWrap {
+  padding-inline: 1px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.sidebarSearchInput {
+  width: 100%;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 11px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--text);
+}
+
+/* Ці стилі роблять текст підказки читабельним усередині поля */
+.sidebarSearchInput::placeholder {
+  color: var(--muted);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryList {
+  min-height: 0;
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  overflow: auto;
+  padding-right: 3px;
+  padding-bottom: 10px;
+}
+
+.libraryRow,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryRowWrap {
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.065);
+  background: rgba(255, 255, 255, 0.022);
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.libraryRow,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryRowWrap {
+  min-height: 58px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryRow {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryRowWrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 26px;
+  align-items: center;
+  padding-right: 8px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryRowWrap .libraryRow {
+  min-height: 56px;
+  border: 0;
+  background: transparent;
+  padding-right: 6px;
+}
+
+.libraryRow:hover,
+.libraryRowWrap:hover,
+.libraryRow.is-active,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryRowWrap.is-active {
+  background: rgba(255, 255, 255, 0.048);
+  border-color: rgba(255, 255, 255, 0.095);
+}
+
+.libraryRow__media,
+.libraryRow__cover,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryRow__media--liked {
+  width: 44px;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryRow__media--liked {
+  display: grid;
+  place-items: center;
+  font-size: 1.18rem;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(169, 124, 255, 0.34), rgba(101, 62, 191, 0.22));
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryRow__meta {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.libraryRow__meta strong,
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryRow__meta span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryRow__meta strong {
+  font-size: 0.99rem;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryRow__meta span {
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryRow__action {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(214, 198, 255, 0.8);
+  font-size: 1.02rem;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+/* Стан наведення підсилює візуальний відгук елемента */
+.libraryRow__action:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+/* Це правило задає основний вигляд відступи і поведінку відповідного блока */
+.libraryEmpty {
+  padding: 4px 2px 0;
+  color: var(--text-soft);
+  font-size: 0.84rem;
+}
